@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Project } from "@/types";
 
@@ -9,44 +8,40 @@ interface MasonryGridProps {
 }
 
 export function MasonryGrid({ projects, onProjectClick }: MasonryGridProps) {
-  const [columns, setColumns] = useState(3);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const updateColumns = () => {
-      const width = window.innerWidth;
-      if (width < 640) setColumns(1);
-      else if (width < 1024) setColumns(2);
-      else if (width < 1400) setColumns(3);
-      else setColumns(4);
-    };
-
-    updateColumns();
-    window.addEventListener("resize", updateColumns);
-    return () => window.removeEventListener("resize", updateColumns);
-  }, []);
-
-  // Distribute projects into columns
-  const columnArrays: Project[][] = Array.from({ length: columns }, () => []);
-  projects.forEach((project, index) => {
-    columnArrays[index % columns].push(project);
-  });
-
   return (
     <div
-      ref={containerRef}
-      className="flex gap-4"
-      style={{ alignItems: "flex-start" }}
+      style={{
+        columnCount: 3,
+        columnGap: '16px',
+        width: '100%',
+      }}
+      className="masonry-grid"
     >
-      {columnArrays.map((col, colIndex) => (
-        <div key={colIndex} className="flex-1 flex flex-col gap-4">
-          {col.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onClick={onProjectClick}
-            />
-          ))}
+      <style>{`
+        @media (max-width: 639px) {
+          .masonry-grid { column-count: 1 !important; }
+        }
+        @media (min-width: 640px) and (max-width: 1023px) {
+          .masonry-grid { column-count: 2 !important; }
+        }
+        @media (min-width: 1024px) and (max-width: 1399px) {
+          .masonry-grid { column-count: 3 !important; }
+        }
+        @media (min-width: 1400px) {
+          .masonry-grid { column-count: 4 !important; }
+        }
+        .masonry-item {
+          break-inside: avoid;
+          display: block;
+          margin-bottom: 16px;
+        }
+      `}</style>
+      {projects.map((project) => (
+        <div key={project.id} className="masonry-item">
+          <ProjectCard
+            project={project}
+            onClick={onProjectClick}
+          />
         </div>
       ))}
     </div>

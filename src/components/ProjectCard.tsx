@@ -112,7 +112,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
   return (
     <motion.div
       layoutId={`card-container-${project.id}`}
-      className="group relative overflow-hidden rounded-xl bg-[#111] border border-white/10 cursor-pointer mb-4 break-inside-avoid"
+      className="group relative overflow-hidden rounded-xl bg-[#111] border border-white/10 cursor-pointer"
       onClick={() => onClick(project)}
       whileHover={{ y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
