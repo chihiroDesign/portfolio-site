@@ -1,18 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { SkillChartSection } from '@/components/SkillChart';
 
-const skillData = [
-  { name: 'AI Artist', value: 80 },
-  { name: '3D Design', value: 25 },
-  { name: 'Motion Design', value: 20 },
-  { name: 'Graphic Design', value: 20 },
-  { name: 'UI/UX Design', value: 10 },
-  { name: 'Marketing', value: 8 },
-  { name: 'Design Strategist', value: 7 },
-];
+
 
 const awards = [
   { year: '2025', title: 'AICU 月例漫画コンテスト ノンジャンル／art部門 受賞「POPPY GUMMY BEARS」' },
@@ -28,41 +21,7 @@ const tools = [
   'Manus AI', 'ChatGPT', 'Gemini',
 ];
 
-function SkillBar({ name, value }: { name: string; value: number }) {
-  const [width, setWidth] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setWidth(value), 100);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [value]);
-
-  return (
-    <div ref={ref}>
-      <div className="flex justify-between text-xs mb-1">
-        <span className="text-white/60">{name}</span>
-        <span className="text-[#3b82f6]">{value}%</span>
-      </div>
-      <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-[#3b82f6] rounded-full transition-all duration-1000 ease-out"
-          style={{ width: `${width}%` }}
-        />
-      </div>
-    </div>
-  );
-}
 
 export default function ProfilePage() {
   return (
@@ -156,19 +115,15 @@ export default function ProfilePage() {
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-3">About</h2>
           <div className="text-sm text-white/70 leading-relaxed space-y-4">
-            <p>私が目指すものは、ただ綺麗なだけのデザインではありません。思わず誰かに話したくなるような、心が躍る、見たことのない「楽しみ」そのものです。その楽しみを届けるためなら、私はどんな手段でも使います。AIも、デザインも、3Dも、映像も、すべてはそのためのパワフルな道具です。</p>
-            <p>プロジェクトの目的を一緒に考え、最適な体験を設計し、世の中に届けるまで。私は常に「どうすればもっと面白くなるか？」「どうすればもっと心が揺さぶられるか？」を問い続けます。</p>
-            <p>テクノロジーとクリエイティブの力で、あなたと一緒に、まだ誰も見たことのない楽しみを創り出せることを楽しみにしています。</p>
-          </div>
+            <p><span className="text-white font-semibold">ココロユサブルな体験を、あらゆる表現で。</span></p>
+            <p>私が創り出すのは、単なるデザインや映像ではありません。それは、人の心を揺さぶり、思わず誰かに伝えたくなるような「見たことのない楽しみ」です。</p>
+            <p>AI、3D、UI/UX、映像――。私はこれらの技術を自在に組み合わせ、プロジェクトの目的に応じて最適なクリエイティブを設計します。しかし、それらはあくまで手段。私の本当の目的は、あなたのビジネスやプロジェクトに「ココロユサブル」な価値を加え、確実な成果へと繋げることです。</p>
+            <p>企画から実装、そしてその先の運用まで。全体を俦瞰し、一貫した体験を設計することで、まだ誰も見たことのない楽しみを、あなたと共に創り上げます。</p>          </div>
         </section>
 
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Skill Chart</h2>
-          <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
-            {skillData.map((skill) => (
-              <SkillBar key={skill.name} name={skill.name} value={skill.value} />
-            ))}
-          </div>
+          <SkillChartSection />
         </section>
 
         <section className="mb-10">
