@@ -197,6 +197,27 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
             </div>
           ) : null}
 
+          {/* Links — 画像直下に配置（リンクがある場合のみ） */}
+          {links.length > 0 && (
+            <div className="flex flex-wrap gap-3 px-6 py-4 border-b border-white/5">
+              {links.map((url) => {
+                const { label, icon } = getLinkInfo(url);
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
+                  >
+                    {icon}
+                    {label}
+                  </a>
+                );
+              })}
+            </div>
+          )}
+
           {/* Content */}
           <div className="p-6 md:p-8">
             {/* Categories */}
@@ -276,25 +297,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
               </div>
             )}
 
-            {/* Links — URL種別に応じて動的ラベル・アイコン・全て青色 */}
-            <div className="flex flex-wrap gap-3">
-              {links.map((url) => {
-                const { label, icon } = getLinkInfo(url);
-                return (
-                  <a
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
-                  >
-                    {icon}
-                    {label}
-                  </a>
-                );
-              })}
 
-            </div>
           </div>
         </motion.div>
       </motion.div>
