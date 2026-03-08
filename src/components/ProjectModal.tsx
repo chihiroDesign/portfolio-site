@@ -49,6 +49,9 @@ function getLinkInfo(url: string): { label: string; icon: React.ReactNode } {
   if (url.includes("note.com")) {
     return { label: "記事を読む", icon: <BookOpen size={14} /> };
   }
+  if (url.includes("alphapolis") || url.includes("ehon")) {
+    return { label: "絵本を見る", icon: <BookOpen size={14} /> };
+  }
   if (url.includes("linkco.re")) {
     return { label: "音楽を聴く", icon: <Music size={14} /> };
   }
@@ -122,6 +125,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
   const imageUrl = (project as any).imageUrl || project.thumbnail;
 
   // リンク一覧を収集
+  const linkDoc = (project as any).linkDoc;
   const links: string[] = [];
   // 動画でないlinkを追加
   if (project.link && !isVideoLink(project.link)) {
@@ -130,6 +134,10 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
   // linkMovieが別URLの場合も追加（動画でない場合のみ）
   if (linkMovie && linkMovie !== project.link && !isVideoLink(linkMovie) && !links.includes(linkMovie)) {
     links.push(linkMovie);
+  }
+  // linkDoc（ドキュメント・記事リンク）を追加
+  if (linkDoc && !links.includes(linkDoc)) {
+    links.push(linkDoc);
   }
   // 動画URLはvideoUrlとして別途ボタン表示（1つだけ）
   // embedUrlがある場合はiframe内で再生できるので外部リンクボタンは不要
