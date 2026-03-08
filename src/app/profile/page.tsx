@@ -72,14 +72,11 @@ export default function ProfilePage() {
 
       {/* Hero — 背景画像 + 顔写真 */}
       <section className="relative pt-28 pb-16 flex flex-col items-center text-center px-6 overflow-hidden">
-        {/* 背景画像 */}
+        {/* 背景グラデーション（黒→グレー） */}
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            backgroundImage: "url('/images/chihiroDesign_keyImage.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-            opacity: 0.18,
+            background: 'linear-gradient(to bottom, #1a1a1a 0%, #0a0a0a 100%)',
           }}
         />
         <div className="relative z-10 flex flex-col items-center">
@@ -101,7 +98,7 @@ export default function ProfilePage() {
               href="https://www.chihiro.design/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 px-5 py-2.5 rounded-full transition-all"
+              className="inline-flex items-center gap-2 text-sm font-medium text-white bg-[#3b82f6] hover:bg-[#2563eb] px-5 py-2.5 rounded-full transition-all shadow-lg shadow-[#3b82f6]/20"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <rect x="3" y="3" width="7" height="7" />
@@ -125,17 +122,7 @@ export default function ProfilePage() {
               </svg>
               CV
             </a>
-            <a
-              href="https://note.com/chihirodesign"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 px-5 py-2.5 rounded-full transition-all"
-            >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-              </svg>
-              note
-            </a>
+
           </div>
         </div>
       </section>

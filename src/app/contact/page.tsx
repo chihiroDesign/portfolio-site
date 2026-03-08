@@ -175,36 +175,7 @@ export default function ContactPage() {
           </form>
         )}
 
-        {/* SNS Links */}
-        <div className="mt-12 pt-8 border-t border-white/5">
-          <p className="text-xs text-white/30 tracking-widest uppercase mb-4">Or reach me via</p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://www.linkedin.com/in/chihirodesign3d/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 transition-all"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://note.com/chihirodesign"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 transition-all"
-            >
-              note
-            </a>
-            <a
-              href="https://www.instagram.com/chihiro.design.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 transition-all"
-            >
-              Instagram
-            </a>
-          </div>
-        </div>
+
       </main>
 
       <Footer />

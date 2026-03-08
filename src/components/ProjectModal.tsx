@@ -121,15 +121,18 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
   // 画像URL
   const imageUrl = (project as any).imageUrl || project.thumbnail;
 
-  // リンク一覧を収集（動画以外のlink + linkMovie）
+  // リンク一覧を収集
   const links: string[] = [];
+  // 動画でないlinkを追加
   if (project.link && !isVideoLink(project.link)) {
     links.push(project.link);
   }
-  // linkMovieが別URLの場合も追加
-  if (linkMovie && linkMovie !== project.link && !links.includes(linkMovie)) {
+  // linkMovieが別URLの場合も追加（動画でない場合のみ）
+  if (linkMovie && linkMovie !== project.link && !isVideoLink(linkMovie) && !links.includes(linkMovie)) {
     links.push(linkMovie);
   }
+  // 動画URLはvideoUrlとして別途ボタン表示（1つだけ）
+  // embedUrlがある場合はiframe内で再生できるので外部リンクボタンは不要
 
   return (
     <AnimatePresence>
@@ -240,18 +243,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
                   </a>
                 );
               })}
-              {/* 動画埋め込みがある場合も「動画を見る」ボタンを表示 */}
-              {embedUrl && videoUrl && (
-                <a
-                  href={videoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
-                >
-                  <Play size={14} />
-                  動画を見る
-                </a>
-              )}
+
             </div>
           </div>
         </motion.div>

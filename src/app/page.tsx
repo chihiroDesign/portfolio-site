@@ -85,14 +85,18 @@ export default function Home() {
             backgroundImage: "url('/images/chihiroDesign_keyImage.png')",
             backgroundSize: "cover",
             backgroundPosition: "center top",
-            opacity: 0.18,
+            opacity: 0.25,
+          }}
+        />
+        {/* Gradient to black at bottom */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, transparent 0%, transparent 40%, #0a0a0a 100%)",
           }}
         />
         <div className="relative z-10">
-          <h1
-            className="text-5xl md:text-7xl font-black tracking-tight text-white mb-4 leading-none"
-            style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic" }}
-          >
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white mb-4 leading-none">
             Feel it before you see it.
           </h1>
         </div>
