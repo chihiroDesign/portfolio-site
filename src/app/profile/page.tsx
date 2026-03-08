@@ -16,9 +16,10 @@ const awards = [
 ];
 
 const tools = [
-  'DALL-E', 'Stable Diffusion', 'Veo3', 'Runway', 'Heygen', 'Kling',
+  'Claude Code', 'Manus AI', 'ChatGPT', 'Gemini',
+  'Freepik', 'Higgsfield', 'Stable Diffusion', 'Veo', 'Runway', 'Heygen', 'Kling',
   'Blender', 'After Effects', 'Premiere Pro', 'Photoshop', 'Illustrator', 'Figma',
-  'Manus AI', 'ChatGPT', 'Gemini',
+  'Substance Painter', 'Slack', 'GitHub',
 ];
 
 
@@ -126,7 +127,7 @@ export default function ProfilePage() {
         </section>
 
         <section className="mb-10">
-          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Tools & Skills</h2>
+          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Tools</h2>
           <div className="flex flex-wrap gap-2">
             {tools.map((tool) => (
               <span key={tool} className="text-xs text-white/50 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
