@@ -805,7 +805,7 @@
     ],
     "charge": "モデリング、リギング、ライティング、デザイン",
     "developmentScale": "1名",
-    "link": "https://www.youtube.com/watch?v=sakana",
+    "link": "https://ehon.alphapolis.co.jp/content/detail/689",
     "category": [
       "Picture Book"
     ],
@@ -843,7 +843,8 @@
     ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "order": 44
+    "order": 44,
+    "link": "https://store.line.me/stickershop/product/1155260/ja"
   },
   {
     "id": "chibishirokuma-3d",
@@ -897,16 +898,6 @@
       "UI/UX"
     ],
     "order": 47
-  },
-  {
-    "id": "otonashi-jacket",
-    "title": "VTuber音無むおんの楽曲ジャケットデザイン",
-    "description": "楽曲リリースに合わせて、ジャケットデザイン業務",
-    "imageUrl": "/images/muon-jacket-designs.png",
-    "category": [
-      "2D WORKS"
-    ],
-    "order": 48
   },
   {
     "id": "quiz-ad-video",
