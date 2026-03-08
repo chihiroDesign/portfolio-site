@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Play } from "lucide-react";
+import { X, ExternalLink, Play, BookOpen, Music } from "lucide-react";
 import { Project } from "@/types";
 
 interface ProjectModalProps {
@@ -24,14 +24,57 @@ function getYoutubeEmbedUrl(url: string): string | null {
   return null;
 }
 
-function isVideoLink(url?: string): boolean {
+function getGoogleDriveEmbedUrl(url: string): string | null {
+  const match = url.match(/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/);
+  if (match) return `https://drive.google.com/file/d/${match[1]}/preview`;
+  return null;
+}
+
+function isYoutubeLink(url?: string): boolean {
   if (!url) return false;
-  return (
-    url.includes("youtube.com") ||
-    url.includes("youtu.be") ||
-    url.includes("drive.google.com") ||
-    url.includes("vimeo.com")
-  );
+  return url.includes("youtube.com") || url.includes("youtu.be");
+}
+
+function isGoogleDriveLink(url?: string): boolean {
+  if (!url) return false;
+  return url.includes("drive.google.com");
+}
+
+function isVideoLink(url?: string): boolean {
+  return isYoutubeLink(url) || isGoogleDriveLink(url) || (!!url && url.includes("vimeo.com"));
+}
+
+// URL種別に応じたラベル・アイコンを返す
+function getLinkInfo(url: string): { label: string; icon: React.ReactNode } {
+  if (url.includes("note.com")) {
+    return { label: "記事を読む", icon: <BookOpen size={14} /> };
+  }
+  if (url.includes("linkco.re")) {
+    return { label: "音楽を聴く", icon: <Music size={14} /> };
+  }
+  if (url.includes("x.com") || url.includes("twitter.com")) {
+    return {
+      label: "Xで見る",
+      icon: (
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      ),
+    };
+  }
+  if (url.includes("tiktok.com")) {
+    return { label: "TikTokで見る", icon: <ExternalLink size={14} /> };
+  }
+  if (url.includes("pinterest.com")) {
+    return { label: "Pinterestで見る", icon: <ExternalLink size={14} /> };
+  }
+  if (isYoutubeLink(url) || isGoogleDriveLink(url)) {
+    return { label: "動画を見る", icon: <Play size={14} /> };
+  }
+  if (url.includes("instagram.com")) {
+    return { label: "Instagramで見る", icon: <ExternalLink size={14} /> };
+  }
+  return { label: "詳細を見る", icon: <ExternalLink size={14} /> };
 }
 
 export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModalProps) {
@@ -60,37 +103,59 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
     ? project.category
     : [project.category];
 
-  // Determine video URL
-  const videoUrl = (project as any).linkMovie || (isVideoLink(project.videoUrl) ? project.videoUrl : null) || (isVideoLink(project.thumbnail) ? project.thumbnail : null);
-  const embedUrl = videoUrl ? getYoutubeEmbedUrl(videoUrl) : null;
+  // linkMovie優先、次にlink（動画の場合）
+  const linkMovie = (project as any).linkMovie;
+  const videoUrl =
+    (linkMovie && isVideoLink(linkMovie) ? linkMovie : null) ||
+    (isVideoLink(project.link) ? project.link : null);
 
-  // Determine image
-  const imageUrl = project.thumbnail && !isVideoLink(project.thumbnail) ? project.thumbnail : (project as any).imageUrl;
+  // YouTube embed or Google Drive embed
+  const embedUrl = videoUrl
+    ? isYoutubeLink(videoUrl)
+      ? getYoutubeEmbedUrl(videoUrl)
+      : isGoogleDriveLink(videoUrl)
+      ? getGoogleDriveEmbedUrl(videoUrl)
+      : null
+    : null;
+
+  // 画像URL
+  const imageUrl = (project as any).imageUrl || project.thumbnail;
+
+  // リンク一覧を収集（動画以外のlink + linkMovie）
+  const links: string[] = [];
+  if (project.link && !isVideoLink(project.link)) {
+    links.push(project.link);
+  }
+  // linkMovieが別URLの場合も追加
+  if (linkMovie && linkMovie !== project.link && !links.includes(linkMovie)) {
+    links.push(linkMovie);
+  }
 
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+        className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto py-8 px-4 md:px-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
         {/* Backdrop */}
         <motion.div
-          className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm"
           onClick={onClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         />
 
-        {/* Modal Content */}
+        {/* Modal Content — スクロール可能、高さ制限なし */}
         <motion.div
-          className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#111] rounded-2xl border border-white/10 shadow-2xl"
+          className="relative z-10 w-full max-w-4xl bg-[#111] rounded-2xl border border-white/10 shadow-2xl"
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.2 }}
+          onClick={(e) => e.stopPropagation()}
         >
           {/* Close Button */}
           <button
@@ -100,7 +165,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
             <X size={16} />
           </button>
 
-          {/* Media */}
+          {/* Media — 動画embed or フル画像（高さ制限なし） */}
           {embedUrl ? (
             <div className="relative w-full aspect-video bg-black rounded-t-2xl overflow-hidden">
               <iframe
@@ -112,16 +177,18 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
             </div>
           ) : imageUrl ? (
             <div className="relative w-full rounded-t-2xl overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={imageUrl}
                 alt={project.title}
-                className="w-full h-auto object-cover max-h-[60vh]"
+                className="w-full h-auto block"
               />
             </div>
           ) : null}
 
           {/* Content */}
           <div className="p-6 md:p-8">
+            {/* Categories */}
             <div className="flex flex-wrap gap-2 mb-3">
               {categories.map((cat) => (
                 <button
@@ -156,28 +223,33 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
               </div>
             )}
 
-            {/* Links */}
+            {/* Links — URL種別に応じて動的ラベル・アイコン・全て青色 */}
             <div className="flex flex-wrap gap-3">
-              {(project as any).link && (
-                <a
-                  href={(project as any).link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors"
-                >
-                  <ExternalLink size={14} />
-                  View Project
-                </a>
-              )}
-              {videoUrl && (
+              {links.map((url) => {
+                const { label, icon } = getLinkInfo(url);
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
+                  >
+                    {icon}
+                    {label}
+                  </a>
+                );
+              })}
+              {/* 動画埋め込みがある場合も「動画を見る」ボタンを表示 */}
+              {embedUrl && videoUrl && (
                 <a
                   href={videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 text-white text-sm font-medium hover:bg-white/20 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
                 >
                   <Play size={14} />
-                  Watch Video
+                  動画を見る
                 </a>
               )}
             </div>

@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
 
 const skillData = [
   { name: 'AI Artist', value: 80 },
@@ -11,14 +12,6 @@ const skillData = [
   { name: 'UI/UX Design', value: 10 },
   { name: 'Marketing', value: 8 },
   { name: 'Design Strategist', value: 7 },
-];
-
-const socialLinks = [
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/chihirodesign3d/', icon: 'linkedin' },
-  { label: 'note', url: 'https://note.com/chihirodesign', icon: 'note' },
-  { label: 'Instagram', url: 'https://www.instagram.com/chihiro.design.ai/', icon: 'instagram' },
-  { label: 'TikTok', url: 'https://www.tiktok.com/@chihiro.design.ai', icon: 'tiktok' },
-  { label: 'YouTube', url: 'https://www.youtube.com/@chihiroDesignAI', icon: 'youtube' },
 ];
 
 const awards = [
@@ -35,54 +28,77 @@ const tools = [
   'Manus AI', 'ChatGPT', 'Gemini',
 ];
 
-export default function ProfilePage() {
-  const [menuOpen, setMenuOpen] = useState(false);
+// アニメーション付き棒グラフ
+function SkillBar({ name, value }: { name: string; value: number }) {
+  const [width, setWidth] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setWidth(value), 100);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [value]);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-white rounded-sm flex items-center justify-center">
-              <span className="text-black font-bold text-sm">千</span>
-            </div>
-            <span className="text-sm font-medium tracking-wide hidden sm:block">chihiro Design PORTFOLIO</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-sm text-white/60 hover:text-white transition-colors tracking-wide">Projects</Link>
-            <Link href="/profile" className="text-sm text-white transition-colors tracking-wide">Profile</Link>
-            <Link href="/contact" className="text-sm text-white/60 hover:text-white transition-colors tracking-wide">Contact</Link>
-          </div>
-          <button className="md:hidden text-white/60" onClick={() => setMenuOpen(!menuOpen)}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
-        </div>
-        {menuOpen && (
-          <div className="md:hidden bg-[#0a0a0a] border-t border-white/5 px-6 py-4 flex flex-col gap-4">
-            <Link href="/" className="text-sm text-white/60">Projects</Link>
-            <Link href="/profile" className="text-sm text-white">Profile</Link>
-            <Link href="/contact" className="text-sm text-white/60">Contact</Link>
-          </div>
-        )}
-      </nav>
+    <div ref={ref}>
+      <div className="flex justify-between text-xs mb-1">
+        <span className="text-white/60">{name}</span>
+        <span className="text-[#3b82f6]">{value}%</span>
+      </div>
+      <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-[#3b82f6] rounded-full transition-all duration-1000 ease-out"
+          style={{ width: `${width}%` }}
+        />
+      </div>
+    </div>
+  );
+}
 
-      {/* Main Content */}
-      <main className="max-w-2xl mx-auto px-6 pt-28 pb-20">
-        {/* Hero */}
-        <div className="flex flex-col items-center text-center mb-12">
-          <div className="w-24 h-24 rounded-full overflow-hidden mb-5 ring-2 ring-white/10">
-            <img src="/images/chihiro-profile.jpg" alt="CHIHIRO" className="w-full h-full object-cover" />
+export default function ProfilePage() {
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] text-white">
+      <Navbar />
+
+      {/* Hero — 背景画像 + 顔写真 */}
+      <section className="relative pt-28 pb-16 flex flex-col items-center text-center px-6 overflow-hidden">
+        {/* 背景画像 */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/chihiroDesign_keyImage.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            opacity: 0.18,
+          }}
+        />
+        <div className="relative z-10 flex flex-col items-center">
+          {/* 顔写真 */}
+          <div className="w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-white/20 shadow-2xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/ProfileImage.png"
+              alt="CHIHIRO"
+              className="w-full h-full object-cover"
+            />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight mb-1">CHIHIRO</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-1">CHIHIRO</h1>
           <p className="text-sm text-white/40 tracking-widest uppercase mb-6">AI Visual Artist</p>
+
+          {/* ボタン */}
           <div className="flex gap-3 flex-wrap justify-center">
-            <Link
-              href="/#artist"
+            <a
+              href="https://www.chihiro.design/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 px-5 py-2.5 rounded-full transition-all"
@@ -94,7 +110,7 @@ export default function ProfilePage() {
                 <rect x="14" y="14" width="7" height="7" />
               </svg>
               Portfolio
-            </Link>
+            </a>
             <a
               href="https://drive.google.com/drive/folders/1wZ0XvBDIDCwPqJsFz2nVypgc4hmN0IPD?usp=sharing"
               target="_blank"
@@ -106,39 +122,43 @@ export default function ProfilePage() {
                 <polyline points="14 2 14 8 20 8" />
                 <line x1="16" y1="13" x2="8" y2="13" />
                 <line x1="16" y1="17" x2="8" y2="17" />
-                <polyline points="10 9 9 9 8 9" />
               </svg>
               CV
             </a>
+            <a
+              href="https://note.com/chihirodesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 px-5 py-2.5 rounded-full transition-all"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+              note
+            </a>
           </div>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <main className="max-w-2xl mx-auto px-6 pb-20">
 
         {/* About */}
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-3">About</h2>
-          <div className="text-sm text-white/70 leading-relaxed space-y-3">
-            <p>AI × 全体設計で、成果に直結する体験をデザインする。画像・動画・3D・AR・UI/UXを横断し、要件定義から制作、運用・プロモーションまでを一気通貫でリードします。</p>
-            <p>全体像を設計し、実務に落とし込み、確実に成果へつなげることを得意としています。</p>
+          <div className="text-sm text-white/70 leading-relaxed space-y-4">
+            <p>私が目指すものは、ただ綺麗なだけのデザインではありません。思わず誰かに話したくなるような、心が躍る、見たことのない「楽しみ」そのものです。その楽しみを届けるためなら、私はどんな手段でも使います。AIも、デザインも、3Dも、映像も、すべてはそのためのパワフルな道具です。</p>
+            <p>プロジェクトの目的を一緒に考え、最適な体験を設計し、世の中に届けるまで。私は常に「どうすればもっと面白くなるか？」「どうすればもっと心が揺さぶられるか？」を問い続けます。</p>
+            <p>テクノロジーとクリエイティブの力で、あなたと一緒に、まだ誰も見たことのない楽しみを創り出せることを楽しみにしています。</p>
           </div>
         </section>
 
         {/* Skill Chart */}
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Skill Chart</h2>
-          <div className="space-y-3">
+          <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
             {skillData.map((skill) => (
-              <div key={skill.name}>
-                <div className="flex justify-between text-xs mb-1">
-                  <span className="text-white/60">{skill.name}</span>
-                  <span className="text-white/30">{skill.value}%</span>
-                </div>
-                <div className="h-1 bg-white/10 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-[#3b82f6] rounded-full"
-                    style={{ width: `${skill.value}%` }}
-                  />
-                </div>
-              </div>
+              <SkillBar key={skill.name} name={skill.name} value={skill.value} />
             ))}
           </div>
         </section>
@@ -167,25 +187,9 @@ export default function ProfilePage() {
             ))}
           </div>
         </section>
-
-        {/* Social Links */}
-        <section className="mb-10">
-          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Links</h2>
-          <div className="flex flex-wrap gap-3">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 transition-all"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

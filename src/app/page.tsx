@@ -77,10 +77,25 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-28 pb-10 text-center px-6">
-        <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white mb-4 leading-none italic">
-          Feel it before you see it.
-        </h1>
+      <section className="relative pt-28 pb-10 text-center px-6 overflow-hidden">
+        {/* Background key image */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/chihiroDesign_keyImage.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            opacity: 0.18,
+          }}
+        />
+        <div className="relative z-10">
+          <h1
+            className="text-5xl md:text-7xl font-black tracking-tight text-white mb-4 leading-none"
+            style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic" }}
+          >
+            Feel it before you see it.
+          </h1>
+        </div>
       </section>
 
       {/* Filter Bar */}
