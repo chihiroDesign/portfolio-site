@@ -220,6 +220,48 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
               {project.description}
             </p>
 
+            {/* Meta info: Date / Tools / Charge / Scale */}
+            {(() => {
+              const date = (project as any).date;
+              const tools = (project as any).tools;
+              const charge = (project as any).charge;
+              const scale = (project as any).developmentScale;
+              const hasMeta = date || (tools && tools.length > 0) || charge || scale;
+              if (!hasMeta) return null;
+              return (
+                <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 mb-6 text-sm">
+                  {date && (
+                    <div>
+                      <dt className="text-white/30 text-xs tracking-widest uppercase mb-0.5">Date</dt>
+                      <dd className="text-white/70">{date}</dd>
+                    </div>
+                  )}
+                  {scale && (
+                    <div>
+                      <dt className="text-white/30 text-xs tracking-widest uppercase mb-0.5">Scale</dt>
+                      <dd className="text-white/70">{scale}</dd>
+                    </div>
+                  )}
+                  {charge && (
+                    <div className="sm:col-span-2">
+                      <dt className="text-white/30 text-xs tracking-widest uppercase mb-0.5">担当</dt>
+                      <dd className="text-white/70">{charge}</dd>
+                    </div>
+                  )}
+                  {tools && tools.length > 0 && (
+                    <div className="sm:col-span-2">
+                      <dt className="text-white/30 text-xs tracking-widest uppercase mb-0.5">Tools</dt>
+                      <dd className="flex flex-wrap gap-1.5 mt-1">
+                        {tools.map((t: string) => (
+                          <span key={t} className="text-xs px-2 py-0.5 rounded bg-white/5 text-white/50 border border-white/10">{t}</span>
+                        ))}
+                      </dd>
+                    </div>
+                  )}
+                </dl>
+              );
+            })()}
+
             {/* Tags */}
             {project.tags && project.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
