@@ -12,8 +12,8 @@ const skillData = [
   { name: 'Visual Design', value: 88 },
   { name: 'Video / Motion', value: 82 },
   { name: 'IP / Character Dev', value: 85 },
-  { name: '3D / AR', value: 75 },
-  { name: 'UX / Strategy', value: 78 },
+  { name: '3D / AR / VR', value: 90 },
+  { name: 'UX / Strategy', value: 98 },
 ];
 
 // --- Animated horizontal bar ---
