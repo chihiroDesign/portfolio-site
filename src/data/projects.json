@@ -399,6 +399,26 @@
     "order": 19
   },
   {
+    "id": "vtuber-youtube-edit",
+    "title": "VTuber事務所YouTube動画編集",
+    "description": "VTuber4人組アイドルグループの動画編集作業。動画構成、編集、テロップ入れ、サウンド編集、サムネイル作成を担当。",
+    "imageUrl": "/images/VTuber事務所YouTube動画編集.png",
+    "category": [
+      "Video Edit"
+    ],
+    "order": 20,
+    "linkDoc": "https://www.youtube.com/@sssspj_official",
+    "link": "https://www.youtube.com/@sssspj_official",
+    "date": "2025/01",
+    "tools": [
+      "DaVinci Resolve",
+      "Premiere Pro",
+      "After Effects"
+    ],
+    "charge": "動画構成、編集、テロップ入れ、サウンド編集、サムネイル作成",
+    "developmentScale": "6名"
+  },
+  {
     "id": "himehina-goods",
     "title": "HIMEHINA7周年LIVE in TDC グッズデザイン",
     "description": "ラバーバンド、アクスタ、ホロ缶バッジ、ミラー、キーホルダー、ほか",
@@ -414,7 +434,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 20
+    "order": 21
   },
   {
     "id": "2d-to-3d-character",
@@ -431,7 +451,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "2名",
-    "order": 21
+    "order": 22
   },
   {
     "id": "thai-vtuber-goods",
@@ -449,7 +469,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 22
+    "order": 23
   },
   {
     "id": "roblox-layered-clothing",
@@ -467,7 +487,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 23
+    "order": 24
   },
   {
     "id": "aoppella-goods",
@@ -485,7 +505,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 24
+    "order": 25
   },
   {
     "id": "roblox-creature",
@@ -502,7 +522,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 25
+    "order": 26
   },
   {
     "id": "vtuber-utayo-pome",
@@ -520,7 +540,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 26
+    "order": 27
   },
   {
     "id": "perfect-sync",
@@ -536,7 +556,7 @@
     ],
     "charge": "3Dモデリング",
     "developmentScale": "5名",
-    "order": 27
+    "order": 28
   },
   {
     "id": "otonashi-venom-bloom",
@@ -556,7 +576,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 28
+    "order": 29
   },
   {
     "id": "otonashi-vibrant-core",
@@ -576,7 +596,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 29
+    "order": 30
   },
   {
     "id": "asia-ip-contest",
@@ -595,7 +615,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 30
+    "order": 31
   },
   {
     "id": "tiktok-ar-boxfish",
@@ -613,7 +633,7 @@
       "3D WORKS",
       "Promotion"
     ],
-    "order": 31
+    "order": 32
   },
   {
     "id": "ai-art-collection",
@@ -632,7 +652,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 32
+    "order": 33
   },
   {
     "id": "samurai-girl-ip",
@@ -649,7 +669,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 33
+    "order": 34
   },
   {
     "id": "otonashi-ai-character",
@@ -666,7 +686,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 34
+    "order": 35
   },
   {
     "id": "location-game-illustration",
@@ -683,7 +703,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "10名",
-    "order": 35
+    "order": 36
   },
   {
     "id": "vket2022-booth",
@@ -701,7 +721,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 36
+    "order": 37
   },
   {
     "id": "shibuya-vision",
@@ -721,7 +741,7 @@
     ],
     "charge": "プロデュース、映像制作",
     "developmentScale": "2名",
-    "order": 37
+    "order": 38
   },
   {
     "id": "avatar-webinar-speaker",
@@ -737,7 +757,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 38
+    "order": 39
   },
   {
     "id": "sapporo-kasaimamori",
@@ -755,7 +775,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "2名",
-    "order": 39
+    "order": 40
   },
   {
     "id": "virtual-market-2021",
@@ -773,7 +793,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 40
+    "order": 41
   },
   {
     "id": "webtoon-kurage",
@@ -789,7 +809,7 @@
     "category": [
       "Manga"
     ],
-    "order": 41
+    "order": 42
   },
   {
     "id": "ooki-na-sakana",
@@ -809,7 +829,7 @@
     "category": [
       "Picture Book"
     ],
-    "order": 42
+    "order": 43
   },
   {
     "id": "character-logo-design",
@@ -825,7 +845,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "1名",
-    "order": 43
+    "order": 44
   },
   {
     "id": "gummy-bear-ip",
@@ -843,7 +863,7 @@
     ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "order": 44,
+    "order": 45,
     "link": "https://store.line.me/stickershop/product/1155260/ja"
   },
   {
@@ -861,7 +881,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 45
+    "order": 46
   },
   {
     "id": "virtual-shirokuma",
@@ -878,7 +898,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 46
+    "order": 47
   },
   {
     "id": "app-ui-ux-design",
@@ -897,7 +917,7 @@
       "2D WORKS",
       "UI/UX"
     ],
-    "order": 47
+    "order": 48
   },
   {
     "id": "quiz-ad-video",
@@ -908,25 +928,5 @@
       "Video Edit"
     ],
     "order": 49
-  },
-  {
-    "id": "vtuber-youtube-edit",
-    "title": "VTuber事務所YouTube動画編集",
-    "description": "VTuber4人組アイドルグループの動画編集作業。動画構成、編集、テロップ入れ、サウンド編集、サムネイル作成を担当。",
-    "imageUrl": "/images/VTuber事務所YouTube動画編集.png",
-    "category": [
-      "Video Edit"
-    ],
-    "order": 50,
-    "linkDoc": "https://www.youtube.com/@sssspj_official",
-    "link": "https://www.youtube.com/@sssspj_official",
-    "date": "2025/01",
-    "tools": [
-      "DaVinci Resolve",
-      "Premiere Pro",
-      "After Effects"
-    ],
-    "charge": "動画構成、編集、テロップ入れ、サウンド編集、サムネイル作成",
-    "developmentScale": "6名"
   }
 ]
