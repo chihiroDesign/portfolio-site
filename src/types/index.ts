@@ -3,7 +3,8 @@ export interface Project {
   title: string;
   category: string | string[];
   description: string;
-  thumbnail: string;
+  thumbnail?: string;
+  imageUrl?: string;
   images?: string[];
   videoUrl?: string;
   tags?: string[];
@@ -11,6 +12,13 @@ export interface Project {
   client?: string;
   tools?: string[];
   order?: number;
+  link?: string;
+  linkMovie?: string;
+  linkDoc?: string;
+  date?: string;
+  charge?: string;
+  developmentScale?: string;
+  featured?: boolean;
 }
 
 export interface ProfileData {
