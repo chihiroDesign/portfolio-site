@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.chihiro.design/ogp.png",
-        width: 1456,
-        height: 816,
+        url: "https://www.chihiro.design/ogp.jpg",
+        width: 1200,
+        height: 630,
         alt: "CHIHIRO | AI Visual Artist Portfolio",
       },
     ],
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CHIHIRO | AI Visual Artist",
     description: "Portfolio showing digital craftsmanship, AI experiments, and visual storytelling.",
-    images: ["https://www.chihiro.design/ogp.png"],
+    images: ["https://www.chihiro.design/ogp.jpg"],
   },
 };
 
