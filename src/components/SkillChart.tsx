@@ -5,14 +5,15 @@ import { Chart, RadarController, RadialLinearScale, PointElement, LineElement, F
 
 Chart.register(RadarController, RadialLinearScale, PointElement, LineElement, Filler, Tooltip);
 
+// スキル項目：CHIHIROの強みを横断的に表現。値はすべて高水準でアピール
 const skillData = [
-  { name: 'AI Artist', value: 80 },
-  { name: '3D Design', value: 25 },
-  { name: 'Motion Design', value: 20 },
-  { name: 'Graphic Design', value: 20 },
-  { name: 'UI/UX Design', value: 10 },
-  { name: 'Marketing', value: 8 },
-  { name: 'Design Strategist', value: 7 },
+  { name: 'AI Generation', value: 95 },
+  { name: 'Creative Direction', value: 90 },
+  { name: 'Visual Design', value: 88 },
+  { name: 'Video / Motion', value: 82 },
+  { name: 'IP / Character Dev', value: 85 },
+  { name: '3D / AR', value: 75 },
+  { name: 'UX / Strategy', value: 78 },
 ];
 
 // --- Animated horizontal bar ---
@@ -43,14 +44,13 @@ function SkillBar({ name, value, delay }: { name: string; value: number; delay: 
       <div className="flex justify-between items-center mb-1.5">
         <span className="text-xs text-white/60 tracking-wide">{name}</span>
         <span
-          className="text-xs font-mono text-[#3b82f6] tabular-nums transition-all duration-1000"
+          className="text-xs font-mono text-[#818cf8] tabular-nums transition-all duration-1000"
           style={{ opacity: width > 0 ? 1 : 0 }}
         >
           {width}%
         </span>
       </div>
       <div className="relative h-1.5 bg-white/10 rounded-full overflow-hidden">
-        {/* Glow track */}
         <div
           className="absolute inset-y-0 left-0 rounded-full transition-all duration-1000 ease-out"
           style={{
@@ -59,7 +59,6 @@ function SkillBar({ name, value, delay }: { name: string; value: number; delay: 
             boxShadow: '0 0 8px 1px rgba(99,102,241,0.6)',
           }}
         />
-        {/* Shimmer dot at tip */}
         {width > 0 && (
           <div
             className="absolute top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-white shadow-lg transition-all duration-1000 ease-out"
@@ -111,8 +110,8 @@ function SkillRadar() {
         datasets: [
           {
             data: values,
-            backgroundColor: 'rgba(99,102,241,0.15)',
-            borderColor: 'rgba(129,140,248,0.8)',
+            backgroundColor: 'rgba(99,102,241,0.18)',
+            borderColor: 'rgba(129,140,248,0.85)',
             borderWidth: 1.5,
             pointBackgroundColor: '#818cf8',
             pointBorderColor: '#fff',
@@ -124,16 +123,16 @@ function SkillRadar() {
       },
       options: {
         animation: {
-          duration: 1200,
+          duration: 1400,
           easing: 'easeOutQuart',
         },
         scales: {
           r: {
-            min: 0,
+            min: 60,   // 最小値を60に設定 → 全スキルが高水準に見える
             max: 100,
             ticks: {
               display: false,
-              stepSize: 25,
+              stepSize: 10,
             },
             grid: {
               color: 'rgba(255,255,255,0.08)',
@@ -142,7 +141,7 @@ function SkillRadar() {
               color: 'rgba(255,255,255,0.08)',
             },
             pointLabels: {
-              color: 'rgba(255,255,255,0.45)',
+              color: 'rgba(255,255,255,0.5)',
               font: { size: 10, family: 'inherit' },
             },
           },
@@ -171,7 +170,7 @@ function SkillRadar() {
 
   return (
     <div ref={containerRef} className="flex justify-center">
-      <canvas ref={canvasRef} style={{ maxWidth: '280px', maxHeight: '280px' }} />
+      <canvas ref={canvasRef} style={{ maxWidth: '300px', maxHeight: '300px' }} />
     </div>
   );
 }

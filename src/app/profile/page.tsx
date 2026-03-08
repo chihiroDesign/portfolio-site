@@ -111,17 +111,18 @@ export default function ProfilePage() {
       <main className="max-w-2xl mx-auto px-6 pb-20">
 
         <section className="mb-10">
+          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Skill Chart</h2>
+          <SkillChartSection />
+        </section>
+
+        <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-3">About</h2>
           <div className="text-sm text-white/70 leading-relaxed space-y-4">
             <p><span className="text-white font-semibold">ココロユサブルな体験を、あらゆる表現で。</span></p>
             <p>私が創り出すのは、単なるデザインや映像ではありません。それは、人の心を揺さぶり、思わず誰かに伝えたくなるような「見たことのない楽しみ」です。</p>
             <p>AI、3D、UI/UX、映像――。私はこれらの技術を自在に組み合わせ、プロジェクトの目的に応じて最適なクリエイティブを設計します。しかし、それらはあくまで手段。私の本当の目的は、あなたのビジネスやプロジェクトに「ココロユサブル」な価値を加え、確実な成果へと繋げることです。</p>
-            <p>企画から実装、そしてその先の運用まで。全体を俦瞰し、一貫した体験を設計することで、まだ誰も見たことのない楽しみを、あなたと共に創り上げます。</p>          </div>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Skill Chart</h2>
-          <SkillChartSection />
+            <p>企画から実装、そしてその先の運用まで。全体を俦瞰し、一貫した体験を設計することで、まだ誰も見たことのない楽しみを、あなたと共に創り上げます。</p>
+          </div>
         </section>
 
         <section className="mb-10">
