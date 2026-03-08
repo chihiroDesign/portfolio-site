@@ -22,7 +22,7 @@
     "id": "manus-music-video",
     "title": "AIエージェントと描くMVの新しい作り方 - 書道パフォーマンスをテーマに描いた 『Tsugihagi Parade / OTONASHI AI Music』制作の全記録 - Manus はクリエイティブに強い素敵な相棒になった",
     "description": "今回は、OTONASHI AI Musicの3rdアルバム『FAKE HEART』より、『Tsugihagi Parade』のMV制作について、まとめていきます。このプロジェクトでは、AIとの協業による新しいMV制作フローに挑戦し、コンセプト設計からわずか4日間で、78カットにも及ぶ全編アニメーションのMVを完成させることができました。",
-    "imageUrl": "/images/tsugihagi-parade-mv.jpg",
+    "imageUrl": "/images/Tsugihagi_Parade_mv_t4-Cover.jpg",
     "linkMovie": "https://youtu.be/FvcgJvPznKA",
     "linkDoc": "https://note.com/chihirodesign/n/n1bb157b66dd5",
     "link": "https://youtu.be/FvcgJvPznKA",
@@ -45,7 +45,7 @@
     "id": "fatal-exception-mv",
     "title": "AIエージェントがMV制作を加速! 「Manus AI × AI Visual Artist」で253シーンの素材を13時間で完全自動生成、そのプロセスを全公開",
     "description": "本記事のハイライトは、253シーンもの膨大な素材制作が、わずか13時間で完全自動化された点です。従来なら数週間を要するこのプロセスを、AIエージェントがどのように変革したのか。その詳細なワークフローと、試行錯誤の道のりを公開します。",
-    "imageUrl": "/images/fatal-exception-mv.jpg",
+    "imageUrl": "/images/FatalException_MV_t2-Cover.jpg",
     "linkMovie": "https://youtu.be/O_-Y_JNKmHE",
     "linkDoc": "https://note.com/chihirodesign/n/nd0b64e6cd1c5",
     "link": "https://youtu.be/O_-Y_JNKmHE",
@@ -68,7 +68,7 @@
     "id": "otonashi-fake-heart",
     "title": "I2Vを使い倒す！歌詞からミュージックビデオを生成したら3日でできた誰でもできるワークフロー♫AI Visual ArtistがGemini×VeoでMV作ったら最高に楽しかった♫（Vanta Black制作秘話）",
     "description": "オリジナルIP「音無むおん」による2年ぶりの新作15曲を収録したメタルロック[FAKE HEART]が2026年2月7日にデジタルリリースしました。今回は代表曲「Vanta Black」のMV制作についてまとめました。",
-    "imageUrl": "/images/vanta-black-mv.jpg",
+    "imageUrl": "/images/VantaBlackMVt4_noTerop-Cover.jpg",
     "linkMovie": "https://youtu.be/vwKgM3gPY0E",
     "linkDoc": "https://note.com/chihirodesign/n/n1630ea30c3c5",
     "link": "https://youtu.be/vwKgM3gPY0E",
@@ -92,7 +92,7 @@
     "id": "otonashi-fake-heart-album",
     "title": "OTONASHI AI Music Third Album「FAKE HEART」",
     "description": "オリジナルIP「音無むおん」による1年ぶりの新作15曲を収録したメタルロック[FAKE HEART]",
-    "imageUrl": "/images/otonashi-fake-heart.webp",
+    "imageUrl": "/images/OTONASHIAIMusicThirdAlbum「FAKEHEART」.webp",
     "linkDoc": "https://linkco.re/TahBRfXV",
     "link": "https://linkco.re/TahBRfXV",
     "category": [
@@ -112,7 +112,7 @@
     "id": "shift-ai-interview-42",
     "title": "50代デザイナーが見た「AI黎明期」の風景——3DCGからメタバースまで手がけた熟練クリエイターの再起動",
     "description": "実績者インタビューVol.42。3DCGからメタバースまで手がけた熟練クリエイターがAIで再起動する軌跡。",
-    "imageUrl": "/images/shift-ai-interview-42.jpg",
+    "imageUrl": "https://service.shift-ai.co.jp/wp-content/uploads/2026/01/7c08c89bed4cc555195d2bd4406a8a70.jpg",
     "link": "https://service.shift-ai.co.jp/result/interview/interview-42/",
     "category": [
       "AI Work"
@@ -131,7 +131,7 @@
     "id": "vtuber-kanon-hibiki",
     "title": "VTuber 叶 響 3Dアバター制作",
     "description": "3面図をベースにした3Dアバター制作。VRM納品。パーフェクトシンク対応",
-    "imageUrl": "/images/vtuber-kano-hibiki.png",
+    "imageUrl": "/images/VTuber叶響3Dアバター制作.png",
     "category": [
       "3D WORKS"
     ],
@@ -149,7 +149,7 @@
     "id": "ai-manga-automation",
     "title": "企業漫画におけるシナリオ→作画の自動生成",
     "description": "シナリオ、設定資料からコマ割り、作画、吹き出しの挿入の一部自動化。",
-    "imageUrl": "/images/kigyo-manga-auto.png",
+    "imageUrl": "/images/企業漫画におけるシナリオ→作画の自動生成.png",
     "category": [
       "AI Work",
       "Manga"
@@ -167,7 +167,7 @@
     "id": "net-oripa-video",
     "title": "ネットオリパ演出動画AI生成",
     "description": "ガチャ演出動画（青→緑→赤→金→虹）の動画生成による映像制作。",
-    "imageUrl": "/images/net-oripa-video.png",
+    "imageUrl": "/images/ネットオリパ演出動画AI生成.png",
     "date": "2026/1",
     "linkMovie": "https://drive.google.com/file/d/1ciAzSwpY9AcRMaRJWW7LG_IDf0AsVckJ/view?usp=drive_link",
     "tools": [
@@ -187,7 +187,7 @@
     "id": "ai-hiyari-hatto",
     "title": "災害ヒヤリハット事例からAIイラスト自動生成",
     "description": "ヒヤリハットの文章事例からプロンプトとイラストを自動生成するWebツールの開発、実験。",
-    "imageUrl": "/images/hiyarihatto-auto.png",
+    "imageUrl": "/images/災害ヒヤリハット事例からAIイラスト自動生成.png",
     "category": [
       "AI Work",
       "UI/UX"
@@ -205,7 +205,7 @@
     "id": "ai-manga-creation",
     "title": "生成AIによる漫画制作「POPPY GUMMY BEARS」",
     "description": "アイディア、シナリオ、クリエイティブまでほぼすべてを生成AIにより作成した漫画。",
-    "imageUrl": "/images/poppy-gummy-bears.png",
+    "imageUrl": "/images/企業漫画におけるシナリオ→作画の自動生成.png",
     "linkDoc": "https://x.com/chihiroDesignAI/status/1918257443379003757",
     "link": "https://x.com/chihiroDesignAI/status/1918257443379003757",
     "category": [
@@ -226,7 +226,7 @@
     "id": "korea-cosme-video",
     "title": "韓国コスメ商品紹介動画の生成 AI制作",
     "description": "商品紹介をベースにした30秒ショート動画の映像制作",
-    "imageUrl": "/images/korea-cosme-video.png",
+    "imageUrl": "/images/韓国コスメ商品紹介動画の生成AI制作.png",
     "linkMovie": "https://drive.google.com/file/d/1-Svy8_pbQuBAyegQYkFUzF0D3JZrNREX/view",
     "link": "https://drive.google.com/file/d/1-Svy8_pbQuBAyegQYkFUzF0D3JZrNREX/view",
     "category": [
@@ -247,7 +247,7 @@
     "id": "cosme-cm-video",
     "title": "コスメ系15秒CM風動画【AI動画】",
     "description": "コスメ系15秒CM風動画【AI動画】ショート ● キャッチコピー / 構成案→ ChatGPT-4o ● 顔画像生成 / 動画生成→ Veo v3/プロントはChatGPT ● サムネイル / 加工→ CapCut ● BGM作曲→ SUNO4.5＋ オリジナル30秒楽曲生成 ● ブランド名・商品名設計→ ChatGPT 　→ 「LUNÉA GLOW（ルネア・グロウ）」という架空ブランドと製品名を設計 ● タイトル / 説明文作成→ ChatGPT",
-    "imageUrl": "https://img.youtube.com/vi/Nv0Sa2Z6jps/maxresdefault.jpg",
+    "imageUrl": "/images/コスメ系15秒CM風動画【AI動画】.png",
     "linkMovie": "https://youtu.be/Nv0Sa2Z6jps",
     "link": "https://www.youtube.com/watch?v=Nv0Sa2Z6jps",
     "category": [
@@ -270,7 +270,7 @@
     "id": "dance-video-unicorn",
     "title": "ダンス動画【AI生成】UN1CØRN｜VELN",
     "description": "架空ダンスユニットによる高速ダンス動画 ・音楽：SUNO 4.5+ ・映像：Veo3 ・構成・脚本：ChatGPT ・編集：CapCut",
-    "imageUrl": "https://img.youtube.com/vi/mEaFk0DJ5fE/maxresdefault.jpg",
+    "imageUrl": "/images/ダンス動画【AI生成】UN1CØRN｜VELN.png",
     "linkMovie": "https://youtu.be/mEaFk0DJ5fE",
     "link": "https://www.youtube.com/watch?v=mEaFk0DJ5fE",
     "category": [
@@ -292,7 +292,7 @@
     "id": "chill-music-aquarium",
     "title": "20曲のチルミュージック × アクアリウムループ映像80分",
     "description": "深夜のチルミュージック、80分のループ動画と20曲の音楽生成 ・音楽：SUNO 4.5+　20曲 ・映像：Veo3　8秒ループ映像 ・構成/脚本：ChatGPT ・編集：CapCut",
-    "imageUrl": "/images/chill-music-aquarium.png",
+    "imageUrl": "/images/20曲のチルミュージック×アクアリウムループ映像80分.png",
     "linkMovie": "https://youtu.be/UXzZlA5zAuc",
     "link": "https://www.youtube.com/watch?v=UXzZlA5zAuc",
     "category": [
@@ -315,7 +315,7 @@
     "id": "kenpon-cm",
     "title": "【見本運輸】AI制作｜企業風ショートアニメCM",
     "description": "生成AIによる企業アニメ風の30秒CMサンプル 。 ▼ 制作プロセス： • 字コンテ / 脚本設計 / コピー : ChatGPT-4o • ビジュアル制作:DALL·E 3（OpenAI） • ロゴデザイン: Adobe Stock • アニメーション :Runway Gen-3 • 編集 / 合成 : Adobe After Effects • ナレーション音声 : ElevenLabs（Voice Design V3） • BGM : AudioStock (arachang / Audiostock) • サムネイル: Adobe Photoshop",
-    "imageUrl": "/images/kenpon-cm.png",
+    "imageUrl": "/images/【見本運輸】AI制作｜企業風ショートアニメCM.png",
     "linkMovie": "https://youtu.be/KU4rljv8Ico",
     "link": "https://www.youtube.com/watch?v=KU4rljv8Ico",
     "category": [
@@ -337,7 +337,7 @@
     "id": "zio-music-video",
     "title": "生成AI ミュージックビデオ制作 🌀 楽曲タイトル｜Title：Hello I'm Zio",
     "description": "生成AIによるミュージックビデオ制作 🌀 楽曲タイトル｜Title：Hello I'm Zio 🧬 アーティスト名｜Artist：Zio（Zero + Input/Output） 🎥 映像制作｜Visuals：AI画像生成 + AIアニメーション + AE / KlingAI, RunWay, Hey Gen, ChatGPT 4-o, DALL-E, SUNO 🎵 ジャンル｜Genre：Japanese-English Hybrid Rock / Anime OP style",
-    "imageUrl": "/images/zio-music-video.png",
+    "imageUrl": "/images/生成AIミュージックビデオ制作🌀楽曲タイトル｜Title：HelloI'mZio.png",
     "linkMovie": "https://youtu.be/pO3LVxz2ZIg",
     "link": "https://www.youtube.com/watch?v=pO3LVxz2ZIg",
     "category": [
@@ -359,7 +359,7 @@
     "id": "ellipsis-dot-dance",
     "title": "ダンス動画【AI生成】Ellipsis / Dot.Dance!",
     "description": "架空ダンスチームのダンス動画",
-    "imageUrl": "/images/ellipsis-dot-dance.png",
+    "imageUrl": "/images/ダンス動画【AI生成】Ellipsis_Dot.Dance!.png",
     "date": "2025/7",
     "linkMovie": "https://youtu.be/3rgev0bOR-g",
     "tools": [
@@ -380,7 +380,7 @@
     "id": "fruit-fish-ar",
     "title": "オリジナルIP「Fruit Fish」によるAR絵本",
     "description": "果実の海で暮らすフルーツフィッシュたちは、海を美しく保つためにみんなで力を合わせています。アボガドイカがナビゲーターとなり、メロンフグ、バナナシャーク、スイカカツオたちと一緒に、楽しく循環を学びながら海の冒険に出発します。",
-    "imageUrl": "/images/fruit-fish-ar.png",
+    "imageUrl": "/images/オリジナルIP「FruitFish」によるAR絵本.png",
     "category": [
       "Picture Book",
       "3D WORKS",
@@ -402,7 +402,7 @@
     "id": "himehina-goods",
     "title": "HIMEHINA7周年LIVE in TDC グッズデザイン",
     "description": "ラバーバンド、アクスタ、ホロ缶バッジ、ミラー、キーホルダー、ほか",
-    "imageUrl": "/images/himehina-7th-goods.png",
+    "imageUrl": "/images/HIMEHINA7周年LIVEinTDCグッズデザイン.png",
     "category": [
       "2D WORKS",
       "Promotion"
@@ -420,7 +420,7 @@
     "id": "2d-to-3d-character",
     "title": "2Dキャラクターイラストの3D化",
     "description": "正面、背面の2面イラストから3D化、アニメーションを付けて動画にする。",
-    "imageUrl": "/images/2d-to-3d-character.png",
+    "imageUrl": "/images/2Dキャラクターイラストの3D化.png",
     "category": [
       "3D WORKS"
     ],
@@ -437,7 +437,7 @@
     "id": "thai-vtuber-goods",
     "title": "タイのVTuber グッズデザイン",
     "description": "アクキー、アクスタ、缶バッジ、クッション、フォトスタンド、タンブラー、扇子、アクリル絵馬などのデザイン業務",
-    "imageUrl": "/images/thai-vtuber-goods.png",
+    "imageUrl": "/images/タイのVTuberグッズデザイン.png",
     "category": [
       "2D WORKS",
       "Promotion"
@@ -455,7 +455,7 @@
     "id": "roblox-layered-clothing",
     "title": "Roblox Layered Clothing Accessory",
     "description": "モデリング→ペイント→Roblox StudioにてSet up→納品",
-    "imageUrl": "/images/roblox-layered.png",
+    "imageUrl": "/images/RobloxLayeredClothingAccessory.png",
     "category": [
       "3D WORKS"
     ],
@@ -473,7 +473,7 @@
     "id": "aoppella-goods",
     "title": "アオペラ -aoppella!?- キャラグッズデザイン",
     "description": "アクキー、アクスタ、缶バッジ、トレーディングカード、シートステッカー、コースター、などのデザイン業務",
-    "imageUrl": "/images/aoppella-goods.png",
+    "imageUrl": "/images/アオペラキャラグッズデザイン.png",
     "category": [
       "2D WORKS",
       "Promotion"
@@ -491,7 +491,7 @@
     "id": "roblox-creature",
     "title": "Roblox用 クリーチャーモデル制作",
     "description": "ラフ画→モデリング→セットアップ→アニメーション→Roblox Studio にて動作テスト→納品",
-    "imageUrl": "/images/roblox-creature.png",
+    "imageUrl": "/images/Roblox用クリーチャーモデル制作.png",
     "category": [
       "3D WORKS"
     ],
@@ -508,7 +508,7 @@
     "id": "vtuber-utayo-pome",
     "title": "VTuber 歌与 ポメ 3Dアバター制作",
     "description": "3面図をベースにした3Dアバター制作。VRM納品。",
-    "imageUrl": "/images/vtuber-utayo-pome.png",
+    "imageUrl": "/images/VTuber歌与ポメ3Dアバター制作.png",
     "category": [
       "3D WORKS"
     ],
@@ -526,7 +526,7 @@
     "id": "perfect-sync",
     "title": "パーフェクトシンク表情52種のシェイプ設定",
     "description": "パーフェクトシンク用に定められている52種のシェイプ表情の作成",
-    "imageUrl": "/images/perfect-sync-52.png",
+    "imageUrl": "/images/パーフェクトシンク用に定められている52種のシェイプ表情の作成.png",
     "category": [
       "3D WORKS"
     ],
@@ -542,7 +542,7 @@
     "id": "otonashi-venom-bloom",
     "title": "OTONASHI AI Music Second Album「VENOM BLOOM」",
     "description": "オリジナルIP「音無むおん」によるAI生成アルバム第2弾",
-    "imageUrl": "/images/otonashi-venom-bloom.webp",
+    "imageUrl": "/images/OTONASHIAIMusicSecondAlbum「VENOMBLOOM」.webp",
     "linkDoc": "https://linkco.re/DvXR7GaP",
     "link": "https://linkco.re/DvXR7GaP",
     "category": [
@@ -562,7 +562,7 @@
     "id": "otonashi-vibrant-core",
     "title": "OTONASHI AI Music First Album「VIBRANT CORE」",
     "description": "オリジナルIP「音無むおん」によるAI生成アルバム第1弾",
-    "imageUrl": "/images/otonashi-vibrant-core.webp",
+    "imageUrl": "/images/OTONASHIAIMusicFirstAlbum「VIBRANTCORE」.webp",
     "linkDoc": "https://linkco.re/62MaeYUQ",
     "link": "https://linkco.re/62MaeYUQ",
     "category": [
@@ -582,7 +582,7 @@
     "id": "asia-ip-contest",
     "title": "アジアIPコンテスト in Tokyo 2023 AIアートキャラクター部門 最優秀賞",
     "description": "2D/3D/AIと3部門あるキャラクター募集からAIアートキャラクター部門にて最優秀賞を受賞",
-    "imageUrl": "/images/asia-ip-contest-2023.png",
+    "imageUrl": "/images/アジアIPコンテストinTokyo2023AIアートキャラクター部門最優秀賞.png",
     "linkMovie": "https://youtu.be/89ETeakr_BI",
     "link": "https://www.youtube.com/watch?v=89ETeakr_BI",
     "category": [
@@ -601,7 +601,7 @@
     "id": "tiktok-ar-boxfish",
     "title": "TikTok ARエフェクト「ar BOXFISH」",
     "description": "TikTok内、3Dモデルを使ったARエフェクト制作",
-    "imageUrl": "/images/tiktok-ar-boxfish.png",
+    "imageUrl": "/images/TikTokARエフェクト「ARBOXFISH」.png",
     "date": "2023/09",
     "tools": [
       "Blender"
@@ -619,7 +619,7 @@
     "id": "ai-art-collection",
     "title": "AI Art Collection",
     "description": "「和装」をテーマにした生成AI画像によるアートコレクション",
-    "imageUrl": "/images/ai-art-collection.png",
+    "imageUrl": "/images/AIArtCollection.png",
     "linkDoc": "https://jp.pinterest.com/chihirodesign3d/japanese-elegance-series/",
     "link": "https://jp.pinterest.com/chihirodesign3d/japanese-elegance-series/",
     "category": [
@@ -638,7 +638,7 @@
     "id": "samurai-girl-ip",
     "title": "オリジナルIP サムライガール",
     "description": "AIによる超高密度の装飾、繊細さとサムライ本来の力強さを融合させた純和風イラストIP",
-    "imageUrl": "/images/samurai-girl.png",
+    "imageUrl": "/images/オリジナルIPサムライガール.png",
     "category": [
       "AI Work",
       "Original"
@@ -655,7 +655,7 @@
     "id": "otonashi-ai-character",
     "title": "オリジナルIP「音無むおん」生成AIによるキャラクターデザイン",
     "description": "2018年より約4年間活動したVTuber音無むおんのAI化プロジェクト",
-    "imageUrl": "/images/muon-character-design.png",
+    "imageUrl": "/images/オリジナルIP「音無むおん」生成AIによるキャラクターデザイン.png",
     "category": [
       "AI Work",
       "Original"
@@ -672,7 +672,7 @@
     "id": "location-game-illustration",
     "title": "位置情報を使ったゲームアプリにおけるイラスト制作",
     "description": "カードデザイン、ガチャアイテムなど2Dイラストのベクターグラフィック制作",
-    "imageUrl": "/images/location-game-illustration.png",
+    "imageUrl": "/images/位置情報を使ったゲームアプリにおけるイラスト制作.png",
     "category": [
       "2D WORKS"
     ],
@@ -689,7 +689,7 @@
     "id": "vket2022-booth",
     "title": "Vket 2022 Winter 企業ブースモデリング",
     "description": "MARY QUANTショップの外観、内観モデリングを担当",
-    "imageUrl": "/images/vket2022-booth.png",
+    "imageUrl": "/images/Vket2022Winter企業ブースモデリング.png",
     "date": "2022/10",
     "tools": [
       "Blender",
@@ -707,7 +707,7 @@
     "id": "shibuya-vision",
     "title": "渋谷スクランブル交差点ビジョンジャック",
     "description": "Virtual Singer音無むおん活動4周年＆アルバムリリースとなる9月6日に実施される大規模プロモーション。",
-    "imageUrl": "/images/shibuya-vision.png",
+    "imageUrl": "/images/渋谷スクランブル交差点ビジョンジャック.png",
     "linkMovie": "https://youtu.be/2d8banGuIIs",
     "link": "https://youtu.be/2d8banGuIIs",
     "category": [
@@ -727,7 +727,7 @@
     "id": "avatar-webinar-speaker",
     "title": "アバターでウェビナースピーカー",
     "description": "既存事業×メタバースにおける未来予想",
-    "imageUrl": "/images/avatar-webinar-speaker.png",
+    "imageUrl": "/images/アバターでウェビナースピーカー.png",
     "date": "2022/9",
     "tools": [
       "Webcam motion capture"
@@ -743,7 +743,7 @@
     "id": "sapporo-kasaimamori",
     "title": "札幌市消防局 かさいまもり VTuber 3Dアバター制作",
     "description": "3面図をベースにした3Dアバター制作。VRM納品。",
-    "imageUrl": "/images/kasai-mamori-vtuber.png",
+    "imageUrl": "/images/札幌市消防局かさいまもりVTuber3Dアバター制作.png",
     "category": [
       "3D WORKS"
     ],
@@ -761,7 +761,7 @@
     "id": "virtual-market-2021",
     "title": "Virtual Market 2021 出展",
     "description": "Virtual Market、Music Vketへの出展。ブース/アバターモデリング、セットアップ",
-    "imageUrl": "/images/virtual-market-2021.png",
+    "imageUrl": "/images/VirtualMarket2021出展.png",
     "date": "2021/10",
     "tools": [
       "Blender",
@@ -779,7 +779,7 @@
     "id": "webtoon-kurage",
     "title": "Webtoon マンガ「クラゲ女子」",
     "description": "クラゲの帽子をかぶったJKたちがラジオディジェイ風にリスナーのリラックス法を紹介する縦型漫画",
-    "imageUrl": "/images/webtoon-kurage.png",
+    "imageUrl": "/images/Webtoonマンガ「クラゲ女子」.png",
     "date": "2019/04",
     "tools": [
       "Blender"
@@ -795,7 +795,7 @@
     "id": "ooki-na-sakana",
     "title": "【おかげ様で10万view達成！】おおきなさかな と ちいさなさかな",
     "description": "黒くて大きな魚「オオカミウオのウォン」は、いつもひとりぼっち。怖い顔で周りのみんなは逃げてしまいます。ある時、食べられそうになっていた所を助けてもらった早口でおしゃべりの「ミナミハコフグのドット」は、親友の忘れ物を届けるため、いっしょに泳ぎ始めます。太陽が照らし、光が差し込み、サンゴ礁が輝く、大きな海で、性格の違う2人が繰り広げるやさしさあふれる友情物語。",
-    "imageUrl": "/images/ooki-na-sakana.png",
+    "imageUrl": "/images/おおきなさかなとちいさなさかな.png",
     "date": "2018/10",
     "linkDoc": "https://ehon.alphapolis.co.jp/content/detail/689",
     "tools": [
@@ -815,7 +815,7 @@
     "id": "character-logo-design",
     "title": "キャラクター系ロゴデザイン",
     "description": "マスコットキャラのデザインとキャラを取り入れたロゴのデザイン",
-    "imageUrl": "/images/character-logo-design.png",
+    "imageUrl": "/images/キャラクター系ロゴデザイン.png",
     "category": [
       "2D WORKS"
     ],
@@ -831,7 +831,7 @@
     "id": "gummy-bear-ip",
     "title": "オリジナルIP グミーベア",
     "description": "LINEスタンプ用にデザインしたベアー型グミの喜怒哀楽を表現したシリーズIP",
-    "imageUrl": "/images/gummy-bear-ip.png",
+    "imageUrl": "/images/オリジナルIPグミーベア.png",
     "category": [
       "2D WORKS",
       "Original"
@@ -849,7 +849,7 @@
     "id": "chibishirokuma-3d",
     "title": "オリジナルIP ちびしろくま",
     "description": "3Dアバター（VRM）として販売用にデザインしたフィギュアスケートを履いた表情豊かなチビキャラIP",
-    "imageUrl": "/images/chibishirokuma.png",
+    "imageUrl": "/images/オリジナルIPちびしろくま.png",
     "date": "2018/04",
     "tools": [
       "Blender"
@@ -866,7 +866,7 @@
     "id": "virtual-shirokuma",
     "title": "オリジナルIP バーチャルしろくま",
     "description": "音無むおんのプロディーサーとしてメタバース上で活動していたIP",
-    "imageUrl": "/images/virtual-shirokuma.png",
+    "imageUrl": "/images/オリジナルIPバーチャルしろくま.png",
     "date": "2018/04",
     "tools": [
       "Blender"
@@ -883,7 +883,7 @@
     "id": "app-ui-ux-design",
     "title": "アプリUI/UXデザイン",
     "description": "調剤薬局向け業務支援アプリのデザイン業務。",
-    "imageUrl": "/images/app-ui-ux-design.png",
+    "imageUrl": "/images/アプリUIUXデザイン.png",
     "date": "2017/03",
     "tools": [
       "Photoshop",
