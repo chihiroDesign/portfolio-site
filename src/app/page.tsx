@@ -73,7 +73,7 @@ export default function Home() {
   }, [activeCategory, sortedProjects]);
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a]">
+    <main className="min-h-screen bg-[#0a0a0a] overflow-x-hidden w-full">
       <Navbar />
 
       {/* Hero Section */}
@@ -114,11 +114,13 @@ export default function Home() {
       </section>
 
       {/* Projects Grid */}
-      <section className="max-w-[1600px] mx-auto px-4 md:px-6 py-8">
-        <MasonryGrid
-          projects={filteredProjects}
-          onProjectClick={setSelectedProject}
-        />
+      <section className="w-full overflow-x-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-8">
+          <MasonryGrid
+            projects={filteredProjects}
+            onProjectClick={setSelectedProject}
+          />
+        </div>
       </section>
 
 

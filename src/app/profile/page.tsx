@@ -28,7 +28,6 @@ const tools = [
   'Manus AI', 'ChatGPT', 'Gemini',
 ];
 
-// アニメーション付き棒グラフ
 function SkillBar({ name, value }: { name: string; value: number }) {
   const [width, setWidth] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -70,29 +69,55 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
 
-      {/* Hero — 背景画像 + 顔写真 */}
-      <section className="relative pt-28 pb-16 flex flex-col items-center text-center px-6 overflow-hidden">
-        {/* 背景グラデーション（黒→グレー） */}
+      <section className="relative pt-32 pb-20 flex flex-col items-center text-center px-6 overflow-hidden">
+        {/* 背景画像（Projectsと同様） */}
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            background: 'linear-gradient(to bottom, #1a1a1a 0%, #0a0a0a 100%)',
+            backgroundImage: "url('/images/chihiroDesign_keyImage.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            opacity: 0.25,
           }}
         />
+        {/* 下方向へ黒くなるグラデーション */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #0a0a0a 100%)',
+          }}
+        />
+
         <div className="relative z-10 flex flex-col items-center">
-          {/* 顔写真 */}
-          <div className="w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-white/20 shadow-2xl">
+          {/* 顔写真：inlineスタイルで確実に円内に収める */}
+          <div
+            style={{
+              width: '128px',
+              height: '128px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              flexShrink: 0,
+              marginBottom: '24px',
+              boxShadow: '0 25px 50px -12px rgba(0,0,0,0.8)',
+              outline: '2px solid rgba(255,255,255,0.2)',
+            }}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/ProfileImage.png"
+              src="/images/ProfileImage.jpg"
               alt="CHIHIRO"
-              className="w-full h-full object-cover"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center 15%',
+                display: 'block',
+              }}
             />
           </div>
           <h1 className="text-4xl font-bold tracking-tight mb-1">CHIHIRO</h1>
           <p className="text-sm text-white/40 tracking-widest uppercase mb-6">AI Visual Artist</p>
 
-          {/* ボタン */}
           <div className="flex gap-3 flex-wrap justify-center">
             <a
               href="https://www.chihiro.design/"
@@ -122,15 +147,12 @@ export default function ProfilePage() {
               </svg>
               CV
             </a>
-
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
       <main className="max-w-2xl mx-auto px-6 pb-20">
 
-        {/* About */}
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-3">About</h2>
           <div className="text-sm text-white/70 leading-relaxed space-y-4">
@@ -140,7 +162,6 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        {/* Skill Chart */}
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Skill Chart</h2>
           <div className="bg-white/5 border border-white/10 rounded-xl p-6 space-y-4">
@@ -150,7 +171,6 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        {/* Tools */}
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Tools & Skills</h2>
           <div className="flex flex-wrap gap-2">
@@ -162,7 +182,6 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        {/* Awards */}
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Awards</h2>
           <div className="space-y-3">
