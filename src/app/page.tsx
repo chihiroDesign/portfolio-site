@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { MasonryGrid } from "@/components/ui/MasonryGrid";
 import { ProjectModal } from "@/components/ProjectModal";
 import { FilterBar } from "@/components/FilterBar";
@@ -9,9 +10,18 @@ import { Footer } from "@/components/Footer";
 import projectsData from "@/data/projects.json";
 import { Project } from "@/types";
 
-export default function Home() {
+function HomeContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const categoryParam = searchParams.get("category") || "All";
+  const [activeCategory, setActiveCategory] = useState(categoryParam);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [activeCategory, setActiveCategory] = useState("All");
+
+  // Sync category from URL
+  useEffect(() => {
+    setActiveCategory(categoryParam);
+  }, [categoryParam]);
 
   // Define the preferred order of categories
   const categoryOrder = [
@@ -37,12 +47,10 @@ export default function Home() {
       }
     });
 
-    // Filter the order list to only include existing ones
     const availableCategories = categoryOrder.filter((cat) =>
       existingCategories.has(cat)
     );
 
-    // Add any categories not in the order list
     existingCategories.forEach((cat) => {
       if (!availableCategories.includes(cat)) {
         availableCategories.push(cat);
@@ -71,6 +79,21 @@ export default function Home() {
       return p.category === activeCategory;
     });
   }, [activeCategory, sortedProjects]);
+
+  // Update URL when category changes
+  const handleCategoryChange = (cat: string) => {
+    setActiveCategory(cat);
+    if (cat === "All") {
+      router.push("/", { scroll: false });
+    } else {
+      router.push(`/?category=${encodeURIComponent(cat)}`, { scroll: false });
+    }
+  };
+
+  // Handle project click — navigate to /works/[id]
+  const handleProjectClick = (project: Project) => {
+    router.push(`/works/${project.id}`);
+  };
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] overflow-x-hidden w-full">
@@ -108,7 +131,7 @@ export default function Home() {
           <FilterBar
             categories={categories}
             activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
+            onCategoryChange={handleCategoryChange}
           />
         </div>
       </section>
@@ -118,26 +141,26 @@ export default function Home() {
         <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-8">
           <MasonryGrid
             projects={filteredProjects}
-            onProjectClick={setSelectedProject}
+            onProjectClick={handleProjectClick}
           />
         </div>
       </section>
 
-
       <Footer />
-
-      {/* Modal */}
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-        onCategoryClick={(cat) => {
-          setActiveCategory(cat);
-          setSelectedProject(null);
-          setTimeout(() => {
-            document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-          }, 100);
-        }}
-      />
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-[#0a0a0a]">
+        <div className="flex items-center justify-center h-screen">
+          <div className="text-white/30 text-sm">Loading...</div>
+        </div>
+      </main>
+    }>
+      <HomeContent />
+    </Suspense>
   );
 }
