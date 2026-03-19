@@ -273,21 +273,33 @@ export default function WorkDetailPage() {
             )}
 
             {/* Share URL */}
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-xs text-white/30 mb-2 tracking-widest uppercase">Share</p>
-              <div className="flex items-center gap-2 bg-white/5 rounded-lg px-4 py-2 border border-white/10">
-                <span className="text-xs text-white/50 flex-1 truncate">
-                  {typeof window !== "undefined" ? window.location.href : `https://www.chihiro.design/works/${project.id}`}
-                </span>
-                <CopyButton id={project.id} />
-              </div>
-            </div>
+            <ShareSection id={project.id} />
           </div>
         </motion.div>
       </div>
 
       <Footer />
     </main>
+  );
+}
+
+function ShareSection({ id }: { id: string }) {
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    setUrl(`${window.location.origin}/works/${id}`);
+  }, [id]);
+
+  return (
+    <div className="mt-8 pt-6 border-t border-white/10">
+      <p className="text-xs text-white/30 mb-2 tracking-widest uppercase">Share</p>
+      <div className="flex items-center gap-2 bg-white/5 rounded-lg px-4 py-2 border border-white/10">
+        <span className="text-xs text-white/50 flex-1 truncate">
+          {url || `https://www.chihiro.design/works/${id}`}
+        </span>
+        <CopyButton id={id} />
+      </div>
+    </div>
   );
 }
 
