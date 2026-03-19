@@ -120,7 +120,7 @@ function HomeContent() {
         />
         <div className="relative z-10">
           <h1 className="text-5xl md:text-7xl font-black tracking-tight text-white mb-4 leading-none">
-            Feel it before you see it.
+            Make it feel.
           </h1>
         </div>
       </section>
