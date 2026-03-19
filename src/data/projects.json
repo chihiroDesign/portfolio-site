@@ -1,5 +1,20 @@
 [
   {
+    "id": "morning-ai-digest",
+    "title": "Morning AI Digest",
+    "description": "Morning AI Digest は、AIとクリエイティブ領域の最新動向を Manus が毎朝収集・整理して届けるデイリーダイジェストです。生成AI、映像、3D、UI/UXなど実務に関わる変化を選び、要点と制作への示唆を短時間でつかめる形にまとめています。",
+    "imageUrl": "/images/note_magazine_header.png",
+    "category": ["AI Work"],
+    "date": "2026/03",
+    "order": 0,
+    "link": "https://note.com/chihirodesign/m/m8bb7c4707db6",
+    "linkDoc": "https://note.com/chihirodesign/m/m8bb7c4707db6",
+    "tools": ["Manus AI"],
+    "charge": "企画",
+    "developmentScale": "1名",
+    "featured": true
+  },
+  {
     "id": "shift-ai-interview",
     "title": "デザイン歴30年の50代がAIで覚醒！地方在住でも東京の案件をフルリモートで総なめにする裏側　【SHIFT AI 実績者インタビュー】",
     "description": "SHIFT AIによる実績者インタビュー。AIを活用したデザイン業務のフルリモート化と案件獲得の裏側を語るインタビュー動画。",
