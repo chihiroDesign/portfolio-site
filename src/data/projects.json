@@ -5,28 +5,64 @@
     "description": "チンアナゴ先生が世の中のストレスをちょっとだけ緩和してくれるゆるいショート動画",
     "imageUrl": "/images/chinanago-sensei.jpg",
     "link": "https://www.tiktok.com/@chihiro.design.ai/collection/%E3%83%81%E3%83%B3%E3%82%A2%E3%83%8A%E3%82%B4%E5%85%88%E7%94%9F%E3%81%AE%E7%8F%8D%E7%94%9F%E7%9B%B8%E8%AB%87-7627697933258148628?is_from_webapp=1&sender_device=pc",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2026/04",
-    "tools": ["Claude Code", "Freepik", "Kling3 Omni", "CapCut"],
+    "tools": [
+      "Claude Code",
+      "Freepik",
+      "Kling3 Omni",
+      "CapCut"
+    ],
     "charge": "企画/AI動画生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 0
+    "order": 1
+  },
+  {
+    "id": "creative-ai-digest-podcast",
+    "title": "Creative AI Digest ／ クリエイターのためのAIニュース",
+    "description": "AIクリエイティブの最前線を、毎朝お届けするニュースダイジェストです。画像・動画・音楽・アバター生成AI、アイウェア、フィジカルAIの最新情報から、クリエイターの権利・著作権の動向まで、制作現場に直結する情報をコンパクトにまとめています。英語圏の一次情報を翻訳・要約してお届けするので、最新AIニュースをいち早くキャッチできます。TechCrunch・The Verge・VentureBeat・各AI企業の公式ブログなど、50以上のソースから毎日厳選。ナビゲーターは、30年以上のデザイン経験を持つAI Visual Artist・CHIHIRO。Runway・Kling・Midjourney・Suno・ElevenLabsなど話題のAIツールから、Adobe・Googleなど大手の最新アップデートまで幅広くカバーします。",
+    "imageUrl": "/images/creative-ai-digest-podcast.png",
+    "category": [
+      "AI Work",
+      "Original"
+    ],
+    "date": "2026/04",
+    "link": "https://open.spotify.com/show/1J74CPllAUYD1n5yPUYmi5?si=gBZZJHq_Touz1-PnEUe_BA",
+    "linkDoc": "https://podcasts.apple.com/jp/podcast/creative-ai-digest-%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEai%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/id1895139803",
+    "tools": [
+      "Claude",
+      "Google Apps Script",
+      "Freepik",
+      "Adobe Photoshop"
+    ],
+    "charge": "企画/制作",
+    "developmentScale": "1名",
+    "featured": true,
+    "order": 2
   },
   {
     "id": "morning-ai-digest",
     "title": "Creative AI Digest",
     "description": "Creative AI Digest は、AIとクリエイティブ領域の最新動向を Claude code が毎朝収集・整理して届けるデイリーダイジェストです。生成AI、映像、3D、UI/UXなど実務に関わる変化を選び、要点と制作への示唆を短時間でつかめる形にまとめています。",
     "imageUrl": "/images/creative-ai-digest-header.jpg",
-    "category": ["AI Work"],
+    "category": [
+      "AI Work"
+    ],
     "date": "2026/03",
-    "order": 1,
     "link": "https://note.com/chihirodesign/m/m8bb7c4707db6",
     "linkDoc": "https://note.com/chihirodesign/m/m8bb7c4707db6",
-    "tools": ["Claude code"],
+    "tools": [
+      "Claude code"
+    ],
     "charge": "企画",
     "developmentScale": "1名",
-    "featured": true
+    "featured": true,
+    "order": 3
   },
   {
     "id": "shift-ai-interview",
@@ -34,13 +70,18 @@
     "description": "SHIFT AIによる実績者インタビュー。AIを活用したデザイン業務のフルリモート化と案件獲得の裏側を語るインタビュー動画。",
     "imageUrl": "https://img.youtube.com/vi/w-pUWzALSN8/maxresdefault.jpg",
     "link": "https://www.youtube.com/watch?v=w-pUWzALSN8",
-    "category": ["AI Work"],
+    "category": [
+      "AI Work"
+    ],
     "date": "2026/02",
-    "tools": ["Gemini", "ChatGPT"],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
     "charge": "インタビュー",
     "developmentScale": "5名",
     "featured": true,
-    "order": 2
+    "order": 4
   },
   {
     "id": "manus-music-video",
@@ -50,13 +91,20 @@
     "linkMovie": "https://youtu.be/FvcgJvPznKA",
     "linkDoc": "https://note.com/chihirodesign/n/n1bb157b66dd5",
     "link": "https://youtu.be/FvcgJvPznKA",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2026/02",
-    "tools": ["Manus AI", "SUNO"],
+    "tools": [
+      "Manus AI",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 3
+    "order": 5
   },
   {
     "id": "fatal-exception-mv",
@@ -66,13 +114,20 @@
     "linkMovie": "https://youtu.be/O_-Y_JNKmHE",
     "linkDoc": "https://note.com/chihirodesign/n/nd0b64e6cd1c5",
     "link": "https://youtu.be/O_-Y_JNKmHE",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2026/02",
-    "tools": ["Manus", "SUNO"],
+    "tools": [
+      "Manus",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 4
+    "order": 6
   },
   {
     "id": "otonashi-fake-heart",
@@ -82,13 +137,21 @@
     "linkMovie": "https://youtu.be/vwKgM3gPY0E",
     "linkDoc": "https://note.com/chihirodesign/n/n1630ea30c3c5",
     "link": "https://youtu.be/vwKgM3gPY0E",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2026/02",
-    "tools": ["Gemini", "Veo", "SUNO"],
+    "tools": [
+      "Gemini",
+      "Veo",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 5
+    "order": 7
   },
   {
     "id": "otonashi-fake-heart-album",
@@ -97,12 +160,18 @@
     "imageUrl": "/images/OTONASHIAIMusicThirdAlbum「FAKEHEART」.webp",
     "linkDoc": "https://linkco.re/TahBRfXV",
     "link": "https://linkco.re/TahBRfXV",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2026/02",
-    "tools": ["Gemini", "SUNO"],
+    "tools": [
+      "Gemini",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 6
+    "order": 8
   },
   {
     "id": "shift-ai-interview-42",
@@ -110,37 +179,54 @@
     "description": "実績者インタビューVol.42。3DCGからメタバースまで手がけた熟練クリエイターがAIで再起動する軌跡。",
     "imageUrl": "https://service.shift-ai.co.jp/wp-content/uploads/2026/01/7c08c89bed4cc555195d2bd4406a8a70.jpg",
     "link": "https://service.shift-ai.co.jp/result/interview/interview-42/",
-    "category": ["AI Work"],
+    "category": [
+      "AI Work"
+    ],
     "date": "2026/01",
-    "tools": ["Gemini", "ChatGPT"],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
     "charge": "インタビュー",
     "developmentScale": "5名",
     "featured": true,
-    "order": 7
+    "order": 9
   },
   {
     "id": "vtuber-kanae-hibiki",
     "title": "VTuber 叶 響 3Dアバター制作",
     "description": "3面図をベースにした3Dアバター制作。VRM納品。パーフェクトシンク対応",
     "imageUrl": "/images/VTuber叶響3Dアバター制作.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2026/01",
-    "tools": ["Blender", "Substance 3D Painter", "Unity"],
+    "tools": [
+      "Blender",
+      "Substance 3D Painter",
+      "Unity"
+    ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 8
+    "order": 10
   },
   {
     "id": "ai-manga-automation",
     "title": "企業漫画におけるシナリオ→作画の自動生成",
     "description": "シナリオ、設定資料からコマ割り、作画、吹き出しの挿入の一部自動化。",
     "imageUrl": "/images/企業漫画におけるシナリオ→作画の自動生成.png",
-    "category": ["AI Work", "Manga"],
+    "category": [
+      "AI Work",
+      "Manga"
+    ],
     "date": "2026/01",
-    "tools": ["Gemini", "ChatGPT"],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
     "charge": "企画/制作/Web開発",
     "developmentScale": "5名",
-    "order": 9
+    "order": 11
   },
   {
     "id": "net-oripa-video",
@@ -149,23 +235,36 @@
     "imageUrl": "/images/ネットオリパ演出動画AI生成.png",
     "date": "2026/1",
     "linkMovie": "https://drive.google.com/file/d/1ciAzSwpY9AcRMaRJWW7LG_IDf0AsVckJ/view?usp=drive_link",
-    "tools": ["GPT", "Gemini", "Veo"],
+    "tools": [
+      "GPT",
+      "Gemini",
+      "Veo"
+    ],
     "charge": "動画素材生成とAfter Effectsによる映像制作",
     "developmentScale": "1名",
-    "category": ["AI Work", "Video Edit"],
-    "order": 10
+    "category": [
+      "AI Work",
+      "Video Edit"
+    ],
+    "order": 12
   },
   {
     "id": "ai-hiyari-hatto",
     "title": "災害ヒヤリハット事例からAIイラスト自動生成",
     "description": "ヒヤリハットの文章事例からプロンプトとイラストを自動生成するWebツールの開発、実験。",
     "imageUrl": "/images/災害ヒヤリハット事例からAIイラスト自動生成.png",
-    "category": ["AI Work", "UI/UX"],
+    "category": [
+      "AI Work",
+      "UI/UX"
+    ],
     "date": "2025/12",
-    "tools": ["Gemini", "ChatGPT"],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
     "charge": "企画/制作/Web開発",
     "developmentScale": "5名",
-    "order": 11
+    "order": 13
   },
   {
     "id": "ai-manga-creation",
@@ -174,12 +273,19 @@
     "imageUrl": "/images/生成AIによる漫画制作POPPY.png",
     "linkDoc": "https://x.com/chihiroDesignAI/status/1918257443379003757",
     "link": "https://x.com/chihiroDesignAI/status/1918257443379003757",
-    "category": ["AI Work", "Manga", "Original"],
+    "category": [
+      "AI Work",
+      "Manga",
+      "Original"
+    ],
     "date": "2025/12",
-    "tools": ["Gemini", "ChatGPT"],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/",
     "developmentScale": "1名",
-    "order": 12
+    "order": 14
   },
   {
     "id": "korea-cosme-video",
@@ -188,12 +294,19 @@
     "imageUrl": "/images/韓国コスメ商品紹介動画の生成AI制作.png",
     "linkMovie": "https://drive.google.com/file/d/1-Svy8_pbQuBAyegQYkFUzF0D3JZrNREX/view",
     "link": "https://drive.google.com/file/d/1-Svy8_pbQuBAyegQYkFUzF0D3JZrNREX/view",
-    "category": ["AI Work", "Video Edit"],
+    "category": [
+      "AI Work",
+      "Video Edit"
+    ],
     "date": "2025/12",
-    "tools": ["Gemini", "SUNO", "AfterEffects"],
+    "tools": [
+      "Gemini",
+      "SUNO",
+      "AfterEffects"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 13
+    "order": 15
   },
   {
     "id": "cosme-cm-video",
@@ -202,13 +315,21 @@
     "imageUrl": "/images/コスメ系15秒CM風動画【AI動画】.png",
     "linkMovie": "https://youtu.be/Nv0Sa2Z6jps",
     "link": "https://www.youtube.com/watch?v=Nv0Sa2Z6jps",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2025/07",
-    "tools": ["Gemini", "ChatGPT", "SUNO"],
+    "tools": [
+      "Gemini",
+      "ChatGPT",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 14
+    "order": 16
   },
   {
     "id": "dance-video-unicorn",
@@ -217,12 +338,20 @@
     "imageUrl": "/images/ダンス動画【AI生成】UN1CØRN｜VELN.png",
     "linkMovie": "https://youtu.be/mEaFk0DJ5fE",
     "link": "https://www.youtube.com/watch?v=mEaFk0DJ5fE",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2025/07",
-    "tools": ["Gemini", "ChatGPT", "SUNO"],
+    "tools": [
+      "Gemini",
+      "ChatGPT",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 15
+    "order": 17
   },
   {
     "id": "chill-music-aquarium",
@@ -231,12 +360,21 @@
     "imageUrl": "/images/20曲のチルミュージック×アクアリウムループ映像80分.png",
     "linkMovie": "https://youtu.be/UXzZlA5zAuc",
     "link": "https://www.youtube.com/watch?v=UXzZlA5zAuc",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2025/07",
-    "tools": ["Gemini", "ChatGPT", "SUNO", "CapCut"],
+    "tools": [
+      "Gemini",
+      "ChatGPT",
+      "SUNO",
+      "CapCut"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 16
+    "order": 18
   },
   {
     "id": "kenpon-cm",
@@ -245,12 +383,20 @@
     "imageUrl": "/images/【見本運輸】AI制作｜企業風ショートアニメCM.png",
     "linkMovie": "https://youtu.be/KU4rljv8Ico",
     "link": "https://www.youtube.com/watch?v=KU4rljv8Ico",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2025/07",
-    "tools": ["Gemini", "SUNO", "AfterEffects"],
+    "tools": [
+      "Gemini",
+      "SUNO",
+      "AfterEffects"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 17
+    "order": 19
   },
   {
     "id": "zio-music-video",
@@ -259,12 +405,20 @@
     "imageUrl": "/images/生成AIミュージックビデオ制作🌀楽曲タイトル｜Title：HelloI'mZio.png",
     "linkMovie": "https://youtu.be/pO3LVxz2ZIg",
     "link": "https://www.youtube.com/watch?v=pO3LVxz2ZIg",
-    "category": ["AI Work", "Video Edit", "Original"],
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
     "date": "2025/07",
-    "tools": ["Gemini", "SUNO", "CapCut"],
+    "tools": [
+      "Gemini",
+      "SUNO",
+      "CapCut"
+    ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 18
+    "order": 20
   },
   {
     "id": "ellipsis-dot-dance",
@@ -273,35 +427,59 @@
     "imageUrl": "/images/ダンス動画【AI生成】Ellipsis_Dot.Dance!.png",
     "date": "2025/7",
     "linkMovie": "https://youtu.be/3rgev0bOR-g",
-    "tools": ["Chat GPT 4o", "Veo3", "Suno4.5+", "CapCut"],
+    "tools": [
+      "Chat GPT 4o",
+      "Veo3",
+      "Suno4.5+",
+      "CapCut"
+    ],
     "charge": "企画/シナリオ/プロンプト/動画編集",
     "developmentScale": "1名",
-    "category": ["AI Work", "Video Edit"],
-    "order": 19
+    "category": [
+      "AI Work",
+      "Video Edit"
+    ],
+    "order": 21
   },
   {
     "id": "fruit-fish-ar",
     "title": "オリジナルIP「Fruit Fish」によるAR絵本",
     "description": "果実の海で暮らすフルーツフィッシュたちは、海を美しく保つためにみんなで力を合わせています。アボガドイカがナビゲーターとなり、メロンフグ、バナナシャーク、スイカカツオたちと一緒に、楽しく循環を学びながら海の冒険に出発します。",
     "imageUrl": "/images/オリジナルIP「FruitFish」によるAR絵本.png",
-    "category": ["Picture Book", "3D WORKS", "2D WORKS", "Original"],
+    "category": [
+      "Picture Book",
+      "3D WORKS",
+      "2D WORKS",
+      "Original"
+    ],
     "date": "2025/2",
-    "tools": ["Blender", "Substance Painter", "Illustrator", "PhotoShop"],
+    "tools": [
+      "Blender",
+      "Substance Painter",
+      "Illustrator",
+      "PhotoShop"
+    ],
     "charge": "キャラデザイン、モデリング、リギング、ライティング",
     "developmentScale": "1名",
-    "order": 20
+    "order": 22
   },
   {
     "id": "vtuber-youtube-edit",
     "title": "VTuber事務所YouTube動画編集",
     "description": "VTuber4人組アイドルグループの動画編集作業。動画構成、編集、テロップ入れ、サウンド編集、サムネイル作成を担当。",
     "imageUrl": "/images/VTuber事務所YouTube動画編集.png",
-    "category": ["Video Edit"],
-    "order": 21,
+    "category": [
+      "Video Edit"
+    ],
+    "order": 23,
     "linkDoc": "https://www.youtube.com/@sssspj_official",
     "link": "https://www.youtube.com/@sssspj_official",
     "date": "2025/01",
-    "tools": ["DaVinci Resolve", "Premiere Pro", "After Effects"],
+    "tools": [
+      "DaVinci Resolve",
+      "Premiere Pro",
+      "After Effects"
+    ],
     "charge": "動画構成、編集、テロップ入れ、サウンド編集、サムネイル作成",
     "developmentScale": "6名"
   },
@@ -310,96 +488,140 @@
     "title": "HIMEHINA7周年LIVE in TDC グッズデザイン",
     "description": "ラバーバンド、アクスタ、ホロ缶バッジ、ミラー、キーホルダー、ほか",
     "imageUrl": "/images/HIMEHINA7周年LIVEinTDCグッズデザイン.png",
-    "category": ["2D WORKS", "Promotion"],
+    "category": [
+      "2D WORKS",
+      "Promotion"
+    ],
     "date": "2024/12",
-    "tools": ["Adobe Illustrator", "Adobe Photoshop"],
+    "tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 22
+    "order": 24
   },
   {
     "id": "2d-to-3d-character",
     "title": "2Dキャラクターイラストの3D化",
     "description": "正面、背面の2面イラストから3D化、アニメーションを付けて動画にする。",
     "imageUrl": "/images/2Dキャラクターイラストの3D化.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2024/11",
-    "tools": ["Blender", "Substance 3D Painter"],
+    "tools": [
+      "Blender",
+      "Substance 3D Painter"
+    ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "2名",
-    "order": 23
+    "order": 25
   },
   {
     "id": "thai-vtuber-goods",
     "title": "タイのVTuber グッズデザイン",
     "description": "アクキー、アクスタ、缶バッジ、クッション、フォトスタンド、タンブラー、扇子、アクリル絵馬などのデザイン業務",
     "imageUrl": "/images/タイのVTuberグッズデザイン.png",
-    "category": ["2D WORKS", "Promotion"],
+    "category": [
+      "2D WORKS",
+      "Promotion"
+    ],
     "date": "2024/08",
-    "tools": ["Adobe Illustrator", "Adobe Photoshop"],
+    "tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 24
+    "order": 26
   },
   {
     "id": "roblox-layered-clothing",
     "title": "Roblox Layered Clothing Accessory",
     "description": "モデリング→ペイント→Roblox StudioにてSet up→納品",
     "imageUrl": "/images/RobloxLayeredClothingAccessory.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2024/06",
-    "tools": ["Blender", "Substance 3D Painter", "Roblox Studio"],
+    "tools": [
+      "Blender",
+      "Substance 3D Painter",
+      "Roblox Studio"
+    ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 25
+    "order": 27
   },
   {
     "id": "aoppella-goods",
     "title": "アオペラ -aoppella!?- キャラグッズデザイン",
     "description": "アクキー、アクスタ、缶バッジ、トレーディングカード、シートステッカー、コースター、などのデザイン業務",
     "imageUrl": "/images/アオペラキャラグッズデザイン.png",
-    "category": ["2D WORKS", "Promotion"],
+    "category": [
+      "2D WORKS",
+      "Promotion"
+    ],
     "date": "2024/06",
-    "tools": ["Adobe Illustrator", "Adobe Photoshop"],
+    "tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 26
+    "order": 28
   },
   {
     "id": "roblox-creature",
     "title": "Roblox用 クリーチャーモデル制作",
     "description": "ラフ画→モデリング→セットアップ→アニメーション→Roblox Studio にて動作テスト→納品",
     "imageUrl": "/images/Roblox用クリーチャーモデル制作.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2024/05",
-    "tools": ["Blender", "Substance 3D Painter"],
+    "tools": [
+      "Blender",
+      "Substance 3D Painter"
+    ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 27
+    "order": 29
   },
   {
     "id": "vtuber-utayo-pome",
     "title": "VTuber 歌与 ポメ 3Dアバター制作",
     "description": "3面図をベースにした3Dアバター制作。VRM納品。",
     "imageUrl": "/images/VTuber歌与ポメ3Dアバター制作.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2024/03",
-    "tools": ["Blender", "Substance 3D Painter", "Unity"],
+    "tools": [
+      "Blender",
+      "Substance 3D Painter",
+      "Unity"
+    ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 28
+    "order": 30
   },
   {
     "id": "perfect-sync",
     "title": "パーフェクトシンク表情52種のシェイプ設定",
     "description": "パーフェクトシンク用に定められている52種のシェイプ表情の作成",
     "imageUrl": "/images/パーフェクトシンク用に定められている52種のシェイプ表情の作成.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2024/03",
-    "tools": ["Blender"],
+    "tools": [
+      "Blender"
+    ],
     "charge": "3Dモデリング",
     "developmentScale": "5名",
-    "order": 29
+    "order": 31
   },
   {
     "id": "otonashi-venom-bloom",
@@ -408,12 +630,18 @@
     "imageUrl": "/images/OTONASHIAIMusicSecondAlbum「VENOMBLOOM」.webp",
     "linkDoc": "https://linkco.re/DvXR7GaP",
     "link": "https://linkco.re/DvXR7GaP",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2024/01",
-    "tools": ["Stable Diffusion", "SUNO"],
+    "tools": [
+      "Stable Diffusion",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 30
+    "order": 32
   },
   {
     "id": "otonashi-vibrant-core",
@@ -422,12 +650,18 @@
     "imageUrl": "/images/OTONASHIAIMusicFirstAlbum「VIBRANTCORE」.webp",
     "linkDoc": "https://linkco.re/62MaeYUQ",
     "link": "https://linkco.re/62MaeYUQ",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2023/12",
-    "tools": ["Stable Diffusion", "SUNO"],
+    "tools": [
+      "Stable Diffusion",
+      "SUNO"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 31
+    "order": 33
   },
   {
     "id": "asia-ip-contest",
@@ -436,12 +670,17 @@
     "imageUrl": "/images/アジアIPコンテストinTokyo2023AIアートキャラクター部門最優秀賞.png",
     "linkMovie": "https://youtu.be/89ETeakr_BI",
     "link": "https://www.youtube.com/watch?v=89ETeakr_BI",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2023/11",
-    "tools": ["Stable Diffusion"],
+    "tools": [
+      "Stable Diffusion"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 32
+    "order": 34
   },
   {
     "id": "tiktok-ar-boxfish",
@@ -449,12 +688,17 @@
     "description": "TikTok内、3Dモデルを使ったARエフェクト制作",
     "imageUrl": "/images/TikTokARエフェクト「ARBOXFISH」.png",
     "date": "2023/09",
-    "tools": ["Blender"],
+    "tools": [
+      "Blender"
+    ],
     "charge": "3Dモデリング",
     "developmentScale": "1名",
     "linkDoc": "https://vt.tiktok.com/ZSNNB3vHp/",
-    "category": ["3D WORKS", "Promotion"],
-    "order": 33
+    "category": [
+      "3D WORKS",
+      "Promotion"
+    ],
+    "order": 35
   },
   {
     "id": "ai-art-collection",
@@ -463,48 +707,68 @@
     "imageUrl": "/images/AIArtCollection.png",
     "linkDoc": "https://jp.pinterest.com/chihirodesign3d/japanese-elegance-series/",
     "link": "https://jp.pinterest.com/chihirodesign3d/japanese-elegance-series/",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2023/06",
-    "tools": ["Stable Diffusion"],
+    "tools": [
+      "Stable Diffusion"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 34
+    "order": 36
   },
   {
     "id": "samurai-girl-ip",
     "title": "オリジナルIP サムライガール",
     "description": "AIによる超高密度の装飾、繊細さとサムライ本来の力強さを融合させた純和風イラストIP",
     "imageUrl": "/images/オリジナルIPサムライガール.png",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2023/06",
-    "tools": ["Stable Diffusion"],
+    "tools": [
+      "Stable Diffusion"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 35
+    "order": 37
   },
   {
     "id": "otonashi-ai-character",
     "title": "オリジナルIP「音無むおん」生成AIによるキャラクターデザイン",
     "description": "2018年より約4年間活動したVTuber音無むおんのAI化プロジェクト",
     "imageUrl": "/images/オリジナルIP「音無むおん」生成AIによるキャラクターデザイン.png",
-    "category": ["AI Work", "Original"],
+    "category": [
+      "AI Work",
+      "Original"
+    ],
     "date": "2023/06",
-    "tools": ["Stable Diffusion"],
+    "tools": [
+      "Stable Diffusion"
+    ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 36
+    "order": 38
   },
   {
     "id": "location-game-illustration",
     "title": "位置情報を使ったゲームアプリにおけるイラスト制作",
     "description": "カードデザイン、ガチャアイテムなど2Dイラストのベクターグラフィック制作",
     "imageUrl": "/images/位置情報を使ったゲームアプリにおけるイラスト制作.png",
-    "category": ["2D WORKS"],
+    "category": [
+      "2D WORKS"
+    ],
     "date": "2023/06",
-    "tools": ["Adobe Illustrator", "Adobe Photoshop"],
+    "tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "10名",
-    "order": 37
+    "order": 39
   },
   {
     "id": "vket2022-booth",
@@ -512,11 +776,17 @@
     "description": "MARY QUANTショップの外観、内観モデリングを担当",
     "imageUrl": "/images/Vket2022Winter企業ブースモデリング.png",
     "date": "2022/10",
-    "tools": ["Blender", "Substance Painter", "Unity"],
+    "tools": [
+      "Blender",
+      "Substance Painter",
+      "Unity"
+    ],
     "charge": "モデリング、リギング、ライティング",
     "developmentScale": "5名",
-    "category": ["3D WORKS"],
-    "order": 38
+    "category": [
+      "3D WORKS"
+    ],
+    "order": 40
   },
   {
     "id": "shibuya-vision",
@@ -525,12 +795,18 @@
     "imageUrl": "/images/渋谷スクランブル交差点ビジョンジャック.png",
     "linkMovie": "https://youtu.be/2d8banGuIIs",
     "link": "https://youtu.be/2d8banGuIIs",
-    "category": ["Video Edit", "Promotion"],
+    "category": [
+      "Video Edit",
+      "Promotion"
+    ],
     "date": "2022/09",
-    "tools": ["Adobe Illustrator", "Adobe Photoshop"],
+    "tools": [
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ],
     "charge": "プロデュース、映像制作",
     "developmentScale": "2名",
-    "order": 39
+    "order": 41
   },
   {
     "id": "avatar-webinar-speaker",
@@ -538,33 +814,48 @@
     "description": "既存事業×メタバースにおける未来予想",
     "imageUrl": "/images/アバターでウェビナースピーカー.png",
     "date": "2022/9",
-    "tools": ["Webcam motion capture"],
+    "tools": [
+      "Webcam motion capture"
+    ],
     "charge": "コンサルティング",
     "developmentScale": "1名",
-    "category": ["3D WORKS"],
-    "order": 40
+    "category": [
+      "3D WORKS"
+    ],
+    "order": 42
   },
   {
     "id": "sapporo-kasaimamori",
     "title": "札幌市消防局 かさいまもり VTuber 3Dアバター制作",
     "description": "3面図をベースにした3Dアバター制作。VRM納品。",
     "imageUrl": "/images/札幌市消防局かさいまもりVTuber3Dアバター制作.png",
-    "category": ["3D WORKS"],
+    "category": [
+      "3D WORKS"
+    ],
     "date": "2022/08",
-    "tools": ["Blender", "Substance 3D Painter", "Unity"],
+    "tools": [
+      "Blender",
+      "Substance 3D Painter",
+      "Unity"
+    ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "2名",
-    "order": 41
+    "order": 43
   },
   {
     "id": "quiz-ad-video",
     "title": "みんなで早押しクイズ 広告動画作成",
     "description": "Ad広告動画の制作",
     "imageUrl": "/images/quiz-ad-video.png",
-    "category": ["Video Edit"],
-    "order": 42,
+    "category": [
+      "Video Edit"
+    ],
+    "order": 44,
     "date": "2022/01",
-    "tools": ["Photoshop", "After Effects"],
+    "tools": [
+      "Photoshop",
+      "After Effects"
+    ],
     "charge": "動画編集",
     "scale": "2名"
   },
@@ -574,11 +865,17 @@
     "description": "Virtual Market、Music Vketへの出展。ブース/アバターモデリング、セットアップ",
     "imageUrl": "/images/VirtualMarket2021出展.png",
     "date": "2021/10",
-    "tools": ["Blender", "Substance Painter", "Unity"],
+    "tools": [
+      "Blender",
+      "Substance Painter",
+      "Unity"
+    ],
     "charge": "モデリング、リギング、ライティング",
     "developmentScale": "1名",
-    "category": ["3D WORKS"],
-    "order": 43
+    "category": [
+      "3D WORKS"
+    ],
+    "order": 45
   },
   {
     "id": "webtoon-kurage",
@@ -586,11 +883,15 @@
     "description": "クラゲの帽子をかぶったJKたちがラジオディジェイ風にリスナーのリラックス法を紹介する縦型漫画",
     "imageUrl": "/images/Webtoonマンガ「クラゲ女子」.png",
     "date": "2019/04",
-    "tools": ["Blender"],
+    "tools": [
+      "Blender"
+    ],
     "charge": "3Dモデリング、漫画制作",
     "developmentScale": "1名",
-    "category": ["Manga"],
-    "order": 44
+    "category": [
+      "Manga"
+    ],
+    "order": 46
   },
   {
     "id": "ooki-na-sakana",
@@ -599,36 +900,52 @@
     "imageUrl": "/images/おおきなさかなとちいさなさかな.png",
     "date": "2018/10",
     "linkDoc": "https://ehon.alphapolis.co.jp/content/detail/689",
-    "tools": ["Blender", "Substance Painter", "Photoshop"],
+    "tools": [
+      "Blender",
+      "Substance Painter",
+      "Photoshop"
+    ],
     "charge": "モデリング、リギング、ライティング、デザイン",
     "developmentScale": "1名",
     "link": "https://ehon.alphapolis.co.jp/content/detail/689",
-    "category": ["Picture Book"],
-    "order": 45
+    "category": [
+      "Picture Book"
+    ],
+    "order": 47
   },
   {
     "id": "character-logo-design",
     "title": "キャラクター系ロゴデザイン",
     "description": "マスコットキャラのデザインとキャラを取り入れたロゴのデザイン",
     "imageUrl": "/images/キャラクター系ロゴデザイン.png",
-    "category": ["2D WORKS"],
+    "category": [
+      "2D WORKS"
+    ],
     "date": "2018/04",
-    "tools": ["Adobe Illustrator"],
+    "tools": [
+      "Adobe Illustrator"
+    ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "1名",
-    "order": 46
+    "order": 48
   },
   {
     "id": "gummy-bear-ip",
     "title": "オリジナルIP グミーベア",
     "description": "LINEスタンプ用にデザインしたベアー型グミの喜怒哀楽を表現したシリーズIP",
     "imageUrl": "/images/オリジナルIPグミーベア.png",
-    "category": ["2D WORKS", "Original"],
+    "category": [
+      "2D WORKS",
+      "Original"
+    ],
     "date": "2018/04",
-    "tools": ["Blender", "PhotoShop"],
+    "tools": [
+      "Blender",
+      "PhotoShop"
+    ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "order": 47,
+    "order": 49,
     "link": "https://store.line.me/stickershop/product/1155260/ja"
   },
   {
@@ -637,11 +954,16 @@
     "description": "3Dアバター（VRM）として販売用にデザインしたフィギュアスケートを履いた表情豊かなチビキャラIP",
     "imageUrl": "/images/オリジナルIPちびしろくま.png",
     "date": "2018/04",
-    "tools": ["Blender"],
+    "tools": [
+      "Blender"
+    ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "category": ["3D WORKS", "Original"],
-    "order": 48
+    "category": [
+      "3D WORKS",
+      "Original"
+    ],
+    "order": 50
   },
   {
     "id": "virtual-shirokuma",
@@ -649,11 +971,16 @@
     "description": "音無むおんのプロディーサーとしてメタバース上で活動していたIP",
     "imageUrl": "/images/オリジナルIPバーチャルしろくま.png",
     "date": "2018/04",
-    "tools": ["Blender"],
+    "tools": [
+      "Blender"
+    ],
     "charge": "3Dアバター",
     "developmentScale": "1名",
-    "category": ["3D WORKS", "Original"],
-    "order": 49
+    "category": [
+      "3D WORKS",
+      "Original"
+    ],
+    "order": 51
   },
   {
     "id": "app-ui-ux-design",
@@ -661,10 +988,17 @@
     "description": "調剤薬局向け業務支援アプリのデザイン業務。",
     "imageUrl": "/images/アプリUIUXデザイン.png",
     "date": "2017/03",
-    "tools": ["Photoshop", "Illustrator", "Figma"],
+    "tools": [
+      "Photoshop",
+      "Illustrator",
+      "Figma"
+    ],
     "charge": "UI/UX、モックアップ、プロトタイプ",
     "developmentScale": "1名",
-    "category": ["2D WORKS", "UI/UX"],
-    "order": 50
+    "category": [
+      "2D WORKS",
+      "UI/UX"
+    ],
+    "order": 52
   }
 ]
