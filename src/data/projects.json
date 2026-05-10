@@ -1,7 +1,7 @@
 [
   {
     "id": "creative-ai-digest-podcast",
-    "title": "Creative AI Digest ／ クリエイターのためのAIニュース",
+    "title": "Podcast ／Creative AI Digest ／ クリエイターのためのAIニュース",
     "description": "AIクリエイティブの最前線を、毎朝お届けするニュースダイジェストです。画像・動画・音楽・アバター生成AI、アイウェア、フィジカルAIの最新情報から、クリエイターの権利・著作権の動向まで、制作現場に直結する情報をコンパクトにまとめています。英語圏の一次情報を翻訳・要約してお届けするので、最新AIニュースをいち早くキャッチできます。TechCrunch・The Verge・VentureBeat・各AI企業の公式ブログなど、50以上のソースから毎日厳選。ナビゲーターは、30年以上のデザイン経験を持つAI Visual Artist・CHIHIRO。Runway・Kling・Midjourney・Suno・ElevenLabsなど話題のAIツールから、Adobe・Googleなど大手の最新アップデートまで幅広くカバーします。",
     "imageUrl": "/images/creative-ai-digest-podcast.png",
     "category": [
@@ -24,7 +24,7 @@
   },
   {
     "id": "chinanago-sensei",
-    "title": "チンアナゴ先生の珍生相談",
+    "title": "ショート動画シリーズ／チンアナゴ先生の珍生相談",
     "description": "チンアナゴ先生が世の中のストレスをちょっとだけ緩和してくれるゆるいショート動画",
     "imageUrl": "/images/chinanago-sensei.jpg",
     "link": "https://www.tiktok.com/@chihiro.design.ai/collection/%E3%83%81%E3%83%B3%E3%82%A2%E3%83%8A%E3%82%B4%E5%85%88%E7%94%9F%E3%81%AE%E7%8F%8D%E7%94%9F%E7%9B%B8%E8%AB%87-7627697933258148628?is_from_webapp=1&sender_device=pc",
@@ -47,7 +47,7 @@
   },
   {
     "id": "morning-ai-digest",
-    "title": "Creative AI Digest",
+    "title": "Note記事／Creative AI Digest",
     "description": "Creative AI Digest は、AIとクリエイティブ領域の最新動向を Claude code が毎朝収集・整理して届けるデイリーダイジェストです。生成AI、映像、3D、UI/UXなど実務に関わる変化を選び、要点と制作への示唆を短時間でつかめる形にまとめています。",
     "imageUrl": "/images/creative-ai-digest-header.jpg",
     "category": [
