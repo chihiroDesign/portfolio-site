@@ -119,8 +119,8 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
       whileHover={{ y: -4, scale: 1.01 }}
       transition={{ duration: 0.25, ease: "easeOut" }}
     >
-      {/* Thumbnail area */}
-      <div className="relative w-full">
+      {/* Thumbnail area — overflow-hidden で画像ホバーズームのはみ出しをクリップ */}
+      <div className="relative w-full overflow-hidden">
         {showImage ? (
           // Real image — let it define its own height naturally
           // eslint-disable-next-line @next/next/no-img-element
@@ -153,8 +153,8 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </div>
         )}
 
-        {/* Hover overlay with info — 下を数px延長して画像ホバーズーム時の隙間を防ぐ */}
-        <div className="absolute inset-x-0 top-0 -bottom-2 bg-gradient-to-t from-black/95 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+        {/* Hover overlay with info */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
           <motion.h3
             layoutId={`title-${project.id}`}
             className="text-sm font-bold text-white mb-1 line-clamp-2"
