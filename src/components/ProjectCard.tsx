@@ -92,6 +92,8 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
 
   const imageSrc = getBestImageSrc(project);
   const hasVideo = isVideoLink(project.link) || isVideoLink(project.linkMovie);
+  const hasAudio = !!(project as any).audioUrl;
+  const showPlayOverlay = hasVideo || hasAudio;
   const placeholderHeight = getPlaceholderHeight(project.id);
 
   // Fallback: try hqdefault if maxresdefault fails
@@ -142,8 +144,8 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </div>
         )}
 
-        {/* Video play icon overlay */}
-        {hasVideo && (
+        {/* Play icon overlay (video or audio) */}
+        {showPlayOverlay && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="bg-black/50 backdrop-blur-sm p-3 rounded-full border border-white/20 group-hover:bg-black/70 transition-colors">
               <Play className="w-7 h-7 text-white fill-white" />
