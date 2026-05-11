@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Play, BookOpen, Music } from "lucide-react";
 import { Project } from "@/types";
@@ -123,6 +123,8 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
 
   // 画像URL
   const imageUrl = (project as any).imageUrl || project.thumbnail;
+  const audioUrl = (project as any).audioUrl;
+  const linkDocLabel = (project as any).linkDocLabel;
 
   // リンク一覧を収集
   const linkDoc = (project as any).linkDoc;
@@ -176,7 +178,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
             <X size={16} />
           </button>
 
-          {/* Media — 動画embed or フル画像（高さ制限なし） */}
+          {/* Media — 動画embed / 音声プレイヤー / フル画像 */}
           {embedUrl ? (
             <div className="relative w-full aspect-video bg-black rounded-t-2xl overflow-hidden">
               <iframe
@@ -185,6 +187,10 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
+            </div>
+          ) : audioUrl ? (
+            <div className="rounded-t-2xl overflow-hidden">
+              <AudioPlayer src={audioUrl} poster={imageUrl} alt={project.title} />
             </div>
           ) : imageUrl ? (
             <div className="relative w-full rounded-t-2xl overflow-hidden">
@@ -201,7 +207,8 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
           {links.length > 0 && (
             <div className="flex flex-wrap gap-3 px-6 py-4 border-b border-white/5">
               {links.map((url) => {
-                const { label, icon } = getLinkInfo(url);
+                const info = getLinkInfo(url);
+                const label = url === linkDoc && linkDocLabel ? linkDocLabel : info.label;
                 return (
                   <a
                     key={url}
@@ -210,7 +217,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
                   >
-                    {icon}
+                    {info.icon}
                     {label}
                   </a>
                 );
@@ -302,5 +309,49 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
         </motion.div>
       </motion.div>
     </AnimatePresence>
+  );
+}
+
+function AudioPlayer({ src, poster, alt }: { src: string; poster?: string; alt: string }) {
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlayClick = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    a.play().catch(() => {
+      /* autoplay blocked etc. — user can use controls bar */
+    });
+  };
+
+  return (
+    <div className="relative w-full bg-black overflow-hidden">
+      {poster && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={poster} alt={alt} className="w-full h-auto block" />
+      )}
+      {!playing && (
+        <button
+          type="button"
+          onClick={handlePlayClick}
+          aria-label="再生"
+          className="absolute inset-0 flex items-center justify-center group"
+        >
+          <span className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center transition-transform group-hover:scale-110 group-hover:bg-black/80 shadow-xl">
+            <Play size={40} className="text-white ml-1" fill="white" />
+          </span>
+        </button>
+      )}
+      <audio
+        ref={audioRef}
+        src={src}
+        controls
+        preload="metadata"
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={() => setPlaying(false)}
+        className="w-full block bg-black"
+      />
+    </div>
   );
 }

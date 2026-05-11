@@ -15,6 +15,8 @@ export interface Project {
   link?: string;
   linkMovie?: string;
   linkDoc?: string;
+  linkDocLabel?: string;
+  audioUrl?: string;
   date?: string;
   charge?: string;
   developmentScale?: string;

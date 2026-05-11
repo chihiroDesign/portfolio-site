@@ -4,6 +4,7 @@
     "title": "AIでつくる音声番組「KURAGE RADIO」",
     "description": "みなさーん、こんにちはー! アカクラゲのあーちゃんでーす!\nAIでつくる音声番組『KURAGE RADIO』、今日もはじまっちゃいましたー!\nこの番組はね、健康・暮らし・好きなもの・動物・食べもの・旅、 いろんな話題で、 みなさんに癒しと元気をお届けしていく番組でーす!\n私あーちゃんがゆるーくおしゃべりしていきまーす!",
     "imageUrl": "/images/kurage-radio.png",
+    "audioUrl": "/audio/kurage-radio-ep01.mp3",
     "category": [
       "AI Work",
       "Original"
@@ -11,6 +12,7 @@
     "date": "2026/05",
     "link": "https://note.com/chihirodesign/m/mdacdc02e79d6",
     "linkDoc": "https://note.com/chihirodesign/m/mdacdc02e79d6",
+    "linkDocLabel": "見に行く",
     "tools": [
       "Claude Code",
       "ElevenLabs",
