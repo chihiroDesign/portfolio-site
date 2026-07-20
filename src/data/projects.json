@@ -35,7 +35,7 @@
     "date": "2026/06",
     "link": "https://note.com/chihirodesign/m/m93ab8e3ccb1b",
     "linkDoc": "https://note.com/chihirodesign/m/m93ab8e3ccb1b",
-    "linkDocLabel": "詳細を見る",
+    "linkDocLabel": "Note記事",
     "tools": [
       "Claude Code",
       "Note"
@@ -58,7 +58,7 @@
     "date": "2026/05",
     "link": "https://note.com/chihirodesign/m/mdacdc02e79d6",
     "linkDoc": "https://note.com/chihirodesign/m/mdacdc02e79d6",
-    "linkDocLabel": "詳細を見る",
+    "linkDocLabel": "Note記事",
     "tools": [
       "Claude Code",
       "ElevenLabs",
@@ -120,19 +120,25 @@
   },
   {
     "id": "morning-ai-digest",
-    "title": "Note記事／Creative AI Digest",
-    "description": "Creative AI Digest は、AIとクリエイティブ領域の最新動向を Claude code が毎朝収集・整理して届けるデイリーダイジェストです。生成AI、映像、3D、UI/UXなど実務に関わる変化を選び、要点と制作への示唆を短時間でつかめる形にまとめています。",
-    "imageUrl": "/images/creative-ai-digest-header.jpg",
+    "title": "Creative AI Digest / クリエイターのためのAIニュース",
+    "description": "AIクリエイティブの最前線を、毎朝お届けするニュースダイジェストです。画像・動画・音楽・アバター生成AIの最新情報から、クリエイターの権利・著作権の動向まで、制作現場に直結する情報をコンパクトにまとめています。英語圏の一次情報を翻訳・要約してお届けするので、最新AIニュースをいち早くキャッチできます。TechCrunch・The Verge・VentureBeat・各AI企業の公式ブログなど、50以上のソースから毎日厳選。ナビゲーターは、30年以上のデザイン経験を持つAI Visual Artist・CHIHIRO。Runway・Kling・Midjourney・Suno・ElevenLabsなど話題のAIツールから、Adobe・Googleなど大手の最新アップデートまで幅広くカバーします。「使える情報を、耳から」をコンセプトに、毎朝配信中。",
+    "imageUrl": "/images/Creative_AI_Digest.png",
     "category": [
-      "AI Work"
+      "AI Work",
+      "Original"
     ],
     "date": "2026/03",
-    "link": "https://note.com/chihirodesign/m/m8bb7c4707db6",
+    "link": "https://www.youtube.com/watch?v=2UVT3nf0Yc4&list=PLViELh2vlEQp7pW6SfDRA-rBQHWw79dIU",
+    "linkMovie": "https://www.youtube.com/watch?v=2UVT3nf0Yc4&list=PLViELh2vlEQp7pW6SfDRA-rBQHWw79dIU",
     "linkDoc": "https://note.com/chihirodesign/m/m8bb7c4707db6",
+    "linkDocLabel": "Note記事",
     "tools": [
-      "Claude code"
+      "Claude Code",
+      "Magnific",
+      "ElevenLabs",
+      "Note"
     ],
-    "charge": "企画",
+    "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
     "order": 6
