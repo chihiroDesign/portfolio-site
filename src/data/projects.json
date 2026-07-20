@@ -72,30 +72,6 @@
     "order": 3
   },
   {
-    "id": "creative-ai-digest-podcast",
-    "title": "Podcast ／Creative AI Digest ／ クリエイターのためのAIニュース",
-    "description": "AIクリエイティブの最前線を、毎朝お届けするニュースダイジェストです。画像・動画・音楽・アバター生成AI、アイウェア、フィジカルAIの最新情報から、クリエイターの権利・著作権の動向まで、制作現場に直結する情報をコンパクトにまとめています。英語圏の一次情報を翻訳・要約してお届けするので、最新AIニュースをいち早くキャッチできます。TechCrunch・The Verge・VentureBeat・各AI企業の公式ブログなど、50以上のソースから毎日厳選。ナビゲーターは、30年以上のデザイン経験を持つAI Visual Artist・CHIHIRO。Runway・Kling・Midjourney・Suno・ElevenLabsなど話題のAIツールから、Adobe・Googleなど大手の最新アップデートまで幅広くカバーします。",
-    "imageUrl": "/images/creative-ai-digest-podcast.png",
-    "audioUrl": "/audio/creative-ai-digest-2026-05-11.mp3",
-    "category": [
-      "AI Work",
-      "Original"
-    ],
-    "date": "2026/04",
-    "link": "https://open.spotify.com/show/1J74CPllAUYD1n5yPUYmi5?si=gBZZJHq_Touz1-PnEUe_BA",
-    "linkDoc": "https://podcasts.apple.com/jp/podcast/creative-ai-digest-%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEai%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/id1895139803",
-    "tools": [
-      "Claude",
-      "Google Apps Script",
-      "Freepik",
-      "Adobe Photoshop"
-    ],
-    "charge": "企画/制作",
-    "developmentScale": "1名",
-    "featured": true,
-    "order": 4
-  },
-  {
     "id": "chinanago-sensei",
     "title": "ショート動画シリーズ／チンアナゴ先生の珍生相談",
     "description": "チンアナゴ先生が世の中のストレスをちょっとだけ緩和してくれるゆるいショート動画",
@@ -116,7 +92,7 @@
     "charge": "企画/AI動画生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 5
+    "order": 4
   },
   {
     "id": "morning-ai-digest",
@@ -132,6 +108,16 @@
     "linkMovie": "https://www.youtube.com/watch?v=2UVT3nf0Yc4&list=PLViELh2vlEQp7pW6SfDRA-rBQHWw79dIU",
     "linkDoc": "https://note.com/chihirodesign/m/m8bb7c4707db6",
     "linkDocLabel": "Note記事",
+    "extraLinks": [
+      {
+        "label": "Spotify",
+        "url": "https://open.spotify.com/show/1J74CPllAUYD1n5yPUYmi5?si=gBZZJHq_Touz1-PnEUe_BA"
+      },
+      {
+        "label": "Podcasts",
+        "url": "https://podcasts.apple.com/jp/podcast/creative-ai-digest-%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%82%BF%E3%83%BC%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEai%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/id1895139803"
+      }
+    ],
     "tools": [
       "Claude Code",
       "Magnific",
@@ -141,7 +127,7 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 6
+    "order": 5
   },
   {
     "id": "shift-ai-interview",
@@ -160,7 +146,7 @@
     "charge": "インタビュー",
     "developmentScale": "5名",
     "featured": true,
-    "order": 7
+    "order": 6
   },
   {
     "id": "manus-music-video",
@@ -183,7 +169,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 8
+    "order": 7
   },
   {
     "id": "fatal-exception-mv",
@@ -206,7 +192,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 9
+    "order": 8
   },
   {
     "id": "otonashi-fake-heart",
@@ -230,7 +216,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 10
+    "order": 9
   },
   {
     "id": "otonashi-fake-heart-album",
@@ -250,7 +236,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 11
+    "order": 10
   },
   {
     "id": "shift-ai-interview-42",
@@ -269,7 +255,7 @@
     "charge": "インタビュー",
     "developmentScale": "5名",
     "featured": true,
-    "order": 12
+    "order": 11
   },
   {
     "id": "vtuber-kanae-hibiki",
@@ -287,7 +273,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 13
+    "order": 12
   },
   {
     "id": "ai-manga-automation",
@@ -305,7 +291,7 @@
     ],
     "charge": "企画/制作/Web開発",
     "developmentScale": "5名",
-    "order": 14
+    "order": 13
   },
   {
     "id": "net-oripa-video",
@@ -325,7 +311,7 @@
       "AI Work",
       "Video Edit"
     ],
-    "order": 15
+    "order": 14
   },
   {
     "id": "ai-hiyari-hatto",
@@ -343,7 +329,7 @@
     ],
     "charge": "企画/制作/Web開発",
     "developmentScale": "5名",
-    "order": 16
+    "order": 15
   },
   {
     "id": "ai-manga-creation",
@@ -364,7 +350,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/",
     "developmentScale": "1名",
-    "order": 17
+    "order": 16
   },
   {
     "id": "korea-cosme-video",
@@ -385,7 +371,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 18
+    "order": 17
   },
   {
     "id": "cosme-cm-video",
@@ -408,7 +394,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 19
+    "order": 18
   },
   {
     "id": "dance-video-unicorn",
@@ -430,7 +416,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 20
+    "order": 19
   },
   {
     "id": "chill-music-aquarium",
@@ -453,7 +439,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 21
+    "order": 20
   },
   {
     "id": "kenpon-cm",
@@ -475,7 +461,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 22
+    "order": 21
   },
   {
     "id": "zio-music-video",
@@ -497,7 +483,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 23
+    "order": 22
   },
   {
     "id": "ellipsis-dot-dance",
@@ -518,7 +504,7 @@
       "AI Work",
       "Video Edit"
     ],
-    "order": 24
+    "order": 23
   },
   {
     "id": "fruit-fish-ar",
@@ -540,7 +526,7 @@
     ],
     "charge": "キャラデザイン、モデリング、リギング、ライティング",
     "developmentScale": "1名",
-    "order": 25
+    "order": 24
   },
   {
     "id": "vtuber-youtube-edit",
@@ -550,7 +536,7 @@
     "category": [
       "Video Edit"
     ],
-    "order": 26,
+    "order": 25,
     "linkDoc": "https://www.youtube.com/@sssspj_official",
     "link": "https://www.youtube.com/@sssspj_official",
     "date": "2025/01",
@@ -578,7 +564,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 27
+    "order": 26
   },
   {
     "id": "2d-to-3d-character",
@@ -595,7 +581,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "2名",
-    "order": 28
+    "order": 27
   },
   {
     "id": "thai-vtuber-goods",
@@ -613,7 +599,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 29
+    "order": 28
   },
   {
     "id": "roblox-layered-clothing",
@@ -631,7 +617,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 30
+    "order": 29
   },
   {
     "id": "aoppella-goods",
@@ -649,7 +635,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 31
+    "order": 30
   },
   {
     "id": "roblox-creature",
@@ -666,7 +652,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 32
+    "order": 31
   },
   {
     "id": "vtuber-utayo-pome",
@@ -684,7 +670,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 33
+    "order": 32
   },
   {
     "id": "perfect-sync",
@@ -700,7 +686,7 @@
     ],
     "charge": "3Dモデリング",
     "developmentScale": "5名",
-    "order": 34
+    "order": 33
   },
   {
     "id": "otonashi-venom-bloom",
@@ -720,7 +706,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 35
+    "order": 34
   },
   {
     "id": "otonashi-vibrant-core",
@@ -740,7 +726,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 36
+    "order": 35
   },
   {
     "id": "asia-ip-contest",
@@ -759,7 +745,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 37
+    "order": 36
   },
   {
     "id": "tiktok-ar-boxfish",
@@ -777,7 +763,7 @@
       "3D WORKS",
       "Promotion"
     ],
-    "order": 38
+    "order": 37
   },
   {
     "id": "ai-art-collection",
@@ -796,7 +782,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 39
+    "order": 38
   },
   {
     "id": "samurai-girl-ip",
@@ -813,7 +799,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 40
+    "order": 39
   },
   {
     "id": "otonashi-ai-character",
@@ -830,7 +816,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 41
+    "order": 40
   },
   {
     "id": "location-game-illustration",
@@ -847,7 +833,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "10名",
-    "order": 42
+    "order": 41
   },
   {
     "id": "vket2022-booth",
@@ -865,7 +851,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 43
+    "order": 42
   },
   {
     "id": "shibuya-vision",
@@ -885,7 +871,7 @@
     ],
     "charge": "プロデュース、映像制作",
     "developmentScale": "2名",
-    "order": 44
+    "order": 43
   },
   {
     "id": "avatar-webinar-speaker",
@@ -901,7 +887,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 45
+    "order": 44
   },
   {
     "id": "sapporo-kasaimamori",
@@ -919,7 +905,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "2名",
-    "order": 46
+    "order": 45
   },
   {
     "id": "quiz-ad-video",
@@ -929,7 +915,7 @@
     "category": [
       "Video Edit"
     ],
-    "order": 47,
+    "order": 46,
     "date": "2022/01",
     "tools": [
       "Photoshop",
@@ -954,7 +940,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 48
+    "order": 47
   },
   {
     "id": "webtoon-kurage",
@@ -970,7 +956,7 @@
     "category": [
       "Manga"
     ],
-    "order": 49
+    "order": 48
   },
   {
     "id": "ooki-na-sakana",
@@ -990,7 +976,7 @@
     "category": [
       "Picture Book"
     ],
-    "order": 50
+    "order": 49
   },
   {
     "id": "character-logo-design",
@@ -1006,7 +992,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "1名",
-    "order": 51
+    "order": 50
   },
   {
     "id": "gummy-bear-ip",
@@ -1024,7 +1010,7 @@
     ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "order": 52,
+    "order": 51,
     "link": "https://store.line.me/stickershop/product/1155260/ja"
   },
   {
@@ -1042,7 +1028,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 53
+    "order": 52
   },
   {
     "id": "virtual-shirokuma",
@@ -1059,7 +1045,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 54
+    "order": 53
   },
   {
     "id": "app-ui-ux-design",
@@ -1078,6 +1064,6 @@
       "2D WORKS",
       "UI/UX"
     ],
-    "order": 55
+    "order": 54
   }
 ]

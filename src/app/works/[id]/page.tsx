@@ -115,6 +115,7 @@ export default function WorkDetailPage() {
   const linkDocLabel = (project as any).linkDocLabel;
 
   const linkDoc = (project as any).linkDoc;
+  const extraLinks: { label: string; url: string }[] = (project as any).extraLinks || [];
   const links: string[] = [];
   if (project.link && !isVideoLink(project.link)) {
     links.push(project.link);
@@ -177,7 +178,7 @@ export default function WorkDetailPage() {
           ) : null}
 
           {/* Links */}
-          {links.length > 0 && (
+          {(links.length > 0 || extraLinks.length > 0) && (
             <div className="flex flex-wrap gap-3 px-6 py-4 border-b border-white/5">
               {links.map((url) => {
                 const info = getLinkInfo(url);
@@ -195,6 +196,18 @@ export default function WorkDetailPage() {
                   </a>
                 );
               })}
+              {extraLinks.map((l) => (
+                <a
+                  key={l.url}
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
+                >
+                  <Music size={14} />
+                  {l.label}
+                </a>
+              ))}
             </div>
           )}
 
