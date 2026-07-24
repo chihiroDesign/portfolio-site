@@ -75,6 +75,21 @@ function getBestImageSrc(project: Project): string | null {
   return null;
 }
 
+// Local (or non-YouTube http) image to fall back to when a YouTube thumbnail
+// fails to load (e.g. the video was made private/deleted). Returns null when
+// imageUrl is itself a YouTube thumbnail or a placeholder.
+function getLocalImageSrc(project: Project): string | null {
+  if (!project.imageUrl) return null;
+  if (project.imageUrl.includes("img.youtube.com")) return null;
+  if (
+    project.imageUrl.includes("placeholder") ||
+    project.imageUrl.includes("via.placeholder")
+  ) {
+    return null;
+  }
+  return project.imageUrl;
+}
+
 // Generate a deterministic "random" height for cards without images
 // based on project id, so it stays consistent across renders
 function getPlaceholderHeight(id: string): number {
@@ -89,23 +104,29 @@ function getPlaceholderHeight(id: string): number {
 export function ProjectCard({ project, onClick }: ProjectCardProps) {
   const [imgError, setImgError] = useState(false);
   const [useFallback, setUseFallback] = useState(false);
+  const [useLocalFallback, setUseLocalFallback] = useState(false);
 
   const imageSrc = getBestImageSrc(project);
+  const localImageSrc = getLocalImageSrc(project);
   const hasVideo = isVideoLink(project.link) || isVideoLink(project.linkMovie);
   const hasAudio = !!(project as any).audioUrl;
   const showPlayOverlay = hasVideo || hasAudio;
   const placeholderHeight = getPlaceholderHeight(project.id);
 
-  // Fallback: try hqdefault if maxresdefault fails
+  // Fallback chain: maxresdefault → hqdefault → local image → placeholder
   const handleImgError = () => {
     if (!useFallback && imageSrc && imageSrc.includes("maxresdefault")) {
       setUseFallback(true);
+    } else if (!useLocalFallback && localImageSrc && localImageSrc !== imageSrc) {
+      setUseLocalFallback(true);
     } else {
       setImgError(true);
     }
   };
 
-  const finalSrc = useFallback && imageSrc
+  const finalSrc = useLocalFallback && localImageSrc
+    ? localImageSrc
+    : useFallback && imageSrc
     ? imageSrc.replace("maxresdefault.jpg", "hqdefault.jpg")
     : imageSrc;
 
