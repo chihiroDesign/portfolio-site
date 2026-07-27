@@ -19,6 +19,12 @@ function isVideoLink(url?: string): boolean {
   );
 }
 
+// TikTok video permalinks (not collection/profile URLs) play like a short video
+function isTiktokVideoLink(url?: string): boolean {
+  if (!url) return false;
+  return /tiktok\.com\/@[^/]+\/video\/\d+/.test(url);
+}
+
 function getYoutubeVideoId(url: string): string | null {
   const patterns = [
     /youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/,
@@ -109,8 +115,10 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
   const imageSrc = getBestImageSrc(project);
   const localImageSrc = getLocalImageSrc(project);
   const hasVideo = isVideoLink(project.link) || isVideoLink(project.linkMovie);
+  const hasTiktokVideo =
+    isTiktokVideoLink(project.link) || isTiktokVideoLink(project.linkMovie);
   const hasAudio = !!(project as any).audioUrl;
-  const showPlayOverlay = hasVideo || hasAudio;
+  const showPlayOverlay = hasVideo || hasTiktokVideo || hasAudio;
   const placeholderHeight = getPlaceholderHeight(project.id);
 
   // Fallback chain: maxresdefault → hqdefault → local image → placeholder

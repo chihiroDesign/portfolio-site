@@ -30,6 +30,15 @@ function getGoogleDriveEmbedUrl(url: string): string | null {
   return null;
 }
 
+// TikTok video permalinks embed vertically via the official embed endpoint.
+// Collection / profile URLs are not embeddable, so only /video/<id> matches.
+function getTiktokEmbedUrl(url: string): string | null {
+  const match = url.match(/tiktok\.com\/@[^/]+\/video\/(\d+)/);
+  if (match) return `https://www.tiktok.com/embed/v2/${match[1]}`;
+  return null;
+}
+
+
 function isYoutubeLink(url?: string): boolean {
   if (!url) return false;
   return url.includes("youtube.com") || url.includes("youtu.be");
@@ -111,6 +120,10 @@ export default function WorkDetailPage() {
       : null
     : null;
 
+  // Vertical (9:16) TikTok embed
+  const tiktokEmbedUrl =
+    getTiktokEmbedUrl(linkMovie || "") || getTiktokEmbedUrl(project.link || "");
+
   const imageUrl = (project as any).imageUrl || project.thumbnail;
   const audioUrl = (project as any).audioUrl;
   const linkDocLabel = (project as any).linkDocLabel;
@@ -163,6 +176,17 @@ export default function WorkDetailPage() {
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+              />
+            </div>
+          ) : tiktokEmbedUrl ? (
+            <div className="w-full bg-black flex justify-center py-6">
+              <iframe
+                src={tiktokEmbedUrl}
+                className="w-full max-w-[340px] aspect-[9/16] border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+                scrolling="no"
+                title={project.title}
               />
             </div>
           ) : audioUrl ? (
