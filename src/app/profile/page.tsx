@@ -8,7 +8,14 @@ import { SkillChartSection } from '@/components/SkillChart';
 
 
 const certifications = [
-  { year: '2026', title: 'AICX認定 AIエージェント・ストラテジスト資格（一般社団法人AICX協会）' },
+  {
+    year: '2026',
+    title: 'AICX認定 AIエージェント・ストラテジスト資格',
+    issuer: '一般社団法人AICX協会',
+    // 利用規定: 縦横比維持のみ可。カラー版は白背景で使用するため白地を敷く。
+    // 変形/色変更/装飾/切り取り、および生成AIによる加工は禁止。
+    logo: '/images/aicx-strategist-logo.png',
+  },
 ];
 
 const awards = [
@@ -143,11 +150,28 @@ export default function ProfilePage() {
 
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Certification</h2>
-          <div className="space-y-3">
+          <div className="space-y-5">
             {certifications.map((cert, i) => (
-              <div key={i} className="flex gap-4 text-sm">
-                <span className="text-white/30 shrink-0 w-10">{cert.year}</span>
-                <span className="text-white/70">{cert.title}</span>
+              <div
+                key={i}
+                className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4"
+              >
+                {cert.logo && (
+                  <div className="bg-white rounded-md p-2.5 shrink-0 self-start sm:self-auto">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cert.logo}
+                      alt={cert.title}
+                      className="block w-[150px] h-auto"
+                    />
+                  </div>
+                )}
+                <div className="text-sm">
+                  <p className="text-white/70">{cert.title}</p>
+                  <p className="text-white/40 text-xs mt-1">
+                    {cert.year} ／ {cert.issuer}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
