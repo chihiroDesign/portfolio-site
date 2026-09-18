@@ -7,6 +7,10 @@ import { SkillChartSection } from '@/components/SkillChart';
 
 
 
+const certifications = [
+  { year: '2026', title: 'AICX認定 AIエージェント・ストラテジスト資格（一般社団法人AICX協会）' },
+];
+
 const awards = [
   { year: '2025', title: 'AICU 月例漫画コンテスト ノンジャンル／art部門 受賞「POPPY GUMMY BEARS」' },
   { year: '2023', title: '生成AIアート アジアIPコンテスト2023 最優秀賞' },
@@ -133,6 +137,18 @@ export default function ProfilePage() {
               <span key={tool} className="text-xs text-white/50 bg-white/5 px-3 py-1.5 rounded-full border border-white/10">
                 {tool}
               </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Certification</h2>
+          <div className="space-y-3">
+            {certifications.map((cert, i) => (
+              <div key={i} className="flex gap-4 text-sm">
+                <span className="text-white/30 shrink-0 w-10">{cert.year}</span>
+                <span className="text-white/70">{cert.title}</span>
+              </div>
             ))}
           </div>
         </section>
