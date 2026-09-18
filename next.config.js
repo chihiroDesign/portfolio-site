@@ -16,6 +16,15 @@ const nextConfig = {
       },
     ],
   },
+  // CV は「リンクを知っている人が見る」もの。検索結果には出さない。
+  async headers() {
+    return [
+      {
+        source: "/cv.pdf",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
