@@ -1,43 +1,5 @@
 [
   {
-    "id": "valkyrie-lyric-video",
-    "title": "Viking Songs｜北欧神話リリックビデオ（全4曲）",
-    "description": "北欧神話を題材にしたオリジナル楽曲とリリックビデオのシリーズ（全4曲）。ヴァルキュリア、ユグドラシルに吊られたオーディン、フェンリルを縛るテュール、熊の衣をまとうベルセルク——神話の一場面をそれぞれ1曲に落とし込んでいます。\n代表曲「Chooser of the Slain」は、戦の跡地を歩くヴァルキュリアが息絶えようとする戦士のそばで足を止める場面。助けに来たのではなく、選びに来た——倒れた戦士とヴァルハラへ導く者、二人のデュエットとして構成しました。\n楽曲・歌詞・アートワーク・映像のすべてを一人で制作し、歌詞に合わせて画面が展開する構成をRemotionで組んでいます。",
-    "imageUrl": "/images/valkyrie-lyric-video.jpg",
-    "category": [
-      "AI Work",
-      "Video Edit",
-      "Original"
-    ],
-    "date": "2026/09",
-    "link": "https://youtu.be/LMP_BdUyR4c",
-    "linkMovie": "https://youtu.be/LMP_BdUyR4c",
-    "tools": [
-      "SUNO",
-      "GPT-image",
-      "Seedream",
-      "Remotion"
-    ],
-    "charge": "企画/作詞・作曲/アートディレクション/AI画像生成/映像制作",
-    "developmentScale": "1名",
-    "featured": true,
-    "order": 1,
-    "extraLinks": [
-      {
-        "label": "Nine Nights｜Odin and the Runes",
-        "url": "https://youtu.be/x1lYszRoYKo"
-      },
-      {
-        "label": "The Rope That Was Not There｜Fenrir & Tyr",
-        "url": "https://youtu.be/91E3Tyum7IE"
-      },
-      {
-        "label": "Bear Shirt｜Berserker Song",
-        "url": "https://youtu.be/Q_17OQgesg4"
-      }
-    ]
-  },
-  {
     "id": "yorimichi-tsuzuki",
     "title": "オリジナル曲・リリックビデオ「よりみち、つづき。」",
     "description": "「近道なら知ってるけど、まだ話していたい。」\n4人の放課後を描く、カラフルな青春ポップのオリジナル曲とリリックビデオ。りさ、もえ、すず、ちな。四つのクラゲのチャームとともに、今日も寄り道はつづきます。\n楽曲・歌声をSunoで、キャラクターや背景の画像をGPTで制作し、After Effectsで歌詞のモーションと演出を組み上げました。AIと対話しながらAfter Effectsを動かす制作フローを試した一作です。",
@@ -58,7 +20,7 @@
     "charge": "企画/ビジュアルディレクション/楽曲制作/AI画像生成/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 2
+    "order": 1
   },
   {
     "id": "gensou-ikimono-zukan",
@@ -82,7 +44,45 @@
     "charge": "企画/描画エンジン開発/AI画像生成/生態解説の構成/ナレーション生成/楽曲制作/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 3
+    "order": 2
+  },
+  {
+    "id": "valkyrie-lyric-video",
+    "title": "Viking Songs｜北欧神話リリックビデオ（全4曲）",
+    "description": "北欧神話を題材にしたオリジナル楽曲とリリックビデオのシリーズ（全4曲）。ヴァルキュリア、ユグドラシルに吊られたオーディン、フェンリルを縛るテュール、熊の衣をまとうベルセルク——神話の一場面をそれぞれ1曲に落とし込んでいます。\n代表曲「Chooser of the Slain」は、戦の跡地を歩くヴァルキュリアが息絶えようとする戦士のそばで足を止める場面。助けに来たのではなく、選びに来た——倒れた戦士とヴァルハラへ導く者、二人のデュエットとして構成しました。\n楽曲・歌詞・アートワーク・映像のすべてを一人で制作し、歌詞に合わせて画面が展開する構成をRemotionで組んでいます。",
+    "imageUrl": "/images/valkyrie-lyric-video.jpg",
+    "category": [
+      "AI Work",
+      "Video Edit",
+      "Original"
+    ],
+    "date": "2026/09",
+    "link": "https://youtu.be/LMP_BdUyR4c",
+    "linkMovie": "https://youtu.be/LMP_BdUyR4c",
+    "tools": [
+      "SUNO",
+      "GPT-image",
+      "Seedream",
+      "Remotion"
+    ],
+    "charge": "企画/作詞・作曲/アートディレクション/AI画像生成/映像制作",
+    "developmentScale": "1名",
+    "featured": true,
+    "order": 3,
+    "extraLinks": [
+      {
+        "label": "Nine Nights｜Odin and the Runes",
+        "url": "https://youtu.be/x1lYszRoYKo"
+      },
+      {
+        "label": "The Rope That Was Not There｜Fenrir & Tyr",
+        "url": "https://youtu.be/91E3Tyum7IE"
+      },
+      {
+        "label": "Bear Shirt｜Berserker Song",
+        "url": "https://youtu.be/Q_17OQgesg4"
+      }
+    ]
   },
   {
     "id": "aquarium-midnight-radio",
@@ -107,16 +107,16 @@
   },
   {
     "id": "aquarium-drawing",
-    "title": "Paintarium - 【描く水族館】6つの海が描き上がるイラスト動画",
-    "description": "白い紙から海が描き上がっていくアート・アンビエントのシリーズ。The Painted Aquarium",
-    "imageUrl": "/images/aquarium_drawing.png",
+    "title": "Paintarium - 【描く生物たち】66本の描画アンビエントシリーズ",
+    "description": "白い紙から生き物が一筆ずつ描き上がっていく描画アンビエントのシリーズ。海の生き物から始まり、チョウ・カマキリ・クワガタ・トンボ、そしてネコの品種まで66本。最新の回では、描きながらその生き物のうんちくを語る解説音声を付けています。The Painted Aquarium",
+    "imageUrl": "/images/paintarium_ikimono.jpg",
     "category": [
       "AI Work",
       "Original"
     ],
     "date": "2026/07",
-    "link": "https://youtu.be/gyXR6JCBGgI",
-    "linkMovie": "https://youtu.be/gyXR6JCBGgI",
+    "link": "https://youtu.be/2vkdAtVmPtY",
+    "linkMovie": "https://youtu.be/2vkdAtVmPtY",
     "linkDoc": "https://note.com/chihirodesign/m/m7483687d20ef",
     "linkDocLabel": "Note記事",
     "tools": [
@@ -127,7 +127,13 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 5
+    "order": 5,
+    "extraLinks": [
+      {
+        "label": "再生リスト（全66本）",
+        "url": "https://www.youtube.com/playlist?list=PLECgfVVtomlQ"
+      }
+    ]
   },
   {
     "id": "hibi-gokigen",
