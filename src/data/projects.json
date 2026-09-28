@@ -77,6 +77,10 @@
     "order": 3,
     "extraLinks": [
       {
+        "label": "再生リスト",
+        "url": "https://www.youtube.com/playlist?list=PLDFqQYf1mD4U"
+      },
+      {
         "label": "Nine Nights｜Odin and the Runes",
         "url": "https://youtu.be/x1lYszRoYKo"
       },
@@ -109,7 +113,13 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 4
+    "order": 4,
+    "extraLinks": [
+      {
+        "label": "再生リスト",
+        "url": "https://www.youtube.com/playlist?list=PLcNfhP0vLMLY"
+      }
+    ]
   },
   {
     "id": "aquarium-drawing",
