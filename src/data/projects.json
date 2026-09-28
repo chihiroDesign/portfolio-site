@@ -25,15 +25,15 @@
   {
     "id": "gensou-ikimono-zukan",
     "title": "幻想いきもの図鑑｜描画タイムラプス・アートシリーズ",
-    "description": "実在の生きものをモチーフに、幻想的な一枚が描き上がっていく描画タイムラプスのシリーズ。AIで制作した原画をもとに、独自開発の描画エンジンで描画過程を構成しています。映像には、その生きものの生態解説をナレーションとして添え、アートと知識の両方を楽しめる構成にしました。\n第001作は「疾風のワシミミズク（WINGS OF THE GALE）」。青花磁器の翼、金の装飾、オレンジの宝石がきらめく瞳と爪を持つワシミミズクを、約12分かけて描き上げます。",
-    "imageUrl": "/images/gensou-ikimono-001.jpg",
+    "description": "実在の生きものをモチーフに、幻想的な一枚が描き上がっていく描画タイムラプスのシリーズ。AIで制作した原画をもとに、独自開発の描画エンジンで描画過程を構成しています。映像には、その生きものの生態解説をナレーションとして添え、アートと知識の両方を楽しめる構成にしました。\n2026年9月に第001作「疾風のワシミミズク」を公開し、以降1日1作ずつ更新しています。",
+    "imageUrl": "/images/gensou-ikimono-005.jpg",
     "category": [
       "AI Work",
       "Original"
     ],
     "date": "2026/09",
-    "link": "https://youtu.be/Q6FteeyM6BY",
-    "linkMovie": "https://youtu.be/Q6FteeyM6BY",
+    "link": "https://youtu.be/iseHwCTMduU",
+    "linkMovie": "https://youtu.be/iseHwCTMduU",
     "tools": [
       "ChatGPT",
       "GPT-image",
@@ -44,7 +44,13 @@
     "charge": "企画/描画エンジン開発/AI画像生成/生態解説の構成/ナレーション生成/楽曲制作/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 2
+    "order": 2,
+    "extraLinks": [
+      {
+        "label": "再生リスト",
+        "url": "https://www.youtube.com/playlist?list=PLXICVctVVSkI"
+      }
+    ]
   },
   {
     "id": "valkyrie-lyric-video",
@@ -107,8 +113,8 @@
   },
   {
     "id": "aquarium-drawing",
-    "title": "Paintarium - 【描く生物たち】66本の描画アンビエントシリーズ",
-    "description": "白い紙から生き物が一筆ずつ描き上がっていく描画アンビエントのシリーズ。海の生き物から始まり、チョウ・カマキリ・クワガタ・トンボ、そしてネコの品種まで66本。最新の回では、描きながらその生き物のうんちくを語る解説音声を付けています。The Painted Aquarium",
+    "title": "Paintarium - 【描く生物たち】描画アンビエントシリーズ",
+    "description": "白い紙から生き物が一筆ずつ描き上がっていく描画アンビエントのシリーズ。海の生き物から始まり、チョウ・カマキリ・クワガタ・トンボ、そしてネコの品種まで、再生リストは60本を超えました。最新の回では、描きながらその生き物のうんちくを語る解説音声を付けています。The Painted Aquarium",
     "imageUrl": "/images/paintarium_ikimono.jpg",
     "category": [
       "AI Work",
@@ -130,7 +136,7 @@
     "order": 5,
     "extraLinks": [
       {
-        "label": "再生リスト（全66本）",
+        "label": "再生リスト",
         "url": "https://www.youtube.com/playlist?list=PLECgfVVtomlQ"
       }
     ]
