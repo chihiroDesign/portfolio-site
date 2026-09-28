@@ -112,7 +112,11 @@ export default function WorkDetailPage() {
     (linkMovie && isVideoLink(linkMovie) ? linkMovie : null) ||
     (isVideoLink(project.link) ? project.link : null);
 
-  const embedUrl = videoUrl
+  // YouTube Shorts はこのチャンネルでは埋め込みが無効（playableInEmbed: false）なので、
+  // 埋め込まずに縦のサムネとリンクで見せる
+  const isYoutubeShorts = /youtube\.com\/shorts\//.test(videoUrl || "");
+
+  const embedUrl = videoUrl && !isYoutubeShorts
     ? isYoutubeLink(videoUrl)
       ? getYoutubeEmbedUrl(videoUrl)
       : isGoogleDriveLink(videoUrl)
@@ -139,6 +143,9 @@ export default function WorkDetailPage() {
   }
   if (linkDoc && !links.includes(linkDoc)) {
     links.push(linkDoc);
+  }
+  if (isYoutubeShorts && project.link && !links.includes(project.link)) {
+    links.push(project.link);
   }
 
   const handleCategoryClick = (cat: string) => {
@@ -192,12 +199,23 @@ export default function WorkDetailPage() {
           ) : audioUrl ? (
             <AudioPlayer src={audioUrl} poster={imageUrl} alt={project.title} />
           ) : imageUrl ? (
-            <div className="relative w-full overflow-hidden">
+            // 縦のサムネは原寸より拡大すると粗くなるので、縦枠に収めて中央に置く
+            <div
+              className={
+                isYoutubeShorts
+                  ? "w-full bg-black flex justify-center py-6"
+                  : "relative w-full overflow-hidden"
+              }
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={imageUrl}
                 alt={project.title}
-                className="w-full h-auto block"
+                className={
+                  isYoutubeShorts
+                    ? "w-full max-w-[340px] h-auto block rounded-lg"
+                    : "w-full h-auto block"
+                }
               />
             </div>
           ) : null}

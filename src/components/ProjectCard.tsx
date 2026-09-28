@@ -51,7 +51,18 @@ function isRealYoutubeId(id: string): boolean {
   return /^[a-zA-Z0-9_-]{11}$/.test(id) && !PLACEHOLDER_IDS.includes(id);
 }
 
+function isYoutubeShortsLink(url?: string): boolean {
+  return !!url && /youtube\.com\/shorts\//.test(url);
+}
+
 function getBestImageSrc(project: Project): string | null {
+  // 0. Shorts: YouTube's own thumbnail letterboxes the 9:16 frame into 16:9,
+  //    so a supplied local image (cropped vertically) wins.
+  if (isYoutubeShortsLink(project.link)) {
+    const local = getLocalImageSrc(project);
+    if (local) return local;
+  }
+
   // 1. If link is a real YouTube URL, use its thumbnail
   if (project.link && isVideoLink(project.link)) {
     const videoId = getYoutubeVideoId(project.link);
