@@ -367,7 +367,7 @@
     "description": "ガチャ演出動画（青→緑→赤→金→虹）の動画生成による映像制作。",
     "imageUrl": "/images/ネットオリパ演出動画AI生成.png",
     "date": "2026/1",
-    "linkMovie": "https://drive.google.com/file/d/1ciAzSwpY9AcRMaRJWW7LG_IDf0AsVckJ/view?usp=drive_link",
+    "linkMovie": "https://youtu.be/DOiU51SnPzc",
     "tools": [
       "GPT",
       "Gemini",
@@ -379,7 +379,14 @@
       "AI Work",
       "Video Edit"
     ],
-    "order": 17
+    "order": 17,
+    "link": "https://youtu.be/DOiU51SnPzc",
+    "extraLinks": [
+      {
+        "label": "青レア版",
+        "url": "https://youtu.be/_ZDSIcUqpsc"
+      }
+    ]
   },
   {
     "id": "ai-hiyari-hatto",
@@ -425,8 +432,8 @@
     "title": "韓国コスメ商品紹介動画の生成 AI制作",
     "description": "商品紹介をベースにした30秒ショート動画の映像制作",
     "imageUrl": "/images/韓国コスメ商品紹介動画の生成AI制作.png",
-    "linkMovie": "https://drive.google.com/file/d/1-Svy8_pbQuBAyegQYkFUzF0D3JZrNREX/view",
-    "link": "https://drive.google.com/file/d/1-Svy8_pbQuBAyegQYkFUzF0D3JZrNREX/view",
+    "linkMovie": "https://youtu.be/fuiS1nHmH5Q",
+    "link": "https://youtu.be/fuiS1nHmH5Q",
     "category": [
       "AI Work",
       "Video Edit"

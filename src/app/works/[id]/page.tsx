@@ -229,7 +229,7 @@ export default function WorkDetailPage() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3b82f6] hover:bg-[#2563eb] text-white text-sm font-medium transition-colors shadow-lg shadow-[#3b82f6]/20"
                 >
-                  <Music size={14} />
+                  {isVideoLink(l.url) ? <Play size={14} /> : <Music size={14} />}
                   {l.label}
                 </a>
               ))}
