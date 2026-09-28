@@ -48,9 +48,9 @@
   },
   {
     "id": "aquarium-midnight-radio",
-    "title": "【24h配信】Aquarium Midnight 🐠 24/7 Lo-Fi Chill Radio for Study, Sleep & Relax【作業用BGM】",
-    "description": "Aquarium Midnight — 24/7 lo-fi & chill radio.\n都会の夜に流れっぱなしのLo-Fiチル。作業・勉強・睡眠のおともに、いつでもどうぞ。\nA non-stop lo-fi & chillhop radio for study, sleep, work and relaxation.\nOriginal music & artwork by AI Visual Artist CHIHIRO.",
-    "imageUrl": "/images/live_v2_frame.png",
+    "title": "Aquarium Midnight 🐠 Lo-Fi Chill Radio for Study, Sleep & Relax【作業用BGM】",
+    "description": "Aquarium Midnight — Lo-Fi & chill radio.\n都会の夜に流れるLo-Fiチル。作業・勉強・睡眠のおともに。\nA non-stop lo-fi & chillhop mix for study, sleep, work and relaxation.\nオリジナル楽曲とアートワークによる作業用BGMシリーズ。24時間ライブ配信として企画・構築し、楽曲・映像素材の生成から配信の常時稼働までを自作の仕組みで運用（2026年8月に検証を終了）。現在はミックス版を公開しています。",
+    "imageUrl": "/images/aquarium-midnight-waterlight.jpg",
     "category": [
       "AI Work",
       "Original"
