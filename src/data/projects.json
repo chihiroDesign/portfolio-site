@@ -1,8 +1,8 @@
 [
   {
     "id": "valkyrie-lyric-video",
-    "title": "Viking Song — Chooser of the Slain｜北欧神話リリックビデオ",
-    "description": "戦の跡地を歩くヴァルキュリアが、息絶えようとする戦士のそばで足を止める。助けに来たのではなく、選びに来た——北欧神話を題材にしたオリジナル楽曲とリリックビデオ。\n倒れた戦士とヴァルハラへ導く者、二人のデュエットとして構成しました。楽曲・歌詞・アートワーク・映像のすべてを一人で制作し、歌詞に合わせて画面が展開する構成をRemotionで組んでいます。",
+    "title": "Viking Songs｜北欧神話リリックビデオ（全4曲）",
+    "description": "北欧神話を題材にしたオリジナル楽曲とリリックビデオのシリーズ（全4曲）。ヴァルキュリア、ユグドラシルに吊られたオーディン、フェンリルを縛るテュール、熊の衣をまとうベルセルク——神話の一場面をそれぞれ1曲に落とし込んでいます。\n代表曲「Chooser of the Slain」は、戦の跡地を歩くヴァルキュリアが息絶えようとする戦士のそばで足を止める場面。助けに来たのではなく、選びに来た——倒れた戦士とヴァルハラへ導く者、二人のデュエットとして構成しました。\n楽曲・歌詞・アートワーク・映像のすべてを一人で制作し、歌詞に合わせて画面が展開する構成をRemotionで組んでいます。",
     "imageUrl": "/images/valkyrie-lyric-video.jpg",
     "category": [
       "AI Work",
@@ -21,7 +21,21 @@
     "charge": "企画/作詞・作曲/アートディレクション/AI画像生成/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 1
+    "order": 1,
+    "extraLinks": [
+      {
+        "label": "Nine Nights｜Odin and the Runes",
+        "url": "https://youtu.be/x1lYszRoYKo"
+      },
+      {
+        "label": "The Rope That Was Not There｜Fenrir & Tyr",
+        "url": "https://youtu.be/91E3Tyum7IE"
+      },
+      {
+        "label": "Bear Shirt｜Berserker Song",
+        "url": "https://youtu.be/Q_17OQgesg4"
+      }
+    ]
   },
   {
     "id": "yorimichi-tsuzuki",
