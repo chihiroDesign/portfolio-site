@@ -112,11 +112,10 @@ export default function WorkDetailPage() {
     (linkMovie && isVideoLink(linkMovie) ? linkMovie : null) ||
     (isVideoLink(project.link) ? project.link : null);
 
-  // YouTube Shorts はこのチャンネルでは埋め込みが無効（playableInEmbed: false）なので、
-  // 埋め込まずに縦のサムネとリンクで見せる
+  // YouTube Shorts は 9:16 なので、TikTok と同じ縦枠で見せる
   const isYoutubeShorts = /youtube\.com\/shorts\//.test(videoUrl || "");
 
-  const embedUrl = videoUrl && !isYoutubeShorts
+  const embedUrl = videoUrl
     ? isYoutubeLink(videoUrl)
       ? getYoutubeEmbedUrl(videoUrl)
       : isGoogleDriveLink(videoUrl)
@@ -143,9 +142,6 @@ export default function WorkDetailPage() {
   }
   if (linkDoc && !links.includes(linkDoc)) {
     links.push(linkDoc);
-  }
-  if (isYoutubeShorts && project.link && !links.includes(project.link)) {
-    links.push(project.link);
   }
 
   const handleCategoryClick = (cat: string) => {
@@ -177,14 +173,26 @@ export default function WorkDetailPage() {
         >
           {/* Media */}
           {embedUrl ? (
-            <div className="relative w-full aspect-video bg-black">
-              <iframe
-                src={embedUrl}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+            isYoutubeShorts ? (
+              <div className="w-full bg-black flex justify-center py-6">
+                <iframe
+                  src={embedUrl}
+                  className="w-full max-w-[340px] aspect-[9/16] border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={project.title}
+                />
+              </div>
+            ) : (
+              <div className="relative w-full aspect-video bg-black">
+                <iframe
+                  src={embedUrl}
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            )
           ) : tiktokEmbedUrl ? (
             <div className="w-full bg-black flex justify-center py-6">
               <iframe
