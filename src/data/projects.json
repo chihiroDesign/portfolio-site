@@ -26,14 +26,14 @@
     "id": "gensou-ikimono-zukan",
     "title": "幻想いきもの図鑑｜描画タイムラプス・アートシリーズ",
     "description": "実在の生きものをモチーフに、幻想的な一枚が描き上がっていく描画タイムラプスのシリーズ。AIで制作した原画をもとに、独自開発の描画エンジンで描画過程を構成しています。映像には、その生きものの生態解説をナレーションとして添え、アートと知識の両方を楽しめる構成にしました。\n2026年9月に第001作「疾風のワシミミズク」を公開し、以降1日1作ずつ更新しています。",
-    "imageUrl": "/images/gensou-ikimono-005.jpg",
+    "imageUrl": "/images/gensou-ikimono-001.jpg",
     "category": [
       "AI Work",
       "Original"
     ],
     "date": "2026/09",
-    "link": "https://youtu.be/iseHwCTMduU",
-    "linkMovie": "https://youtu.be/iseHwCTMduU",
+    "link": "https://youtu.be/Q6FteeyM6BY",
+    "linkMovie": "https://youtu.be/Q6FteeyM6BY",
     "tools": [
       "ChatGPT",
       "GPT-image",
@@ -227,6 +227,10 @@
     "linkDoc": "https://note.com/chihirodesign/m/m8bb7c4707db6",
     "linkDocLabel": "Note記事",
     "extraLinks": [
+      {
+        "label": "再生リスト",
+        "url": "https://www.youtube.com/playlist?list=PLViELh2vlEQp7pW6SfDRA-rBQHWw79dIU"
+      },
       {
         "label": "Spotify",
         "url": "https://open.spotify.com/show/1J74CPllAUYD1n5yPUYmi5?si=gBZZJHq_Touz1-PnEUe_BA"
