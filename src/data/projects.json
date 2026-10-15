@@ -1126,6 +1126,56 @@
     "order": 53
   },
   {
+    "id": "otonashi-muon-muchitsujo",
+    "title": "音無むおん 3周年記念エフェクトライブ「六音無秩序」",
+    "description": "バーチャルシンガー・音無むおんの活動3周年を記念し、NeosVRで開催したエフェクトライブを企画・プロデュース。楽曲、キャラクター、照明、映像、空間エフェクトを一つの公演として構成し、バーチャル空間ならではのライブ体験を追求しました。\n公演のコンセプトからクリエイティブディレクション、ロゴ・キービジュアル・告知物のデザイン、映像制作、プロモーション、制作進行までを横断して担当。演出・技術協力者と連携し、音無むおんの世界観をライブ空間全体へ展開しました。\n\n2021年9月6日開催／NeosVR特設会場\n※掲載映像は制作実績紹介のため、音声はありません。",
+    "imageUrl": "/images/otonashi-muon-muchitsujo.jpg",
+    "category": [
+      "3D WORKS",
+      "2D WORKS",
+      "Video Edit",
+      "Promotion",
+      "Original"
+    ],
+    "date": "2021/09",
+    "tools": [
+      "NeosVR",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe Premiere Pro"
+    ],
+    "charge": "企画/プロデュース/クリエイティブディレクション/グラフィックデザイン/映像制作/プロモーション/制作進行",
+    "featured": true,
+    "order": 54,
+    "link": "https://youtu.be/8E7XGkVvMOA",
+    "linkMovie": "https://youtu.be/8E7XGkVvMOA"
+  },
+  {
+    "id": "otonashi-muon-mugendai",
+    "title": "音無むおん 生バンド1stワンマンライブ「六音無限大」",
+    "description": "バーチャルシンガー・音無むおん初の生バンドワンマンライブを企画・プロデュース。3Dキャラクターとリアルの演奏者が同じステージで共演し、バーチャルとリアルが交わるライブ体験を形にしました。\n公演全体の企画・クリエイティブディレクションを軸に、ロゴ・キービジュアル・告知物のデザイン、映像制作、プロモーション、制作進行までを横断して担当。出演者・演奏者・技術スタッフと連携し、クラウドファンディングから公演、ライブ映像の編集、Blu-rayパッケージ制作までを一つのプロジェクトとして展開しました。\n\n2021年6月9日開催／恵比寿クレアート\n※掲載映像は制作実績紹介のため、音声はありません。",
+    "imageUrl": "/images/otonashi-muon-mugendai.jpg",
+    "category": [
+      "3D WORKS",
+      "2D WORKS",
+      "Video Edit",
+      "Promotion",
+      "Original"
+    ],
+    "date": "2021/06",
+    "tools": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe After Effects",
+      "Adobe Premiere Pro"
+    ],
+    "charge": "企画/プロデュース/クリエイティブディレクション/グラフィックデザイン/映像制作・編集/Blu-rayパッケージデザイン/プロモーション/制作進行",
+    "featured": true,
+    "order": 55,
+    "link": "https://youtu.be/Fe-u7wG2tnU",
+    "linkMovie": "https://youtu.be/Fe-u7wG2tnU"
+  },
+  {
     "id": "webtoon-kurage",
     "title": "Webtoon マンガ「クラゲ女子」",
     "description": "クラゲの帽子をかぶったJKたちがラジオディジェイ風にリスナーのリラックス法を紹介する縦型漫画",
@@ -1139,7 +1189,7 @@
     "category": [
       "Manga"
     ],
-    "order": 54
+    "order": 56
   },
   {
     "id": "ooki-na-sakana",
@@ -1159,7 +1209,7 @@
     "category": [
       "Picture Book"
     ],
-    "order": 55
+    "order": 57
   },
   {
     "id": "character-logo-design",
@@ -1175,7 +1225,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "1名",
-    "order": 56
+    "order": 58
   },
   {
     "id": "gummy-bear-ip",
@@ -1193,7 +1243,7 @@
     ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "order": 57,
+    "order": 59,
     "link": "https://store.line.me/stickershop/product/1155260/ja"
   },
   {
@@ -1211,7 +1261,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 58
+    "order": 60
   },
   {
     "id": "virtual-shirokuma",
@@ -1228,7 +1278,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 59
+    "order": 61
   },
   {
     "id": "app-ui-ux-design",
@@ -1247,6 +1297,6 @@
       "2D WORKS",
       "UI/UX"
     ],
-    "order": 60
+    "order": 62
   }
 ]
