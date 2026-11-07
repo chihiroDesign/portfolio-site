@@ -6,6 +6,7 @@ export interface Project {
   thumbnail?: string;
   imageUrl?: string;
   images?: string[];
+  galleryImages?: { src: string; alt: string }[];
   videoUrl?: string;
   tags?: string[];
   year?: number;

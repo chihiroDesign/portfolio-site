@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Play, BookOpen, Music } from "lucide-react";
 import { Project } from "@/types";
+import { ProjectGallery } from "@/components/ProjectGallery";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -289,6 +290,8 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
                 </dl>
               );
             })()}
+
+            <ProjectGallery images={project.galleryImages} />
 
             {/* Tags */}
             {project.tags && project.tags.length > 0 && (

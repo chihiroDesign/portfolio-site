@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Play, BookOpen, Music, X } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { ProjectGallery } from "@/components/ProjectGallery";
 import { Footer } from "@/components/Footer";
 import projectsData from "@/data/projects.json";
 import { Project } from "@/types";
@@ -326,6 +327,8 @@ export default function WorkDetailPage() {
                 </dl>
               );
             })()}
+
+            <ProjectGallery images={project.galleryImages} />
 
             {/* Tags */}
             {project.tags && project.tags.length > 0 && (

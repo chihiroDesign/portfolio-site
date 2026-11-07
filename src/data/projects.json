@@ -1403,17 +1403,28 @@
   },
   {
     "id": "app-ui-ux-design",
-    "title": "アプリUI/UXデザイン",
-    "description": "調剤薬局向け業務支援アプリのデザイン業務。",
+    "title": "Kusudama｜アプリUI/UX・ブランド展開",
+    "description": "調剤薬局向けiPadアプリ「kusudama」の立ち上げから参加。UI/UXを軸に、製品ブランディング、Web、DTP、プロモーション映像、展示会ブースまでデザインを統括しました。",
     "imageUrl": "/images/アプリUIUXデザイン.png",
+    "galleryImages": [
+      { "src": "/images/kusudama-app-product.png", "alt": "Kusudama 薬剤師向けiPadアプリの製品紹介" },
+      { "src": "/images/kusudama-product-branding.png", "alt": "Kusudama 製品群のブランドデザイン" },
+      { "src": "/images/kusudama-ui-ux.png", "alt": "Kusudama 調剤薬局支援アプリのUI/UXデザイン" },
+      { "src": "/images/kusudama-web-design.png", "alt": "Kusudama Webデザイン" },
+      { "src": "/images/kusudama-dtp-design.png", "alt": "Kusudama カタログなどのDTPデザイン" },
+      { "src": "/images/kusudama-promotion-video.png", "alt": "Kusudama プロモーション映像" },
+      { "src": "/images/kusudama-booth-design.png", "alt": "Kusudama 展示会ブースデザイン" }
+    ],
     "date": "2017/03",
     "tools": [
       "Photoshop",
       "Illustrator",
-      "Figma"
+      "Figma",
+      "WordPress",
+      "Premiere Pro",
+      "After Effects"
     ],
-    "charge": "UI/UX、モックアップ、プロトタイプ",
-    "developmentScale": "1名",
+    "charge": "デザイン統括、UI/UX、製品ブランディング、Web、DTP、映像、展示会ブース",
     "category": [
       "2D WORKS",
       "UI/UX"
