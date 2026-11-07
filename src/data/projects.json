@@ -19,8 +19,9 @@
       }
     ],
     "tools": [
+      "Codex（配信システム開発）",
       "自作配信システム（Python）",
-      "Anthropic API（会話・視覚認識）",
+      "Claude API（Anthropic｜会話・視覚認識）",
       "Magnific API（画像生成）",
       "ElevenLabs（音声合成）",
       "FFmpeg",
