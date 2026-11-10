@@ -150,10 +150,20 @@ export default function WorkDetailPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
+    <main
+      className="min-h-screen bg-[#0a0a0a] text-white"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) router.back();
+      }}
+    >
       <Navbar />
 
-      <div className="max-w-4xl mx-auto px-4 md:px-6 pt-28 pb-20">
+      <div
+        className="max-w-4xl mx-auto px-4 md:px-6 pt-28 pb-20"
+        onClick={(event) => {
+          if (event.target === event.currentTarget) router.back();
+        }}
+      >
         {/* Back button */}
         <motion.button
           onClick={() => router.back()}
