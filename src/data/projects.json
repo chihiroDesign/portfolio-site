@@ -420,7 +420,6 @@
     "title": "ショート動画シリーズ／チンアナゴ先生の珍生相談",
     "description": "チンアナゴ先生が世の中のストレスをちょっとだけ緩和してくれるゆるいショート動画",
     "imageUrl": "/images/chinanago-sensei-vertical.jpg",
-    "link": "https://www.tiktok.com/@chihiro.design.ai/video/7629971052507991317",
     "category": [
       "AI Work",
       "Video Edit",
@@ -442,7 +441,9 @@
         "label": "キャラクターシート",
         "url": "https://www.chihiro.design/images/chinanago-character-sheet/index.html"
       }
-    ]
+    ],
+    "linkDoc": "https://note.com/chihirodesign/m/meba27bc799e6",
+    "linkDocLabel": "シリーズ記事を見る"
   },
   {
     "id": "morning-ai-digest",
