@@ -155,7 +155,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
       >
         {/* Backdrop */}
         <motion.div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 bg-black/45 backdrop-blur-[2px]"
           onClick={onClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

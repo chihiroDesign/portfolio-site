@@ -90,9 +90,9 @@ function HomeContent() {
     }
   };
 
-  // Handle project click — navigate to /works/[id]
+  // Keep the portfolio list in place and open the selected project above it.
   const handleProjectClick = (project: Project) => {
-    router.push(`/works/${project.id}`);
+    setSelectedProject(project);
   };
 
   return (
@@ -147,6 +147,12 @@ function HomeContent() {
       </section>
 
       <Footer />
+
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+        onCategoryClick={handleCategoryChange}
+      />
     </main>
   );
 }
