@@ -129,6 +129,7 @@ export default function WorkDetailPage() {
     getTiktokEmbedUrl(linkMovie || "") || getTiktokEmbedUrl(project.link || "");
 
   const imageUrl = (project as any).imageUrl || project.thumbnail;
+  const videoFile = project.videoFile;
   const audioUrl = (project as any).audioUrl;
   const linkDocLabel = (project as any).linkDocLabel;
 
@@ -183,7 +184,19 @@ export default function WorkDetailPage() {
           transition={{ duration: 0.4 }}
         >
           {/* Media */}
-          {embedUrl ? (
+          {videoFile ? (
+            <div className="w-full bg-black flex justify-center py-6">
+              <video
+                src={videoFile}
+                poster={imageUrl}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={`${project.title} 動画`}
+                className="w-full max-w-[440px] max-h-[75vh] object-contain"
+              />
+            </div>
+          ) : embedUrl ? (
             isYoutubeShorts ? (
               <div className="w-full bg-black flex justify-center py-6">
                 <iframe

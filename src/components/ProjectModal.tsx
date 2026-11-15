@@ -124,6 +124,7 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
 
   // 画像URL
   const imageUrl = (project as any).imageUrl || project.thumbnail;
+  const videoFile = project.videoFile;
   const audioUrl = (project as any).audioUrl;
   const linkDocLabel = (project as any).linkDocLabel;
 
@@ -180,7 +181,19 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
           </button>
 
           {/* Media — 動画embed / 音声プレイヤー / フル画像 */}
-          {embedUrl ? (
+          {videoFile ? (
+            <div className="w-full bg-black rounded-t-2xl overflow-hidden flex justify-center">
+              <video
+                src={videoFile}
+                poster={imageUrl}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={`${project.title} 動画`}
+                className="w-full max-h-[75vh] object-contain"
+              />
+            </div>
+          ) : embedUrl ? (
             <div className="relative w-full aspect-video bg-black rounded-t-2xl overflow-hidden">
               <iframe
                 src={embedUrl}

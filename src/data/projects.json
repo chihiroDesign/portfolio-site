@@ -418,7 +418,7 @@
   {
     "id": "chinanago-sensei",
     "title": "ショート動画シリーズ／チンアナゴ先生の珍生相談",
-    "description": "チンアナゴ先生が世の中のストレスをちょっとだけ緩和してくれるゆるいショート動画",
+    "description": "チンアナゴ先生が、世の中のストレスをちょっとだけ緩和してくれるショート動画シリーズ。詳細画面では第50話をサイト内で再生できます。",
     "imageUrl": "/images/chinanago-sensei-vertical.jpg",
     "category": [
       "AI Work",
@@ -443,7 +443,8 @@
       }
     ],
     "linkDoc": "https://note.com/chihirodesign/m/meba27bc799e6",
-    "linkDocLabel": "シリーズ記事を見る"
+    "linkDocLabel": "シリーズ一覧を見る",
+    "videoFile": "/videos/chinanago-sensei-050.mp4"
   },
   {
     "id": "morning-ai-digest",

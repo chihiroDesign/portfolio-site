@@ -8,6 +8,7 @@ export interface Project {
   images?: string[];
   galleryImages?: { src: string; alt: string }[];
   videoUrl?: string;
+  videoFile?: string;
   tags?: string[];
   year?: number;
   client?: string;
