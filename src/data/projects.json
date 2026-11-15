@@ -1,28 +1,5 @@
 [
   {
-    "id": "stack-ux-prototype",
-    "title": "UI/UXプロトタイプ｜アートカードサービス",
-    "description": "アートカードを集めるサービスを題材にした、自主制作のUI/UXプロトタイプです。パック一覧での検索・絞り込みから、内容や提供割合の確認、開封結果、コレクション、発送依頼までの流れを設計し、操作できるWebプロトタイプとして実装しました。架空のカードと固定デモ結果を使用し、実決済・実抽選・実発送は行いません。",
-    "imageUrl": "/images/stack-ux-prototype.png",
-    "category": [
-      "2D WORKS",
-      "UI/UX",
-      "Original"
-    ],
-    "date": "2026/11",
-    "linkDoc": "https://www.chihiro.design/stack-demo/index.html",
-    "linkDocLabel": "プロトタイプを試す",
-    "tools": [
-      "Codex",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "charge": "企画/要件整理/情報設計/UI/UX/プロトタイプ制作",
-    "featured": true,
-    "order": 1
-  },
-  {
     "id": "training-service-ui-ux",
     "title": "UI/UXプロトタイプ｜受講・研修管理サービス",
     "description": "受講者が講座や必須研修を探し、教材を読み、理解度チェックに回答。修了後は学習履歴から進捗を振り返るまでを一続きに設計した研修サービスのUI/UXプロトタイプです。人事担当者向けには、受講者一覧や研修進捗、研修割当の画面も用意しました。Figma上で画面遷移や回答選択、修了状態を操作できます。共通ボタンは通常・ホバー・押下・フォーカス・無効の状態と反応時間まで整理しています。",
@@ -62,6 +39,29 @@
       }
     ],
     "featured": false,
+    "order": 1
+  },
+  {
+    "id": "stack-ux-prototype",
+    "title": "UI/UXプロトタイプ｜アートカードサービス",
+    "description": "アートカードを集めるサービスを題材にした、自主制作のUI/UXプロトタイプです。パック一覧での検索・絞り込みから、内容や提供割合の確認、開封結果、コレクション、発送依頼までの流れを設計し、操作できるWebプロトタイプとして実装しました。架空のカードと固定デモ結果を使用し、実決済・実抽選・実発送は行いません。",
+    "imageUrl": "/images/stack-ux-prototype.png",
+    "category": [
+      "2D WORKS",
+      "UI/UX",
+      "Original"
+    ],
+    "date": "2026/11",
+    "linkDoc": "https://www.chihiro.design/stack-demo/index.html",
+    "linkDocLabel": "プロトタイプを試す",
+    "tools": [
+      "Codex",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "charge": "企画/要件整理/情報設計/UI/UX/プロトタイプ制作",
+    "featured": true,
     "order": 2
   },
   {
