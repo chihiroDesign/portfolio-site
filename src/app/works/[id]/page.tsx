@@ -444,13 +444,40 @@ function ShareSection({ id }: { id: string }) {
 
 function CopyButton({ id }: { id: string }) {
   const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
 
-  const handleCopy = () => {
+  const handleCopy = async () => {
     const url = `${window.location.origin}/works/${id}`;
-    navigator.clipboard.writeText(url).then(() => {
+    setCopyFailed(false);
+
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+      await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    });
+      return;
+    } catch {
+      const field = document.createElement("textarea");
+      field.value = url;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.top = "0";
+      field.style.left = "-9999px";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.focus();
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+
+      try {
+        const copied = document.execCommand("copy");
+        setCopied(copied);
+        setCopyFailed(!copied);
+        if (copied) setTimeout(() => setCopied(false), 2000);
+      } finally {
+        document.body.removeChild(field);
+      }
+    }
   };
 
   return (
@@ -458,7 +485,7 @@ function CopyButton({ id }: { id: string }) {
       onClick={handleCopy}
       className="text-xs px-3 py-1 rounded bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition-colors whitespace-nowrap"
     >
-      {copied ? "コピーしました！" : "URLをコピー"}
+      {copied ? "コピーしました！" : copyFailed ? "コピーできませんでした" : "URLをコピー"}
     </button>
   );
 }
