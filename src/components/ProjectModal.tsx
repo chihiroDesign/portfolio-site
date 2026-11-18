@@ -320,11 +320,65 @@ export function ProjectModal({ project, onClose, onCategoryClick }: ProjectModal
               </div>
             )}
 
+            <ShareSection id={project.id} />
 
           </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>
+  );
+}
+
+function ShareSection({ id }: { id: string }) {
+  const url = `https://www.chihiro.design/works/${id}`;
+  const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
+
+  const handleCopy = async () => {
+    setCopyFailed(false);
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      const field = document.createElement("textarea");
+      field.value = url;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.top = "0";
+      field.style.left = "-9999px";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.focus();
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+      try {
+        const success = document.execCommand("copy");
+        setCopied(success);
+        setCopyFailed(!success);
+        if (success) window.setTimeout(() => setCopied(false), 2000);
+      } finally {
+        document.body.removeChild(field);
+      }
+    }
+  };
+
+  return (
+    <div className="mt-8 pt-6 border-t border-white/10">
+      <p className="text-xs text-white/30 mb-2 tracking-widest uppercase">Share</p>
+      <div className="flex items-center gap-2 bg-white/5 rounded-lg px-4 py-2 border border-white/10">
+        <span className="text-xs text-white/50 flex-1 truncate select-text">{url}</span>
+        <button
+          type="button"
+          onClick={handleCopy}
+          aria-live="polite"
+          className="text-xs px-3 py-1 rounded bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition-colors whitespace-nowrap"
+        >
+          {copied ? "コピーしました！" : copyFailed ? "コピーできませんでした" : "URLをコピー"}
+        </button>
+      </div>
+    </div>
   );
 }
 
