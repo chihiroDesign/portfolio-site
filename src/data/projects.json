@@ -8,7 +8,7 @@
       "UI/UX",
       "Original"
     ],
-    "date": "2026/07",
+    "date": "2026/11",
     "tools": [
       "HTML",
       "CSS",
@@ -24,7 +24,7 @@
   {
     "id": "creative-ai-digest-live",
     "title": "【LIVE】AI・テック・サブカルニュース番組｜Creative AI Digest LIVE",
-    "description": "AI Visual ArtistのCHIHIROが、AI・テクノロジー・サブカルチャーの最新ニュースを元資料から紹介する番組です。今回の掲載動画では、Geminiのタスク機能やProtonのLumo Desktopなど、2026年11月18日のニュースを取り上げています。",
+    "description": "AI・テック・サブカルチャーのニュースを毎日配信する番組です。ニュース選定・台本構成から、AIキャラクターをリアルな人物として見せ、長時間の発話とカメラアングルの切替を実現する映像制作、配信フローの開発・運用までを担当。掲載動画は2026年11月18日の配信アーカイブです。",
     "imageUrl": "https://img.youtube.com/vi/FsU6UFzi1_0/maxresdefault.jpg",
     "linkDoc": "https://www.youtube.com/@chihiroDesignAI/streams",
     "linkDocLabel": "ライブ配信一覧を見る",
@@ -33,11 +33,17 @@
       "AI Work",
       "Video Edit"
     ],
-    "date": "2026/11/18",
+    "date": "2026/11",
     "tools": [
+      "Claude Code",
+      "Claude API",
+      "Google Apps Script",
+      "ElevenLabs",
+      "Remotion",
+      "Magnific",
       "YouTube Live"
     ],
-    "charge": "番組企画/ニュース選定/構成/配信",
+    "charge": "番組企画/ニュース選定/構成/映像制作・配信フロー開発/配信",
     "featured": true,
     "order": 2
   },
