@@ -103,7 +103,7 @@ export default function ProfilePage() {
               Portfolio
             </a>
             <a
-              href="/cv.pdf?v=20261120c"
+              href="/cv.pdf?v=20261120d"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-white bg-[#3b82f6] hover:bg-[#2563eb] px-5 py-2.5 rounded-full transition-all shadow-lg shadow-[#3b82f6]/20"
@@ -194,5 +194,6 @@ export default function ProfilePage() {
     </div>
   );
 }
+
 
 
