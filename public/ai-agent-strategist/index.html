@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1f6f6b">
-<title>AIエージェント設計 一問一答｜体験版</title>
+<title>一問一答アプリ｜操作デモ</title>
 <style>
 :root{
   --bg:#f6f4ef; --paper:#fffdf9; --ink:#23211d; --muted:#6f6a60;
@@ -77,15 +77,15 @@ button:disabled{cursor:not-allowed;opacity:.65}
 </head>
 <body>
 <header class="top">
-  <h1>AIエージェント設計 一問一答｜体験版</h1>
+  <h1>一問一答アプリ｜操作デモ</h1>
   <div class="stat" id="topstat">タップで解く → 即答え合わせ</div><a class="portfolio-link" href="/works/ai-agent-strategist">制作実績を見る</a>
 </header>
-<main><div class="card demo-note"><strong>オリジナル問題の体験版</strong><br>操作体験用に作成したサンプル問題です。特定の資格・試験の公式問題や公式教材ではありません。98問版は個人学習用として制作し、この公開デモには収録していません。</div>
+<main><div class="card demo-note"><strong>操作確認用のダミー問題</strong><br>架空の「星空喫茶」をテーマにしたサンプルです。実際の問題集やAIエージェントとは関係ありません。</div>
   <div id="menu" class="screen">
     <div class="card" id="resume-card" style="display:none">
       <button class="menu-btn primary" id="resume-btn">▶ 前回の続きから</button>
     </div>
-    <button class="menu-btn primary" id="start-all">全問シャッフルで解く<small>オリジナル問題6問をランダム順で</small></button>
+    <button class="menu-btn primary" id="start-all">全問シャッフルで解く<small>ダミー問題6問をランダム順で</small></button>
     <button class="menu-btn" id="start-wrong">間違えた問題だけ<small id="wrongcount">まだ記録なし</small></button>
     <div class="card">
       <div style="font-size:.8rem; color:var(--muted); font-weight:700; margin-bottom:8px">章をしぼって解く</div>
@@ -126,8 +126,8 @@ button:disabled{cursor:not-allowed;opacity:.65}
   </div>
 </main>
 <script>
-var QUESTIONS = [{"section":"目標と計画","q":"問い合わせ対応を支援するエージェントの特徴として、最も大切なものはどれですか。","choices":{"A":"同じ定型文だけを返す","B":"目標に向けて手順を組み、ツールの結果を見ながら次の行動を選ぶ","C":"一度に長い文章を出力する","D":"会話履歴を無期限に保存する"},"answer":"B","explain":"エージェントは目標に向けた行動と結果の確認を繰り返します。ツールの結果をもとに次の手順を判断します。","ch":1,"chname":"第1章 目標と計画"},{"section":"目標と計画","q":"毎週の売上レポート作成を任せるとき、最初に決めると完了を判断しやすいものはどれですか。","choices":{"A":"成功条件と、参照してよいデータの範囲","B":"返答の文字数だけ","C":"作業端末の壁紙","D":"全員の編集権限"},"answer":"A","explain":"完了条件と参照範囲を先に決めると、成果を評価しやすくなり、不要なデータ参照も防げます。","ch":1,"chname":"第1章 目標と計画"},{"section":"安全な実行","q":"カレンダーの空き時間を調べるだけのエージェントに適切な権限はどれですか。","choices":{"A":"メールとファイルの読み書き","B":"全サービスの管理者権限","C":"カレンダーへの必要最小限の読み取り権限","D":"全利用者のアカウント切替権限"},"answer":"C","explain":"作業に必要な権限だけを与えます。読み取りで足りるなら書き込み権限は不要です。","ch":2,"chname":"第2章 安全な実行"},{"section":"安全な実行","q":"エージェントに顧客への案内メール送信をさせます。送信前の設計として望ましいものはどれですか。","choices":{"A":"宛先と本文のプレビューを出し、送信承認を求める","B":"確認なしで即時送信する","C":"エラーを隠して送信済みに見せる","D":"送信記録を残さない"},"answer":"A","explain":"外部への送信は取り消しにくいため、宛先と内容を人が確認してから実行し、結果も記録します。","ch":2,"chname":"第2章 安全な実行"},{"section":"運用と評価","q":"問い合わせ分類エージェントの導入効果を測る指標として有用なのはどれですか。","choices":{"A":"画面の色の好みだけ","B":"起動回数だけ","C":"分類の正確さ、処理時間、担当者による修正の割合","D":"文章の長さだけ"},"answer":"C","explain":"品質、速度、人手での修正などを測ると、業務で役立っているか判断できます。","ch":3,"chname":"第3章 運用と評価"},{"section":"運用と評価","q":"エージェント更新後に誤答が増えた可能性があります。最初の対応として適切なのはどれですか。","choices":{"A":"報告と評価データを確認して影響範囲を把握する","B":"ログをすべて削除する","C":"検証せず広く展開する","D":"問題を無視して成功率を公表する"},"answer":"A","explain":"品質と影響範囲を確認し、必要なら更新を停止・切り戻して原因を調べます。","ch":3,"chname":"第3章 運用と評価"}];
-var CHAPTERS = [{"id":1,"name":"第1章 目標と計画","count":2},{"id":2,"name":"第2章 安全な実行","count":2},{"id":3,"name":"第3章 運用と評価","count":2}];
+var QUESTIONS = [{"section":"星空喫茶のメニュー","q":"このデモの設定で、看板ドリンク「月灯りソーダ」に浮かべる飾りはどれですか。","choices":{"A":"星形の砂糖菓子","B":"木の葉","C":"赤いボタン","D":"小さな貝殻"},"answer":"A","explain":"星空喫茶の看板ドリンクには、星形の砂糖菓子を浮かべる設定です。","ch":1,"chname":"第1章 星空喫茶のメニュー"},{"section":"星空喫茶のメニュー","q":"このデモの季節メニューで、春限定として登場する飲み物はどれですか。","choices":{"A":"流星レモネード","B":"さくらミルクティー","C":"雲のココア","D":"月影コーヒー"},"answer":"B","explain":"春限定メニューは、桜の花びらを添えた「さくらミルクティー」という設定です。","ch":1,"chname":"第1章 星空喫茶のメニュー"},{"section":"お店のしるし","q":"星空喫茶の入口にある紫色の看板は、何を知らせる合図ですか。","choices":{"A":"本日休業","B":"貸し切り","C":"夜の営業中","D":"新メニュー準備中"},"answer":"C","explain":"この架空のお店では、紫色の看板が夜の営業中を知らせます。","ch":2,"chname":"第2章 お店のしるし"},{"section":"お店のしるし","q":"このデモの設定で、窓辺の席を見つける目印はどれですか。","choices":{"A":"緑色の風車","B":"小さな星のランプ","C":"白い傘","D":"金色のベル"},"answer":"B","explain":"窓辺の席には、小さな星の形をしたランプが置かれています。","ch":2,"chname":"第2章 お店のしるし"},{"section":"喫茶店の小さな物語","q":"星空喫茶では、閉店前にどんな合図を流す設定ですか。","choices":{"A":"三音のベル","B":"汽車の汽笛","C":"波の音","D":"ピアノの長い曲"},"answer":"A","explain":"このデモでは、閉店前に三音のベルを鳴らすことになっています。","ch":3,"chname":"第3章 喫茶店の小さな物語"},{"section":"喫茶店の小さな物語","q":"雨の日にだけ星空喫茶へ手紙を届けるフクロウの名前はどれですか。","choices":{"A":"ルナ","B":"ポポ","C":"ミント","D":"ソラ"},"answer":"B","explain":"雨の日の手紙配達を担当するフクロウは「ポポ」という設定です。","ch":3,"chname":"第3章 喫茶店の小さな物語"}];
+var CHAPTERS = [{"id":1,"name":"第1章 星空喫茶のメニュー","count":2},{"id":2,"name":"第2章 お店のしるし","count":2},{"id":3,"name":"第3章 喫茶店の小さな物語","count":2}];
 (function(){
   var $=function(id){return document.getElementById(id)};
   var STORAGE={stats:'aast_demo_stats_v1',session:'aast_demo_session_v1'};
