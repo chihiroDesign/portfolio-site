@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6f6b">
+<title>AIエージェント設計 一問一答｜体験版</title>
+<style>
+:root{
+  --bg:#f6f4ef; --paper:#fffdf9; --ink:#23211d; --muted:#6f6a60;
+  --accent:#1f6f6b; --accent2:#c2562f; --ok:#2e7d32; --ng:#c62828;
+  --line:#e4ddd0; --shadow:0 1px 3px rgba(0,0,0,.07); --fs:17px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#16181a; --paper:#1f2225; --ink:#e9e6df; --muted:#a39f96;
+    --accent:#5bc6bf; --accent2:#f0915f; --ok:#81c784; --ng:#ef9a9a;
+    --line:#33373b; --shadow:0 1px 3px rgba(0,0,0,.4);}
+}
+*{box-sizing:border-box;-webkit-text-size-adjust:100%}
+html,body{margin:0;padding:0}
+body{background:var(--bg); color:var(--ink);
+  font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  font-size:var(--fs); line-height:1.85; padding-bottom:40px;}
+header.top{position:sticky; top:0; z-index:50; background:var(--accent); color:#fff;
+  padding:calc(env(safe-area-inset-top) + 10px) 14px 10px; box-shadow:var(--shadow);}
+header.top h1{font-size:1rem; margin:0; font-weight:700}
+header.top .stat{font-size:.78rem; opacity:.9; margin-top:2px}
+main{max-width:680px; margin:0 auto; padding:14px}
+.card{background:var(--paper); border:1px solid var(--line); border-radius:14px;
+  padding:16px; margin-bottom:14px; box-shadow:var(--shadow);}
+.menu-btn{display:block; width:100%; text-align:left; background:var(--paper); color:var(--ink);
+  border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:10px;
+  font-size:1rem; font-weight:700; box-shadow:var(--shadow); -webkit-appearance:none;}
+.menu-btn small{display:block; font-weight:400; color:var(--muted); font-size:.8rem; margin-top:2px}
+.menu-btn.primary{background:var(--accent); color:#fff; border:0}
+.menu-btn.primary small{color:rgba(255,255,255,.85)}
+.qmeta{font-size:.75rem; color:var(--muted); margin-bottom:6px}
+.qtext{font-weight:700; margin-bottom:14px; line-height:1.8}
+.choice{display:block; width:100%; text-align:left; background:var(--bg); color:var(--ink);
+  border:1.5px solid var(--line); border-radius:12px; padding:12px 14px; margin-bottom:9px;
+  font-size:.95rem; line-height:1.7; -webkit-appearance:none;}
+.choice b{color:var(--accent); margin-right:6px}
+.choice.correct{border-color:var(--ok); background:rgba(46,125,50,.1)}
+.choice.wrong{border-color:var(--ng); background:rgba(198,40,40,.1)}
+.choice:disabled{opacity:1; color:var(--ink)}
+.verdict{font-size:1.05rem; font-weight:700; margin:10px 0 6px}
+.verdict.ok{color:var(--ok)} .verdict.ng{color:var(--ng)}
+.explain{background:var(--bg); border-left:4px solid var(--accent); border-radius:0 8px 8px 0;
+  padding:10px 14px; font-size:.92rem; margin-top:8px}
+.nav{display:flex; gap:10px; margin-top:14px}
+.nav button{flex:1; background:var(--accent); color:#fff; border:0; border-radius:12px;
+  padding:13px; font-size:1rem; font-weight:700; -webkit-appearance:none;}
+.nav button.ghost{background:var(--paper); color:var(--ink); border:1px solid var(--line)}
+.prog{height:6px; background:var(--line); border-radius:3px; margin:4px 0 14px; overflow:hidden}
+.prog i{display:block; height:100%; background:var(--accent); transition:width .25s}
+.result-big{font-size:2rem; font-weight:800; text-align:center; margin:10px 0}
+.result-sub{text-align:center; color:var(--muted); margin-bottom:14px}
+.hidden{display:none}
+.wrongtag{display:inline-block; background:var(--accent2); color:#fff; font-size:.68rem;
+  border-radius:6px; padding:1px 7px; margin-left:8px; vertical-align:middle}
+.portfolio-link{display:inline-block;margin-top:5px;color:rgba(255,255,255,.9);font-size:.78rem;text-underline-offset:3px}
+.demo-note{border-left:4px solid var(--accent);font-size:.88rem;line-height:1.7}
+button,a{-webkit-tap-highlight-color:transparent}
+.menu-btn,.choice,.nav button{cursor:pointer;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background-color .16s ease}
+.menu-btn:hover:not(:disabled),.choice:hover:not(:disabled),.nav button:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.menu-btn:active:not(:disabled),.choice:active:not(:disabled),.nav button:active:not(:disabled){transform:scale(.985)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+button:disabled{cursor:not-allowed;opacity:.65}
+.screen.is-visible{animation:screen-in .22s cubic-bezier(.2,.75,.25,1) both}
+@keyframes screen-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.choice{animation:choice-in .18s ease-out both}
+.choice:nth-child(2){animation-delay:.025s}.choice:nth-child(3){animation-delay:.05s}.choice:nth-child(4){animation-delay:.075s}
+@keyframes choice-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.storage-alert{background:rgba(198,40,40,.1);border-left:4px solid var(--ng);border-radius:0 8px 8px 0;padding:8px 12px;margin-bottom:12px;font-size:.85rem}
+#storage-status.storage-warning{color:var(--ng);font-weight:700}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}</style>
+</head>
+<body>
+<header class="top">
+  <h1>AIエージェント設計 一問一答｜体験版</h1>
+  <div class="stat" id="topstat">タップで解く → 即答え合わせ</div><a class="portfolio-link" href="/works/ai-agent-strategist">制作実績を見る</a>
+</header>
+<main><div class="card demo-note"><strong>オリジナル問題の体験版</strong><br>操作体験用に作成したサンプル問題です。特定の資格・試験の公式問題や公式教材ではありません。98問版は個人学習用として制作し、この公開デモには収録していません。</div>
+  <div id="menu" class="screen">
+    <div class="card" id="resume-card" style="display:none">
+      <button class="menu-btn primary" id="resume-btn">▶ 前回の続きから</button>
+    </div>
+    <button class="menu-btn primary" id="start-all">全問シャッフルで解く<small>オリジナル問題6問をランダム順で</small></button>
+    <button class="menu-btn" id="start-wrong">間違えた問題だけ<small id="wrongcount">まだ記録なし</small></button>
+    <div class="card">
+      <div style="font-size:.8rem; color:var(--muted); font-weight:700; margin-bottom:8px">章をしぼって解く</div>
+      <div id="chapbtns"></div>
+    </div>
+    <div class="card" style="font-size:.8rem; color:var(--muted)">
+      <span id="storage-status" role="status" aria-live="polite">成績と途中経過をこのブラウザーに保存します。</span><br>シャッフルや章別モードで解き、間違えた問題を復習できます。
+      <div style="margin-top:6px"><button class="menu-btn" id="reset-btn" style="margin:0; font-size:.85rem; padding:9px 14px">成績をリセット</button></div>
+    </div>
+  </div>
+
+  <div id="quiz" class="screen hidden">
+    <div class="prog"><i id="bar"></i></div><div id="storage-alert" class="storage-alert hidden" role="status" aria-live="polite">成績を保存できません。この画面を閉じると進捗が失われます。</div>
+    <div class="card">
+      <div class="qmeta" id="qmeta" aria-live="polite"></div>
+      <div class="qtext" id="qtext" aria-live="polite"></div>
+      <div id="choices"></div>
+      <div id="feedback" class="hidden" role="status" aria-live="polite">
+        <div class="verdict" id="verdict"></div>
+        <div class="explain" id="explain"></div>
+      </div>
+      <div class="nav">
+        <button class="ghost" id="quit">メニューへ</button>
+        <button id="next" disabled>答えを選んでください</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="result" class="screen hidden">
+    <div class="card">
+      <div class="result-big" id="score"></div>
+      <div class="result-sub" id="scoresub"></div>
+      <div class="nav">
+        <button class="ghost" id="back-menu">メニューへ</button>
+        <button id="retry-wrong">間違いだけもう一度</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+var QUESTIONS = [{"section":"目標と計画","q":"問い合わせ対応を支援するエージェントの特徴として、最も大切なものはどれですか。","choices":{"A":"同じ定型文だけを返す","B":"目標に向けて手順を組み、ツールの結果を見ながら次の行動を選ぶ","C":"一度に長い文章を出力する","D":"会話履歴を無期限に保存する"},"answer":"B","explain":"エージェントは目標に向けた行動と結果の確認を繰り返します。ツールの結果をもとに次の手順を判断します。","ch":1,"chname":"第1章 目標と計画"},{"section":"目標と計画","q":"毎週の売上レポート作成を任せるとき、最初に決めると完了を判断しやすいものはどれですか。","choices":{"A":"成功条件と、参照してよいデータの範囲","B":"返答の文字数だけ","C":"作業端末の壁紙","D":"全員の編集権限"},"answer":"A","explain":"完了条件と参照範囲を先に決めると、成果を評価しやすくなり、不要なデータ参照も防げます。","ch":1,"chname":"第1章 目標と計画"},{"section":"安全な実行","q":"カレンダーの空き時間を調べるだけのエージェントに適切な権限はどれですか。","choices":{"A":"メールとファイルの読み書き","B":"全サービスの管理者権限","C":"カレンダーへの必要最小限の読み取り権限","D":"全利用者のアカウント切替権限"},"answer":"C","explain":"作業に必要な権限だけを与えます。読み取りで足りるなら書き込み権限は不要です。","ch":2,"chname":"第2章 安全な実行"},{"section":"安全な実行","q":"エージェントに顧客への案内メール送信をさせます。送信前の設計として望ましいものはどれですか。","choices":{"A":"宛先と本文のプレビューを出し、送信承認を求める","B":"確認なしで即時送信する","C":"エラーを隠して送信済みに見せる","D":"送信記録を残さない"},"answer":"A","explain":"外部への送信は取り消しにくいため、宛先と内容を人が確認してから実行し、結果も記録します。","ch":2,"chname":"第2章 安全な実行"},{"section":"運用と評価","q":"問い合わせ分類エージェントの導入効果を測る指標として有用なのはどれですか。","choices":{"A":"画面の色の好みだけ","B":"起動回数だけ","C":"分類の正確さ、処理時間、担当者による修正の割合","D":"文章の長さだけ"},"answer":"C","explain":"品質、速度、人手での修正などを測ると、業務で役立っているか判断できます。","ch":3,"chname":"第3章 運用と評価"},{"section":"運用と評価","q":"エージェント更新後に誤答が増えた可能性があります。最初の対応として適切なのはどれですか。","choices":{"A":"報告と評価データを確認して影響範囲を把握する","B":"ログをすべて削除する","C":"検証せず広く展開する","D":"問題を無視して成功率を公表する"},"answer":"A","explain":"品質と影響範囲を確認し、必要なら更新を停止・切り戻して原因を調べます。","ch":3,"chname":"第3章 運用と評価"}];
+var CHAPTERS = [{"id":1,"name":"第1章 目標と計画","count":2},{"id":2,"name":"第2章 安全な実行","count":2},{"id":3,"name":"第3章 運用と評価","count":2}];
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var STORAGE={stats:'aast_demo_stats_v1',session:'aast_demo_session_v1'};
+  var storageAvailable=true;
+  function getStored(key){try{return localStorage.getItem(key)}catch(e){storageAvailable=false;return null}}
+  function setStored(key,value){try{localStorage.setItem(key,value);return true}catch(e){storageAvailable=false;updateStorageStatus();return false}}
+  function removeStored(key){try{localStorage.removeItem(key);return true}catch(e){storageAvailable=false;updateStorageStatus();return false}}
+  var stats={};
+  try{stats=JSON.parse(getStored(STORAGE.stats)||'{}')||{}}catch(e){stats={};storageAvailable=false}
+  function updateStorageStatus(){
+    var status=$('storage-status'); var alert=$('storage-alert');
+    if(status){status.textContent=storageAvailable?'成績と途中経過をこのブラウザーに保存します。':'このブラウザーでは保存できません。プライベートモード設定などをご確認ください。';status.className=storageAvailable?'':'storage-warning'}
+    if(alert){alert.classList.toggle('hidden',storageAvailable);if(!storageAvailable)alert.textContent='成績をこのブラウザーに保存できません。今の画面では続けられますが、閉じると進捗が失われます。'}
+  }
+  var session = null;
+
+  function save(){ setStored(STORAGE.stats,JSON.stringify(stats)); updateStorageStatus(); }
+  function saveSession(){ if(session) setStored(STORAGE.session,JSON.stringify(session)); else removeStored(STORAGE.session); updateStorageStatus(); }
+  function wrongIdxs(){ var a=[]; for(var k in stats){ if(stats[k].lastWrong) a.push(parseInt(k,10)); } return a; }
+  function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+
+  function updateMenu(){
+    var w=wrongIdxs().length;
+    $('wrongcount').textContent = w ? w+'問たまっています' : 'まだ記録なし';
+    $('start-wrong').disabled = !w;
+    var ss = getStored(STORAGE.session);
+    $('resume-card').style.display = ss ? '' : 'none';
+    var answered=0; for(var k in stats) answered++;
+    $('topstat').textContent = answered ? ('進捗：'+answered+'/'+QUESTIONS.length+'問に挑戦済み') : 'タップで解く → 即答え合わせ';
+  }
+
+  // chapter buttons
+  CHAPTERS.forEach(function(c){
+    var b=document.createElement('button');
+    b.className='menu-btn'; b.style.marginBottom='8px';
+    b.innerHTML=c.name+'<small>'+c.count+'問</small>';
+    b.onclick=function(){ start(QUESTIONS.map(function(q,i){return q.ch===c.id?i:-1}).filter(function(i){return i>=0}), true); };
+    $('chapbtns').appendChild(b);
+  });
+
+  function start(idxs, doShuffle){
+    if(!idxs.length) return;
+    session = { order: doShuffle? shuffle(idxs.slice()) : idxs.slice(), pos:0, ok:0, ng:0, wrongThis:[] };
+    saveSession();
+    show('quiz'); render();
+  }
+  function resume(){
+    var ss=getStored(STORAGE.session); if(!ss) return;
+    try{session=JSON.parse(ss);if(!session||!Array.isArray(session.order)||session.order.some(function(i){return i<0||i>=QUESTIONS.length}))throw new Error('invalid session')}
+    catch(e){session=null;removeStored(STORAGE.session);$('storage-status').textContent='途中データを読み込めませんでした。新しく始めてください。';return}
+    show('quiz');render();
+  }
+  function show(id){
+    ['menu','quiz','result'].forEach(function(x){$(x).classList.add('hidden');$(x).classList.remove('is-visible')});
+    var panel=$(id);panel.classList.remove('hidden');window.requestAnimationFrame(function(){panel.classList.add('is-visible')});
+    if(id==='menu')updateMenu();window.scrollTo(0,0);
+  }
+  function render(){
+    var i=session.order[session.pos];
+    var q=QUESTIONS[i];
+    $('bar').style.width=Math.round(session.pos/session.order.length*100)+'%';
+    var wrongMark = stats[i]&&stats[i].lastWrong ? '<span class="wrongtag">前回×</span>' : '';
+    $('qmeta').innerHTML='Q'+(session.pos+1)+' / '+session.order.length+'　'+q.chname+'｜'+q.section+wrongMark;
+    $('qtext').textContent=q.q;
+    var box=$('choices'); box.innerHTML='';
+    Object.keys(q.choices).forEach(function(k){
+      var b=document.createElement('button');
+      b.className='choice'; b.innerHTML='<b>'+k+'</b>'+q.choices[k];
+      b.onclick=function(){ answer(k, b); };
+      box.appendChild(b);
+    });
+    $('feedback').classList.add('hidden');
+    $('next').disabled=true; $('next').textContent='答えを選んでください';
+  }
+  function answer(k, btn){
+    var i=session.order[session.pos];
+    var q=QUESTIONS[i];
+    var correct = (k===q.answer);
+    [].slice.call($('choices').children).forEach(function(b){
+      b.disabled=true;
+      var key=b.querySelector('b').textContent;
+      if(key===q.answer) b.classList.add('correct');
+      else if(b===btn && !correct) b.classList.add('wrong');
+    });
+    if(!stats[i]) stats[i]={ok:0,ng:0,lastWrong:false};
+    if(correct){ stats[i].ok++; stats[i].lastWrong=false; session.ok++; }
+    else{ stats[i].ng++; stats[i].lastWrong=true; session.ng++; session.wrongThis.push(i); }
+    save();
+    $('verdict').textContent = correct ? '◯ 正解！' : '× 不正解（正解：'+q.answer+'）';
+    $('verdict').className = 'verdict '+(correct?'ok':'ng');
+    $('explain').textContent = q.explain;
+    $('feedback').classList.remove('hidden');
+    $('next').disabled=false;
+    $('next').textContent = (session.pos+1>=session.order.length)?'結果を見る':'次の問題 →';
+    saveSession();
+  }
+  $('next').onclick=function(){
+    session.pos++;
+    if(session.pos>=session.order.length){ finish(); }
+    else { saveSession(); render(); }
+  };
+  function finish(){
+    $('score').textContent = session.ok+' / '+session.order.length+' 正解';
+    var pct=Math.round(session.ok/session.order.length*100);
+    $('scoresub').textContent = pct+'%　'+(pct>=90?'仕上がってます！':pct>=70?'あと少し。×だけ回そう':'間違えた問題をもう一度解こう');
+    $('retry-wrong').style.display = session.wrongThis.length? '':'none';
+    session=null; saveSession();
+    show('result');
+  }
+  $('quit').onclick=function(){ saveSession(); show('menu'); };
+  $('back-menu').onclick=function(){ show('menu'); };
+  $('retry-wrong').onclick=function(){ start(wrongIdxs(), true); };
+  $('start-all').onclick=function(){ start(QUESTIONS.map(function(_,i){return i}), true); };
+  $('start-wrong').onclick=function(){ start(wrongIdxs(), true); };
+  $('resume-btn').onclick=resume;
+  $('reset-btn').onclick=function(){
+    if(confirm('成績記録をすべて消します。よろしいですか？')){ stats={}; save(); session=null; saveSession(); updateMenu(); }
+  };
+  updateMenu();
+  updateStorageStatus();
+})();
+</script>
+</body>
+</html>
