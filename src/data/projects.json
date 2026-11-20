@@ -1,7 +1,7 @@
 [
   {
     "id": "ai-agent-strategist",
-    "title": "AIエージェント設計 一問一答アプリ",
+    "title": "問題集から一問一答アプリを制作",
     "description": "AIエージェント・ストラテジストの学習用一問一答アプリを設計・実装。公開デモは操作体験用のオリジナル問題6問で構成し、章別・シャッフル・誤答復習、途中再開、端末内保存に対応。個人学習用の98問版の問題は公開デモに含めていません。",
     "imageUrl": "/images/ai-agent-strategist-demo.svg",
     "category": [
