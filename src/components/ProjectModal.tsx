@@ -365,20 +365,25 @@ function ShareSection({ id }: { id: string }) {
   };
 
   return (
-    <div className="mt-8 pt-6 border-t border-white/10">
-      <p className="text-xs text-white/30 mb-2 tracking-widest uppercase">Share</p>
-      <div className="flex items-center gap-2 bg-white/5 rounded-lg px-4 py-2 border border-white/10">
-        <span className="text-xs text-white/50 flex-1 truncate select-text">{url}</span>
+    <section aria-label="詳細ページのURL" className="mt-8 pt-6 border-t border-white/10">
+      <p className="text-sm text-white/70 mb-2">この詳細ページのURL</p>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 bg-white/5 rounded-lg px-4 py-3 border border-white/15">
+        <a
+          href={url}
+          className="text-sm text-blue-300 underline underline-offset-4 break-all flex-1 select-text"
+        >
+          {url}
+        </a>
         <button
           type="button"
           onClick={handleCopy}
           aria-live="polite"
-          className="text-xs px-3 py-1 rounded bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition-colors whitespace-nowrap"
+          className="self-start sm:self-auto text-sm px-4 py-2 rounded bg-white/15 hover:bg-white/25 text-white transition-colors whitespace-nowrap"
         >
-          {copied ? "コピーしました！" : copyFailed ? "コピーできませんでした" : "URLをコピー"}
+          {copied ? "コピーしました" : copyFailed ? "コピーできませんでした" : "URLをコピー"}
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
