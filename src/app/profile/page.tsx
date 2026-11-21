@@ -19,6 +19,7 @@ const certifications = [
 ];
 
 const awards = [
+  { year: '2026', title: '国際AIクリエイターアワード2026 出版部門 受賞「日々、御機嫌」', medal: '/images/hibi-gokigen-award-trophy.png' },
   { year: '2025', title: 'AICU 月例漫画コンテスト ノンジャンル／art部門 受賞「POPPY GUMMY BEARS」' },
   { year: '2023', title: '生成AIアート アジアIPコンテスト2023 最優秀賞' },
   { year: '2022', title: 'Avatar Award 2022 優秀賞' },
@@ -183,7 +184,7 @@ export default function ProfilePage() {
             {awards.map((award, i) => (
               <div key={i} className="flex gap-4 text-sm">
                 <span className="text-white/30 shrink-0 w-10">{award.year}</span>
-                <span className="text-white/70">{award.title}</span>
+                <span className="text-white/70 flex items-center gap-3">{award.medal && <img src={award.medal} alt="国際AIクリエイターアワード2026 出版部門 受賞トロフィー" className="w-20 h-24 object-contain" />}<span>{award.title}</span></span>
               </div>
             ))}
           </div>
@@ -194,6 +195,10 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+
+
+
 
 
 
