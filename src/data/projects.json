@@ -1,5 +1,25 @@
 [
   {
+    "id": "hibi-gokigen-award-article",
+    "title": "『日々、御機嫌』が国際AIクリエイターアワード2026の出版分野で受賞しました！",
+    "description": "Noteで連載中の小説『日々、御機嫌』が、国際AIクリエイターアワード2026の出版分野で受賞したことを伝える記事です。授賞式の翌朝に受賞を知った経緯と、作品の世界観や登場人物、アニメOP制作について紹介しています。",
+    "imageUrl": "https://assets.st-note.com/production/uploads/images/338757932/rectangle_large_type_2_afefcd7ff3ef4f6802c52ce88783177f.png?width=1200",
+    "category": [
+      "AI Work",
+      "Original"
+    ],
+    "date": "2026/11",
+    "tools": [
+      "Note"
+    ],
+    "charge": "記事企画/執筆/編集",
+    "developmentScale": "1名",
+    "featured": true,
+    "order": 0,
+    "linkDoc": "https://note.com/chihirodesign/n/n9e2c9e587817",
+    "linkDocLabel": "受賞記事を読む"
+  },
+  {
     "id": "ai-agent-strategist",
     "title": "問題集から一問一答アプリを制作",
     "description": "問題集の内容を、章ごとに学べる一問一答アプリへ再構成。正誤判定と解説、全問シャッフル、誤答復習、途中再開、端末内保存まで実装。公開体験版では、架空の「星空喫茶」を題材に、出題から復習まで操作できます。",
@@ -1568,4 +1588,3 @@
     "order": 70
   }
 ]
-
