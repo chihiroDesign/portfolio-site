@@ -53,7 +53,7 @@ export default function ProfilePage() {
             ))}
           </div>
         </section>
-      </main>
+      </div>
       <section className="relative pt-32 pb-20 flex flex-col items-center text-center px-6 overflow-hidden">
         {/* 背景画像（Projectsと同様） */}
         <div
