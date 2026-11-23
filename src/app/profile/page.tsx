@@ -41,19 +41,6 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
 
-      <div className="max-w-2xl mx-auto px-6 pt-24 pb-6">
-        <section className="mb-6">
-          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Awards</h2>
-          <div className="space-y-3">
-            {awards.map((award, i) => (
-              <div key={i} className="flex gap-4 text-sm">
-                <span className="text-white/30 shrink-0 w-10">{award.year}</span>
-                <span className="text-white/70 flex items-center gap-3">{award.medal && <img src={award.medal} alt="国際AIクリエイターアワード2026 出版部門 受賞トロフィー" className="w-20 h-24 object-contain" />}<span>{award.title}</span></span>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
       <section className="relative pt-32 pb-20 flex flex-col items-center text-center px-6 overflow-hidden">
         {/* 背景画像（Projectsと同様） */}
         <div
@@ -135,6 +122,17 @@ export default function ProfilePage() {
       </section>
 
       <main className="max-w-2xl mx-auto px-6 pb-20">
+        <section className="mb-10">
+          <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Awards</h2>
+          <div className="space-y-3">
+            {awards.map((award, i) => (
+              <div key={i} className="flex gap-4 text-sm">
+                <span className="text-white/30 shrink-0 w-10">{award.year}</span>
+                <span className="text-white/70 flex items-center gap-3">{award.medal && <img src={award.medal} alt="国際AIクリエイターアワード2026 出版部門 受賞トロフィー" className="w-20 h-24 object-contain" />}<span>{award.title}</span></span>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <section className="mb-10">
           <h2 className="text-xs text-white/30 tracking-widest uppercase mb-4">Skill Chart</h2>
