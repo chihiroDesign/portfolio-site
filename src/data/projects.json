@@ -1,5 +1,27 @@
 [
   {
+    "id": "creative-ai-digest-motion-logo",
+    "title": "Creative AI Digest｜SUNO × Seedance 2.5 モーションロゴ",
+    "description": "番組ロゴと約10秒の音源から、オープニング用のモーションロゴを制作。SUNOでタイトルコールを含む音源を作り、Magnific SpaceからSeedance 2.5へ素材と動きの指示を渡して映像化しました。生成映像の音声を外し、元の音源に差し替えて仕上げています。掲載動画では、素材準備から音づくり、映像生成、仕上げまでの手順を紹介しています。",
+    "imageUrl": "https://img.youtube.com/vi/T_Xdzj2lAEI/maxresdefault.jpg",
+    "linkMovie": "https://youtu.be/T_Xdzj2lAEI",
+    "category": [
+      "AI Work",
+      "Video Edit"
+    ],
+    "date": "2026/11",
+    "tools": [
+      "SUNO",
+      "Magnific Space",
+      "Seedance 2.5",
+      "After Effects"
+    ],
+    "charge": "音源制作/映像生成/編集",
+    "developmentScale": "1名",
+    "featured": true,
+    "order": 0
+  },
+  {
     "id": "hibi-gokigen-award-article",
     "title": "『日々、御機嫌』が国際AIクリエイターアワード2026の出版分野で受賞しました！",
     "description": "Noteで連載中の小説『日々、御機嫌』が、国際AIクリエイターアワード2026の出版分野で受賞したことを伝える記事です。授賞式の翌朝に受賞を知った経緯と、作品の世界観や登場人物、アニメOP制作について紹介しています。",
@@ -15,7 +37,7 @@
     "charge": "記事企画/執筆/編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 0,
+    "order": 1,
     "linkDoc": "https://note.com/chihirodesign/n/n9e2c9e587817",
     "linkDocLabel": "受賞記事を読む"
   },
@@ -37,7 +59,7 @@
     ],
     "charge": "アプリ設計 / UI設計 / 実装",
     "featured": true,
-    "order": 1,
+    "order": 2,
     "linkDoc": "/ai-agent-strategist/index.html",
     "linkDocLabel": "体験版を操作する"
   },
@@ -65,7 +87,7 @@
     ],
     "charge": "番組企画/ニュース選定/構成/映像制作・配信フロー開発/配信",
     "featured": true,
-    "order": 2
+    "order": 3
   },
   {
     "id": "training-service-ui-ux",
@@ -107,7 +129,7 @@
       }
     ],
     "featured": false,
-    "order": 3
+    "order": 4
   },
   {
     "id": "stack-ux-prototype",
@@ -130,7 +152,7 @@
     ],
     "charge": "企画/要件整理/情報設計/UI/UX/プロトタイプ制作",
     "featured": true,
-    "order": 4
+    "order": 5
   },
   {
     "id": "confetti-drawing-live",
@@ -156,7 +178,7 @@
     ],
     "charge": "企画/配信システム開発/配信進行",
     "featured": true,
-    "order": 5
+    "order": 6
   },
   {
     "id": "dot-and-won-making",
@@ -190,7 +212,7 @@
     ],
     "charge": "企画/構成/原作・原型/監修/制作指示・レビュー",
     "featured": false,
-    "order": 6
+    "order": 7
   },
   {
     "id": "dot-and-won",
@@ -227,7 +249,7 @@
     ],
     "charge": "原作/企画/クリエイティブディレクション/制作指示・レビュー/監修",
     "featured": true,
-    "order": 7
+    "order": 8
   },
   {
     "id": "codex-anime-op-making",
@@ -251,7 +273,7 @@
     ],
     "charge": "原作/監督/制作指示・レビュー/最終タイミング調整",
     "featured": false,
-    "order": 8
+    "order": 9
   },
   {
     "id": "hibi-gokigen-mv",
@@ -273,7 +295,7 @@
     ],
     "charge": "企画/ビジュアルディレクション/AI画像・動画生成/映像制作",
     "featured": true,
-    "order": 9
+    "order": 10
   },
   {
     "id": "yorimichi-tsuzuki",
@@ -296,7 +318,7 @@
     "charge": "企画/ビジュアルディレクション/楽曲制作/AI画像生成/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 10
+    "order": 11
   },
   {
     "id": "gensou-ikimono-zukan",
@@ -320,7 +342,7 @@
     "charge": "企画/描画エンジン開発/AI画像生成/生態解説の構成/ナレーション生成/楽曲制作/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 11,
+    "order": 12,
     "extraLinks": [
       {
         "label": "再生リスト",
@@ -350,7 +372,7 @@
     "charge": "企画/作詞・作曲/アートディレクション/AI画像生成/映像制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 12,
+    "order": 13,
     "extraLinks": [
       {
         "label": "再生リスト",
@@ -377,7 +399,7 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 13,
+    "order": 14,
     "extraLinks": [
       {
         "label": "再生リスト",
@@ -407,7 +429,7 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 14,
+    "order": 15,
     "extraLinks": [
       {
         "label": "再生リスト",
@@ -435,7 +457,7 @@
     "charge": "企画/執筆/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 15
+    "order": 16
   },
   {
     "id": "kurage-radio",
@@ -461,7 +483,7 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 16
+    "order": 17
   },
   {
     "id": "chinanago-sensei",
@@ -483,7 +505,7 @@
     "charge": "企画/AI動画生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 17,
+    "order": 18,
     "extraLinks": [
       {
         "label": "キャラクターシート",
@@ -531,7 +553,7 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 18
+    "order": 19
   },
   {
     "id": "tech-culture-shorts",
@@ -559,7 +581,7 @@
     "charge": "企画/制作",
     "developmentScale": "1名",
     "featured": true,
-    "order": 19
+    "order": 20
   },
   {
     "id": "shift-ai-interview",
@@ -578,7 +600,7 @@
     "charge": "インタビュー",
     "developmentScale": "5名",
     "featured": true,
-    "order": 20
+    "order": 21
   },
   {
     "id": "manus-music-video",
@@ -601,7 +623,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 21
+    "order": 22
   },
   {
     "id": "fatal-exception-mv",
@@ -624,7 +646,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 22
+    "order": 23
   },
   {
     "id": "otonashi-fake-heart",
@@ -648,7 +670,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 23
+    "order": 24
   },
   {
     "id": "otonashi-fake-heart-album",
@@ -668,7 +690,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 24
+    "order": 25
   },
   {
     "id": "shift-ai-interview-42",
@@ -687,7 +709,7 @@
     "charge": "インタビュー",
     "developmentScale": "5名",
     "featured": true,
-    "order": 25
+    "order": 26
   },
   {
     "id": "vtuber-kanae-hibiki",
@@ -705,7 +727,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 26
+    "order": 27
   },
   {
     "id": "ai-manga-automation",
@@ -723,7 +745,7 @@
     ],
     "charge": "企画/制作/Web開発",
     "developmentScale": "5名",
-    "order": 27
+    "order": 28
   },
   {
     "id": "net-oripa-video",
@@ -743,7 +765,7 @@
       "AI Work",
       "Video Edit"
     ],
-    "order": 28,
+    "order": 29,
     "link": "https://youtu.be/DOiU51SnPzc",
     "extraLinks": [
       {
@@ -768,7 +790,7 @@
     ],
     "charge": "企画/制作/Web開発",
     "developmentScale": "5名",
-    "order": 29
+    "order": 30
   },
   {
     "id": "ai-manga-creation",
@@ -789,7 +811,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/",
     "developmentScale": "1名",
-    "order": 30
+    "order": 31
   },
   {
     "id": "korea-cosme-video",
@@ -810,7 +832,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 31
+    "order": 32
   },
   {
     "id": "cosme-cm-video",
@@ -833,7 +855,7 @@
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
     "featured": true,
-    "order": 32
+    "order": 33
   },
   {
     "id": "dance-video-unicorn",
@@ -855,7 +877,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 33
+    "order": 34
   },
   {
     "id": "chill-music-aquarium",
@@ -878,7 +900,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 34
+    "order": 35
   },
   {
     "id": "kenpon-cm",
@@ -900,7 +922,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 35
+    "order": 36
   },
   {
     "id": "zio-music-video",
@@ -922,7 +944,7 @@
     ],
     "charge": "構成/AI画像生成/AI動画生成/BGM生成/動画編集",
     "developmentScale": "1名",
-    "order": 36
+    "order": 37
   },
   {
     "id": "ellipsis-dot-dance",
@@ -943,7 +965,7 @@
       "AI Work",
       "Video Edit"
     ],
-    "order": 37
+    "order": 38
   },
   {
     "id": "fruit-fish-ar",
@@ -965,7 +987,7 @@
     ],
     "charge": "キャラデザイン、モデリング、リギング、ライティング",
     "developmentScale": "1名",
-    "order": 38
+    "order": 39
   },
   {
     "id": "vtuber-youtube-edit",
@@ -975,7 +997,7 @@
     "category": [
       "Video Edit"
     ],
-    "order": 39,
+    "order": 40,
     "linkDoc": "https://www.youtube.com/@sssspj_official",
     "link": "https://www.youtube.com/@sssspj_official",
     "date": "2025/01",
@@ -1003,7 +1025,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 40
+    "order": 41
   },
   {
     "id": "2d-to-3d-character",
@@ -1020,7 +1042,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "2名",
-    "order": 41
+    "order": 42
   },
   {
     "id": "thai-vtuber-goods",
@@ -1038,7 +1060,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 42
+    "order": 43
   },
   {
     "id": "roblox-layered-clothing",
@@ -1056,7 +1078,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 43
+    "order": 44
   },
   {
     "id": "aoppella-goods",
@@ -1074,7 +1096,7 @@
     ],
     "charge": "グッズ制作、入稿データ制作",
     "developmentScale": "2名",
-    "order": 44
+    "order": 45
   },
   {
     "id": "roblox-creature",
@@ -1091,7 +1113,7 @@
     ],
     "charge": "3Dモデリング/セットアップ",
     "developmentScale": "4名",
-    "order": 45
+    "order": 46
   },
   {
     "id": "vtuber-utayo-pome",
@@ -1109,7 +1131,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "3名",
-    "order": 46
+    "order": 47
   },
   {
     "id": "perfect-sync",
@@ -1125,7 +1147,7 @@
     ],
     "charge": "3Dモデリング",
     "developmentScale": "5名",
-    "order": 47
+    "order": 48
   },
   {
     "id": "otonashi-venom-bloom",
@@ -1145,7 +1167,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 48
+    "order": 49
   },
   {
     "id": "otonashi-vibrant-core",
@@ -1165,7 +1187,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン/楽曲制作",
     "developmentScale": "1名",
-    "order": 49
+    "order": 50
   },
   {
     "id": "asia-ip-contest",
@@ -1184,7 +1206,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 50
+    "order": 51
   },
   {
     "id": "tiktok-ar-boxfish",
@@ -1202,7 +1224,7 @@
       "3D WORKS",
       "Promotion"
     ],
-    "order": 51
+    "order": 52
   },
   {
     "id": "ai-art-collection",
@@ -1221,7 +1243,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 52
+    "order": 53
   },
   {
     "id": "samurai-girl-ip",
@@ -1238,7 +1260,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 53
+    "order": 54
   },
   {
     "id": "otonashi-ai-character",
@@ -1255,7 +1277,7 @@
     ],
     "charge": "構成/AI画像生成/キャラクターデザイン",
     "developmentScale": "1名",
-    "order": 54
+    "order": 55
   },
   {
     "id": "location-game-illustration",
@@ -1272,7 +1294,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "10名",
-    "order": 55
+    "order": 56
   },
   {
     "id": "vket2022-booth",
@@ -1290,7 +1312,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 56
+    "order": 57
   },
   {
     "id": "shibuya-vision",
@@ -1310,7 +1332,7 @@
     ],
     "charge": "プロデュース、映像制作",
     "developmentScale": "2名",
-    "order": 57
+    "order": 58
   },
   {
     "id": "avatar-webinar-speaker",
@@ -1326,7 +1348,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 58
+    "order": 59
   },
   {
     "id": "sapporo-kasaimamori",
@@ -1344,7 +1366,7 @@
     ],
     "charge": "3Dモデリング/VRMセットアップ",
     "developmentScale": "2名",
-    "order": 59
+    "order": 60
   },
   {
     "id": "quiz-ad-video",
@@ -1354,7 +1376,7 @@
     "category": [
       "Video Edit"
     ],
-    "order": 60,
+    "order": 61,
     "date": "2022/01",
     "tools": [
       "Photoshop",
@@ -1379,7 +1401,7 @@
     "category": [
       "3D WORKS"
     ],
-    "order": 61
+    "order": 62
   },
   {
     "id": "otonashi-muon-muchitsujo",
@@ -1402,7 +1424,7 @@
     ],
     "charge": "企画/プロデュース/クリエイティブディレクション/グラフィックデザイン/映像制作/プロモーション/制作進行",
     "featured": true,
-    "order": 62,
+    "order": 63,
     "link": "https://youtu.be/8E7XGkVvMOA",
     "linkMovie": "https://youtu.be/8E7XGkVvMOA"
   },
@@ -1427,7 +1449,7 @@
     ],
     "charge": "企画/プロデュース/クリエイティブディレクション/グラフィックデザイン/映像制作・編集/Blu-rayパッケージデザイン/プロモーション/制作進行",
     "featured": true,
-    "order": 63,
+    "order": 64,
     "link": "https://youtu.be/Fe-u7wG2tnU",
     "linkMovie": "https://youtu.be/Fe-u7wG2tnU"
   },
@@ -1445,7 +1467,7 @@
     "category": [
       "Manga"
     ],
-    "order": 64
+    "order": 65
   },
   {
     "id": "ooki-na-sakana",
@@ -1465,7 +1487,7 @@
     "category": [
       "Picture Book"
     ],
-    "order": 65
+    "order": 66
   },
   {
     "id": "character-logo-design",
@@ -1481,7 +1503,7 @@
     ],
     "charge": "ベクターワーク、イラスト制作",
     "developmentScale": "1名",
-    "order": 66
+    "order": 67
   },
   {
     "id": "gummy-bear-ip",
@@ -1499,7 +1521,7 @@
     ],
     "charge": "LINEスタンプ",
     "developmentScale": "1名",
-    "order": 67,
+    "order": 68,
     "link": "https://store.line.me/stickershop/product/1155260/ja"
   },
   {
@@ -1517,7 +1539,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 68
+    "order": 69
   },
   {
     "id": "virtual-shirokuma",
@@ -1534,7 +1556,7 @@
       "3D WORKS",
       "Original"
     ],
-    "order": 69
+    "order": 70
   },
   {
     "id": "app-ui-ux-design",
@@ -1585,6 +1607,6 @@
       "2D WORKS",
       "UI/UX"
     ],
-    "order": 70
+    "order": 71
   }
 ]
