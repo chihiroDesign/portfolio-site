@@ -25,6 +25,8 @@ const awards = [
   { year: '2022', title: 'Avatar Award 2022 優秀賞' },
   { year: '2021', title: 'Avatar Award 2021 入賞' },
   { year: '2021', title: '原宿ファッションスナップ2100 アバター部門 3位' },
+  { year: '1995', title: '月例ヤングジャンプ新人賞 奨励賞「dear」（第190回／1995年3月期）' },
+  { year: '1995', title: '月例ヤングジャンプ新人賞 奨励賞「千客万来」（第198回／1995年11月期）' },
 ];
 
 const tools = [
